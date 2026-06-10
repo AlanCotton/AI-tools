@@ -216,15 +216,36 @@ T("Huginn","github.com/huginn/huginn","Open source (GitHub)","Veteran open-sourc
 ],
 "AI Sales & CRM": [
 T("HubSpot","hubspot.com","Freemium","CRM platform with Breeze AI agents across marketing/sales/service","Free CRM; paid hubs from $20/user/mo","Yes — official HubSpot MCP server works with Claude","Free CRM entry; AI across whole funnel; MCP","Costs climb steeply with hubs/contacts","SMBs growing into a full CRM",9,6,9),
+T("Salesforce (Agentforce)","salesforce.com","Paid","Enterprise CRM leader with Agentforce AI agents and Einstein AI","From $25/user/mo; Agentforce usage-priced extra","Yes — Claude available in Agentforce via the Anthropic partnership","Enterprise standard; AI agents on your own CRM data","Cost and complexity stack quickly","Mid-size to enterprise sales orgs",9,4,9),
 T("Apollo.io","apollo.io","Freemium","B2B contact database + sequencing + AI sales engagement","Free; from $49/user/mo","Partial — API/Zapier; community MCP","275M-contact database with outreach in one","Data accuracy varies; email deliverability care","Outbound SDR teams",7,7,8),
 T("Clay","clay.com","Paid","Data enrichment + AI research agent (Claygent) for hyper-personalised outbound","From $134/mo","Yes — Claude usable as enrichment model","Combines 100+ data sources; AI personalisation at scale","Steep learning curve and price","Growth teams doing serious outbound",8,5,9),
+T("Pipedrive","pipedrive.com","Paid","Easy SMB sales CRM with AI sales assistant and automations","From $14/user/mo","No","Fast to adopt; great pipeline view; fair price","Light for complex enterprise needs","SMB sales teams",6,7,7),
 T("Gong","gong.io","Paid","Revenue intelligence: call recording, deal insights, forecasting","~$1,400/user/yr + platform fee","Partial — API; Anthropic models used internally","Category leader; coaching gold","Enterprise pricing; adoption effort","Sales orgs 20+ reps",7,3,9),
+T("Clari","clari.com","Paid","Revenue platform: AI forecasting, deal inspection, pipeline health","Enterprise custom pricing","No","Best-in-class forecasting accuracy","Enterprise price; needs clean CRM data","Revenue leaders at 50+ rep orgs",6,3,8),
+T("Attention","attention.com","Paid","AI sales assistant: call recording, auto CRM fill, coaching, follow-up emails","From ~$50/user/mo (custom)","No","Strong CRM-hygiene automation; fast follow-ups","Younger than Gong; custom pricing","Mid-market sales teams",5,5,7),
 T("Lavender","lavender.ai","Freemium","AI email coach that scores and improves sales emails","Free; from $27/mo","No","Real-time coaching improves reply rates","Email-only scope","SDRs writing cold email",4,6,6),
 T("Outreach","outreach.io","Paid","Enterprise sales engagement and execution platform","~$100+/user/mo","No","Deep workflows, forecasting; enterprise-grade","Cost & complexity","Enterprise sales orgs",6,4,8),
 T("Sybill","sybill.ai","Paid","AI deal copilot: call summaries, CRM autofill, behaviour signals","From $49/user/mo","No","Automatic CRM hygiene; emotion/engagement signals","Per-seat cost; niche","AEs hating CRM data entry",5,5,7),
 T("Twenty","github.com/twentyhq/twenty","Open source (GitHub)","Modern open-source CRM (the OSS Salesforce alternative)","Free self-host; cloud from $9/user/mo","Partial — API/webhooks; community MCP","Beautiful modern OSS CRM; data ownership","Younger ecosystem; fewer native integrations","Startups wanting an ownable CRM",6,10,7),
 T("EspoCRM","github.com/espocrm/espocrm","Open source (GitHub)","Mature open-source CRM with workflows and email","Free self-host; cloud from $15/mo","No","Proven, full-featured, cheap","Dated UI; AI minimal","Cost-sensitive sales teams",4,10,6),
 T("Frappe CRM","github.com/frappe/crm","Open source (GitHub)","Clean open-source CRM from the ERPNext ecosystem","Free self-host; cloud plans","No","Modern UX; ERPNext integration","Smaller community","Companies already on Frappe/ERPNext",4,10,5),
+],
+"AI Sales Outreach & Prospecting": [
+T("ZoomInfo Copilot","zoominfo.com","Paid","B2B contact/company database with intent data and an AI copilot","From ~$15k/yr (contract)","No","Deepest B2B data + buying-intent signals","Expensive annual contracts","Enterprise outbound teams",6,3,9),
+T("Lusha","lusha.com","Freemium","B2B contact data via web app and Chrome extension","Free; from $36/user/mo","No","Easy to use; compliance-focused data","Smaller database than ZoomInfo","SDRs needing quick contact data",5,6,6),
+T("Seamless.AI","seamless.ai","Freemium","Real-time AI search engine for B2B contact information","Free credits; from ~$147/mo","No","Real-time verification; high volumes","Data-accuracy complaints; pushy sales motion","High-volume prospectors",4,5,6),
+T("Instantly","instantly.ai","Paid","Cold email at scale: warmup, inbox rotation, deliverability, AI writing","From $37/mo","No","Best-known deliverability stack; unlimited sending accounts","Cold-email compliance is on you","Agencies and outbound startups",5,7,7),
+T("Smartlead","smartlead.ai","Paid","Cold email infrastructure with unlimited mailboxes and AI warmup","From $39/mo","No","Unlimited mailboxes; API-first","UI rough edges","Outbound agencies",5,7,7),
+T("lemlist","lemlist.com","Paid","Multichannel outreach (email/LinkedIn/calls) with AI personalisation","From $39/user/mo","No","Strong personalisation (images, dynamic content)","Per-seat costs add up","SDRs doing personalised sequences",5,6,7),
+T("Reply.io","reply.io","Paid","AI SDR agents plus multichannel sales sequences","From $59/user/mo; AI SDR from ~$259/mo","No","Mature sequencer with AI-agent option","AI-agent quality varies","Lean teams automating outreach",5,6,7),
+T("Qualified","qualified.com","Paid","AI SDR 'Piper' converts website visitors into pipeline (Salesforce-native)","From ~$3,500/mo","No","Best-in-class inbound conversion for Salesforce shops","Enterprise pricing; Salesforce required","Enterprise demand-gen teams",6,3,8),
+T("11x","11x.ai","Paid","Autonomous 'digital worker' AI SDRs (Alice) running outbound end-to-end","Custom (thousands/mo)","No","Fully autonomous outbound experiments","Mixed quality reports; hype-heavy category","Teams experimenting with AI SDRs",4,3,6),
+T("Artisan","artisan.co","Paid","AI BDR 'Ava': finds leads, researches, writes and sends outbound","Custom (from ~$2k/mo)","No","Consolidates data + email infra + AI in one","Young product; needs supervision","Startups without SDR headcount",4,3,6),
+T("Nooks","nooks.ai","Paid","AI parallel dialer, virtual salesfloor and call coaching","Custom (~$200/user/mo)","No","3-5x connect rates for calling teams","Dialer-centric; custom pricing","Cold-calling SDR teams",5,4,7),
+T("Warmly","warmly.ai","Freemium","De-anonymises website visitors and orchestrates AI outreach to them","Free; from ~$700/mo","No","Good intent signals for the price","Pricing jumps sharply after free tier","SMB pipeline teams",4,5,6),
+T("Crystal","crystalknows.com","Freemium","DISC personality profiles for prospects to tailor messaging","Free; from $49/mo","No","Unique personality-based angle","Profile accuracy varies","Relationship-driven sellers",4,5,6),
+T("Regie.ai","regie.ai","Paid","Generative AI platform for sales prospecting content and sequencing","Custom pricing","No","Brand-controlled AI sales content at scale","Opaque pricing","Enterprise SDR organisations",4,4,6),
+T("Listmonk","github.com/knadh/listmonk","Open source (GitHub)","Self-hosted high-performance email campaign and newsletter manager","Free (self-host)","Partial — pair with Claude to draft campaigns","Free at any scale; fast; API-driven","Warm-list campaigns, not cold outreach","Self-hosters sending email campaigns",5,10,6),
 ],
 "AI Marketing & SEO": [
 T("Semrush","semrush.com","Paid","All-in-one SEO/SEM platform with AI features and ContentShake","From $139.95/mo","No","Deepest SEO dataset; AI content tools","Expensive; overwhelming","SEO professionals",6,4,9),
@@ -392,8 +413,23 @@ def build():
                 logo = f'=IMAGE("https://www.google.com/s2/favicons?domain={domain(site)}&sz=64")'
                 w.writerow([cat, logo, name, typ, site, desc, cost, claude, pros, cons, best,
                             si, sc, sf, round((si+sc+sf)/3,1), ranks[id(t)]])
+    # June 2026 sales additions: rows to paste into the existing Google Sheet (Logo left blank)
+    NEW = {"Salesforce (Agentforce)","Pipedrive","Clari","Attention"} | {t[0] for t in DATA["AI Sales Outreach & Prospecting"]}
+    with open("sales-additions.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["Category"] + HEADERS)
+        for cat in ("AI Sales & CRM", "AI Sales Outreach & Prospecting"):
+            tools = DATA[cat]
+            scored = sorted(tools, key=lambda t: -(t[9]+t[10]+t[11]))
+            ranks = {id(t): r for r, t in enumerate(scored, 1)}
+            for t in tools:
+                if t[0] not in NEW:
+                    continue
+                name, site, typ, desc, cost, claude, pros, cons, best, si, sc, sf = t
+                w.writerow([cat, "", name, typ, site, desc, cost, claude, pros, cons, best,
+                            si, sc, sf, round((si+sc+sf)/3,1), ranks[id(t)]])
     n = sum(len(v) for v in DATA.values())
-    print(f"Wrote AI-Tools-Directory.xlsx, ai-tools-directory.csv, sheets-import.csv — {n} tools in {len(DATA)} categories")
+    print(f"Wrote AI-Tools-Directory.xlsx, ai-tools-directory.csv, sheets-import.csv, sales-additions.csv — {n} tools in {len(DATA)} categories")
 
 if __name__ == "__main__":
     build()
