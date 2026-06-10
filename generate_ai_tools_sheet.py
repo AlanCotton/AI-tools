@@ -151,6 +151,7 @@ T("Avoma","avoma.com","Paid","Meeting AI + conversation intelligence + revenue i
 T("Fellow","fellow.app","Paid","Meeting management (agendas, actions) with AI recordings","From $7/user/mo","Partial — Zapier","Agendas + actions + notes in one workflow","AI newer than dedicated recorders","Managers running structured meetings",6,7,7),
 T("Krisp","krisp.ai","Freemium","AI noise cancellation + transcription layer for any call app","Free; Pro $8/mo","No","Works system-wide with every app; noise removal is best-in-class","Notes secondary to audio cleanup","Noisy environments, call centres",5,8,7),
 T("Equal Time","equaltime.io","Paid","Meeting notes with inclusion/speaking-time analytics","From ~$20/mo","No","Unique DEI/participation metrics","Niche; small vendor","Inclusive-culture teams",3,5,5),
+T("Littlebird","littlebird.ai","Freemium","Ambient AI assistant (Mac/mobile) that watches your screen, meetings, calendar and email to build a work memory","Free; Plus $17/mo; Pro from $100/mo","No","Context from everything you do, not just meetings; raised $11M in 2026","Screen-watching privacy trade-off; Mac-first","Sales/CS pros juggling many relationships",6,7,7),
 T("tl;dv","tldv.io","Freemium","Meeting recorder with clips, multi-meeting AI reports and CRM sync","Free; Pro $18/mo","Partial — API/Zapier","Good free tier; clip sharing","Bot-based; UI busy","Product and sales teams sharing clips",6,7,7),
 T("Whisper + WhisperX","github.com/m-bain/whisperX","Open source (GitHub)","DIY pipeline: record → Whisper transcription with speaker diarisation","Free (self-host)","Yes — pipe transcripts to Claude for summaries/actions","Free, private, scriptable; Claude does the summarising","DIY assembly; no calendar bot","Engineers automating their own notes",7,10,7),
 T("Meetily","github.com/Zackriya-Solutions/meeting-minutes","Open source (GitHub)","Self-hosted AI meeting minutes app (local Whisper + LLM)","Free (self-host)","Yes — can use Claude as the summarisation model","Fully private meeting notes","Early project; setup effort","Privacy-mandated organisations",5,9,5),
@@ -209,6 +210,8 @@ T("Wrike","wrike.com","Freemium","Enterprise project management with AI work int
 T("Integrately","integrately.com","Freemium","One-click automation templates (Zapier alternative)","Free; from $19.99/mo","Partial — Anthropic app available","8M+ ready automations; cheap multi-step","Less flexible than Make","SMBs wanting instant recipes",6,8,6),
 T("Gumloop","gumloop.com","Freemium","AI-native workflow builder (scraping, LLM steps, agents)","Free; from $97/mo","Yes — Claude nodes built in","Built AI-first, not retrofitted; powerful for AI pipelines","Expensive; newer vendor","AI-heavy growth/ops teams",7,5,8),
 T("Relay.app","relay.app","Freemium","Human-in-the-loop AI automation with approvals","Free; from $9/user/mo","Yes — Claude steps supported","Elegant approvals model; generous free tier","Fewer integrations than Zapier","Teams wanting AI + human checkpoints",7,8,7),
+T("Camunda","camunda.com","Freemium","Enterprise process orchestration (BPMN) with AI task agents and connectors","SaaS from ~$99/mo; enterprise custom; Camunda 7 CE is open source","Partial — Anthropic connector for AI tasks","Standards-based (BPMN/DMN); serious orchestration at scale","Developer-oriented; enterprise pricing beyond starter tier","Enterprises orchestrating complex processes",7,6,8),
+T("Lindy","lindy.ai","Freemium","No-code AI agent builder ('Lindies') for email, sales outreach, scheduling and ops","Free tier; from $49.99/mo","Yes — built on Anthropic/Claude models","Fast agent building; big template library","Credits run out fast on heavy workflows","Solopreneurs and ops teams automating with agents",7,7,7),
 T("Activepieces","github.com/activepieces/activepieces","Open source (GitHub)","Open-source (MIT) Zapier alternative with AI pieces and MCP","Free self-host; cloud free tier","Yes — Claude pieces + MCP server support","True MIT OSS; growing connector library","Fewer connectors than Zapier","Self-hosters replacing Zapier",8,10,7),
 T("Windmill","github.com/windmill-labs/windmill","Open source (GitHub)","Open-source developer platform for scripts→workflows→UIs","Free self-host; cloud tiers","Yes — AI steps with Anthropic; Claude writes its scripts","Code-first power; great for engineers","Not for non-coders","Engineering teams automating internally",7,10,8),
 T("Automatisch","github.com/automatisch/automatisch","Open source (GitHub)","Open-source Zapier alternative focused on simplicity","Free self-host","Partial — community connectors","Simple OSS automation","Small connector set","Basic self-hosted automations",5,10,5),
@@ -226,6 +229,7 @@ T("Attention","attention.com","Paid","AI sales assistant: call recording, auto C
 T("Lavender","lavender.ai","Freemium","AI email coach that scores and improves sales emails","Free; from $27/mo","No","Real-time coaching improves reply rates","Email-only scope","SDRs writing cold email",4,6,6),
 T("Outreach","outreach.io","Paid","Enterprise sales engagement and execution platform","~$100+/user/mo","No","Deep workflows, forecasting; enterprise-grade","Cost & complexity","Enterprise sales orgs",6,4,8),
 T("Sybill","sybill.ai","Paid","AI deal copilot: call summaries, CRM autofill, behaviour signals","From $49/user/mo","No","Automatic CRM hygiene; emotion/engagement signals","Per-seat cost; niche","AEs hating CRM data entry",5,5,7),
+T("Donna","askdonna.com","Paid","Proactive AI assistant for field sales: voice-to-CRM, visit prep, follow-ups (Salesforce/SAP)","Custom per-seat (quote)","No","Built for reps on the road; CRM updates without typing","Young vendor; quote-only pricing","Field sales and manufacturing reps",5,5,7),
 T("Twenty","github.com/twentyhq/twenty","Open source (GitHub)","Modern open-source CRM (the OSS Salesforce alternative)","Free self-host; cloud from $9/user/mo","Partial — API/webhooks; community MCP","Beautiful modern OSS CRM; data ownership","Younger ecosystem; fewer native integrations","Startups wanting an ownable CRM",6,10,7),
 T("EspoCRM","github.com/espocrm/espocrm","Open source (GitHub)","Mature open-source CRM with workflows and email","Free self-host; cloud from $15/mo","No","Proven, full-featured, cheap","Dated UI; AI minimal","Cost-sensitive sales teams",4,10,6),
 T("Frappe CRM","github.com/frappe/crm","Open source (GitHub)","Clean open-source CRM from the ERPNext ecosystem","Free self-host; cloud plans","No","Modern UX; ERPNext integration","Smaller community","Companies already on Frappe/ERPNext",4,10,5),
@@ -245,6 +249,16 @@ T("Nooks","nooks.ai","Paid","AI parallel dialer, virtual salesfloor and call coa
 T("Warmly","warmly.ai","Freemium","De-anonymises website visitors and orchestrates AI outreach to them","Free; from ~$700/mo","No","Good intent signals for the price","Pricing jumps sharply after free tier","SMB pipeline teams",4,5,6),
 T("Crystal","crystalknows.com","Freemium","DISC personality profiles for prospects to tailor messaging","Free; from $49/mo","No","Unique personality-based angle","Profile accuracy varies","Relationship-driven sellers",4,5,6),
 T("Regie.ai","regie.ai","Paid","Generative AI platform for sales prospecting content and sequencing","Custom pricing","No","Brand-controlled AI sales content at scale","Opaque pricing","Enterprise SDR organisations",4,4,6),
+T("SalesAPE.ai","salesape.ai","Paid","AI inbound sales agent: qualifies leads via chat/SMS/WhatsApp/email and books meetings 24/7","~$999/mo + ~$3k setup (quote-based)","No","Responds to inbound leads in seconds across channels","Quote-only pricing; setup fee","SMBs losing inbound leads to slow follow-up",4,4,7),
+T("Alta","altahq.com","Paid","AI GTM agent team (Katie SDR, Alex calling, Luna analytics) on one shared data layer","Custom platform fee","No","Full agent team incl. voice; Salesforce app; used by Snowflake/Deel","Custom pricing; newer vendor","B2B teams automating top-of-funnel",6,4,8),
+T("SalesCloser AI","salescloser.ai","Paid","AI sales agent that runs discovery and demo calls over phone/Zoom in 32+ languages, 24/7","From $1,000/mo; Enterprise $2,500/mo","No","Flat-rate pricing; screen-share demos; multilingual","Trusting AI to run sales calls suits simple products best","SaaS with high-volume, simple demos",5,4,7),
+T("AiSDR","aisdr.com","Paid","AI SDR for email + LinkedIn outreach with HubSpot/Salesforce integration","From $900/mo (1,200 messages)","No","Transparent pricing; solid CRM integrations","Feature set reflects the price point","Teams testing AI SDRs without enterprise contracts",5,4,7),
+T("Salesforge","salesforge.ai","Paid","Cold email platform with 'Agent Frank', an AI SDR in co-pilot or autopilot mode","From $40/mo; Agent Frank from $416/mo","No","Co-pilot mode keeps humans in the loop; good deliverability","Email-focused","Lean outbound teams",5,6,7),
+T("Amplemarket","amplemarket.com","Paid","AI sales platform with 'Duo' copilot: B2B data, sequencing and AI in one","~$3,200/user/yr (annual contracts)","No","Human+AI Duo approach; all-in-one data + outreach","Annual commitment; pricier per seat","Mid-market outbound teams",6,4,8),
+T("Relevance AI","relevanceai.com","Freemium","No-code AI workforce builder: custom sales agents (incl. Bosh AI BDR) and workflows","Free tier; from ~$19/mo + usage","Yes — Claude selectable as the agent model","Build exactly the agent you want without code","More setup than turnkey AI SDRs","RevOps teams building custom agents",7,7,7),
+T("Unify","unifygtm.com","Paid","Warm outbound: buying signals, website intent and AI-personalised sequences","From ~$700/mo (custom)","No","Signal-based outbound beats cold lists","Price; needs traffic/signals to shine","PLG and mid-market growth teams",5,4,7),
+T("Common Room","commonroom.io","Paid","Customer intelligence: aggregates community, product and social signals for GTM (RoomieAI)","From ~$999/mo","No","Unmatched signal coverage (30+ channels)","Cost; needs dedicated ops attention","DevTool and PLG companies",6,4,8),
+T("Humantic AI","humantic.ai","Freemium","Buyer personality intelligence (DISC) for personalised selling in LinkedIn/CRM","Free trial; from ~$30/mo","No","Personality insights where you work","Accuracy debatable; niche","Enterprise AEs personalising outreach",4,6,6),
 T("Listmonk","github.com/knadh/listmonk","Open source (GitHub)","Self-hosted high-performance email campaign and newsletter manager","Free (self-host)","Partial — pair with Claude to draft campaigns","Free at any scale; fast; API-driven","Warm-list campaigns, not cold outreach","Self-hosters sending email campaigns",5,10,6),
 ],
 "AI Marketing & SEO": [
@@ -255,6 +269,7 @@ T("AdCreative.ai","adcreative.ai","Paid","AI ad creative and copy generation wit
 T("Hootsuite","hootsuite.com","Paid","Social media management with OwlyWriter AI","From $99/mo","No","Mature scheduling/listening suite","Expensive; AI basic","Social teams managing many accounts",5,4,7),
 T("Buffer","buffer.com","Freemium","Simple social scheduling with AI assistant","Free; $6/channel/mo","No","Affordable; clean; good AI repurposing","Lighter analytics","Creators and small brands",5,8,6),
 T("Mailchimp","mailchimp.com","Freemium","Email marketing with AI content and journeys","Free; from $13/mo","No","Familiar; AI campaign generation","Pricing grows with list; CRM-lite","SMB email marketing",6,6,7),
+T("Soro","trysoro.com","Paid","SEO autopilot: researches keywords, writes, optimises and auto-publishes articles (WordPress/Shopify/Webflow)","From $39/mo","No","Hands-off SEO content pipeline; cheap","AI-content quality and Google-policy risk need human review","Niche-site builders and small ecommerce",4,7,6),
 T("Mautic","github.com/mautic/mautic","Open source (GitHub)","Open-source marketing automation (email, journeys, segmentation)","Free (self-host)","No","Full marketing automation without per-contact fees","Self-host complexity; plugins needed","Companies escaping HubSpot/Marketo pricing",5,10,7),
 T("Postiz","github.com/gitroomhq/postiz-app","Open source (GitHub)","Open-source AI social media scheduling (Buffer/Hootsuite alternative)","Free self-host; cloud from $29/mo","Partial — BYO AI keys","OSS scheduling for 15+ platforms with AI","Young project","Self-hosted social scheduling",6,9,6),
 T("Matomo","github.com/matomo-org/matomo","Open source (GitHub)","Open-source web analytics (Google Analytics alternative)","Free self-host; cloud from $23/mo","No","Privacy-compliant analytics you own","No AI insights layer yet","Privacy-first site analytics",4,9,7),
@@ -428,8 +443,23 @@ def build():
                 name, site, typ, desc, cost, claude, pros, cons, best, si, sc, sf = t
                 w.writerow([cat, "", name, typ, site, desc, cost, claude, pros, cons, best,
                             si, sc, sf, round((si+sc+sf)/3,1), ranks[id(t)]])
+    # Batch 2 additions (niche AI sales agents + requested tools)
+    NEW2 = {"SalesAPE.ai","Alta","SalesCloser AI","AiSDR","Salesforge","Amplemarket","Relevance AI",
+            "Unify","Common Room","Humantic AI","Donna","Littlebird","Soro","Camunda","Lindy"}
+    with open("sales-additions-2.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["Category"] + HEADERS)
+        for cat, tools in DATA.items():
+            scored = sorted(tools, key=lambda t: -(t[9]+t[10]+t[11]))
+            ranks = {id(t): r for r, t in enumerate(scored, 1)}
+            for t in tools:
+                if t[0] not in NEW2:
+                    continue
+                name, site, typ, desc, cost, claude, pros, cons, best, si, sc, sf = t
+                w.writerow([cat, "", name, typ, site, desc, cost, claude, pros, cons, best,
+                            si, sc, sf, round((si+sc+sf)/3,1), ranks[id(t)]])
     n = sum(len(v) for v in DATA.values())
-    print(f"Wrote AI-Tools-Directory.xlsx, ai-tools-directory.csv, sheets-import.csv, sales-additions.csv — {n} tools in {len(DATA)} categories")
+    print(f"Wrote AI-Tools-Directory.xlsx, ai-tools-directory.csv, sheets-import.csv, sales-additions.csv, sales-additions-2.csv — {n} tools in {len(DATA)} categories")
 
 if __name__ == "__main__":
     build()
