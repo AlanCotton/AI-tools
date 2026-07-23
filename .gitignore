@@ -1,0 +1,26 @@
+# Secrets & credentials — never commit these
+.env
+.env.*
+*.env
+secrets.*
+*.key
+*.pem
+# MCP config that may embed API keys (use local/user scope instead)
+.mcp.json
+mcp.json
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
