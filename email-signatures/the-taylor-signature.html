@@ -1,0 +1,249 @@
+<title>The Taylor Signature</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@1&family=Space+Mono:wght@400;700&display=swap">
+<style>
+  /* Layout: one centred column, builder form beside a mock email that shows the signature at real size */
+  :root {
+    --paper: #F6F4ED;
+    --paper2: #EFECE1;
+    --surface: #FDFCF8;
+    --ink: #101D28;
+    --ink2: #273A4A;
+    --muted: #5D7180;
+    --teal: #0B7CB3;
+    --line: rgba(16,29,40,.12);
+    --mail-bg: #FFFFFF;
+    --mail-chrome: #E9E6DB;
+    --ok: #138A62;
+    --f-sans: "Bricolage Grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --f-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+    --f-mono: "Space Mono", "Courier New", Courier, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0E1922; --paper2: #15232F; --surface: #13212C; --ink: #F1EEE4; --ink2: #CBD3D9;
+      --muted: #93A4B0; --teal: #4FB3E3; --line: rgba(241,238,228,.14); --mail-chrome: #22323F; --ok: #43CC92;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1922; --paper2: #15232F; --surface: #13212C; --ink: #F1EEE4; --ink2: #CBD3D9;
+    --muted: #93A4B0; --teal: #4FB3E3; --line: rgba(241,238,228,.14); --mail-chrome: #22323F; --ok: #43CC92;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper); color: var(--ink); font-family: var(--f-sans); font-size: 16px; line-height: 1.5;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding-block: 40px 64px; display: grid; gap: 32px; }
+  header { display: grid; gap: 10px; }
+  .eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  h1 { margin: 0; font-size: clamp(34px, 6vw, 56px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.02; text-wrap: balance; }
+  h1 em, h2 em { font-family: var(--f-serif); font-weight: 400; color: var(--teal); }
+  .lede { margin: 0; max-width: 62ch; color: var(--ink2); }
+  .stitch { height: 2px; background: repeating-linear-gradient(90deg, var(--teal) 0 7px, transparent 7px 13px); max-width: 160px; }
+
+  .grid { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 28px; align-items: start; }
+  @media (max-width: 820px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 22px; display: grid; gap: 16px; min-width: 0; }
+  h2 { margin: 0; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
+  label { display: grid; gap: 6px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  input {
+    font: inherit; font-family: var(--f-sans); font-size: 15px; letter-spacing: 0; text-transform: none; color: var(--ink);
+    background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 9px 11px; width: 100%;
+  }
+  input:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+  .hint { margin: 0; font-size: 13px; color: var(--muted); }
+
+  .mail { border-radius: 4px; overflow: hidden; border: 1px solid var(--line); background: var(--mail-bg); min-width: 0; }
+  .mail-bar { background: var(--mail-chrome); padding: 10px 16px; display: flex; gap: 8px; align-items: center; font-family: var(--f-mono); font-size: 11px; color: var(--muted); letter-spacing: .06em; }
+  .mail-bar span { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+  .mail-bar b { margin-left: 8px; font-weight: 400; }
+  .mail-body { padding: 24px 22px 28px; overflow-x: auto; color: #273A4A; font-family: Arial, sans-serif; font-size: 14px; }
+  .mail-body p { margin: 0 0 18px; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  button {
+    font: inherit; font-family: var(--f-sans); font-weight: 600; font-size: 15px; cursor: pointer;
+    border-radius: 4px; padding: 10px 16px; border: 1px solid var(--ink);
+  }
+  .primary { background: var(--ink); color: var(--paper); }
+  .ghost { background: transparent; color: var(--ink); }
+  .status { font-family: var(--f-mono); font-size: 12px; color: var(--ok); min-height: 1.2em; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  @media (max-width: 820px) { .steps { grid-template-columns: minmax(0, 1fr); } }
+  .step { border-top: 2px dashed var(--teal); padding-top: 14px; display: grid; gap: 6px; min-width: 0; }
+  .step h3 { margin: 0; font-size: 17px; font-weight: 800; }
+  .step ol { margin: 0; padding-left: 18px; color: var(--ink2); font-size: 14px; display: grid; gap: 4px; }
+  .note { font-size: 14px; color: var(--muted); max-width: 70ch; margin: 0; }
+  textarea#src { position: absolute; left: -9999px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">The Taylor · brand kit</div>
+    <h1>Email signature, <em>cut</em> to fit.</h1>
+    <div class="stitch" aria-hidden="true"></div>
+    <p class="lede">Set your details on the left, then copy the signature straight into Gmail, Outlook or Apple Mail. It uses the site's ink, teal and stitch line, and falls back to standard email fonts where Bricolage and Space Mono aren't installed.</p>
+  </header>
+
+  <div class="grid">
+    <form class="panel" id="form" autocomplete="off">
+      <h2>Your <em>measurements</em></h2>
+      <label for="f-name">Name<input id="f-name" value="Alan Cotton"></label>
+      <label for="f-title">Role<input id="f-title" value="Co-founder"></label>
+      <label for="f-phone">Mobile<input id="f-phone" value="07775 898475"></label>
+      <label for="f-email">Email<input id="f-email" value="alan@thetaylor.ai"></label>
+      <label for="f-cta">Booking link<input id="f-cta" value="https://calendar.app.google/dcpx39H8CUMkCnQN8"></label>
+      <p class="hint">Leave mobile blank to drop that line. Dorian and Jane can use the same page for theirs.</p>
+    </form>
+
+    <div class="panel">
+      <h2>The <em>fitting</em></h2>
+      <div class="mail">
+        <div class="mail-bar"><span></span><span></span><span></span><b>New message</b></div>
+        <div class="mail-body">
+          <p>Hi Sarah,<br><br>Thanks for the time today. I've attached the opportunity map we talked through.<br><br>Best,</p>
+          <div id="sig"></div>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="primary" id="copy-rich">Copy signature</button>
+        <button type="button" class="ghost" id="copy-html">Copy HTML</button>
+        <span class="status" id="status" role="status"></span>
+      </div>
+      <textarea id="src" aria-hidden="true" tabindex="-1"></textarea>
+    </div>
+  </div>
+
+  <section class="steps" aria-label="Install steps">
+    <div class="step">
+      <h3>Gmail</h3>
+      <ol>
+        <li>Press <b>Copy signature</b>.</li>
+        <li>Settings → See all settings → General → Signature → Create new.</li>
+        <li>Paste into the box, then Save changes at the bottom.</li>
+      </ol>
+    </div>
+    <div class="step">
+      <h3>Outlook</h3>
+      <ol>
+        <li>Press <b>Copy signature</b>.</li>
+        <li>Settings → Mail → Compose and reply (new Outlook: Accounts → Signatures).</li>
+        <li>Paste, name it "The Taylor", set it as default for new messages.</li>
+      </ol>
+    </div>
+    <div class="step">
+      <h3>Apple Mail</h3>
+      <ol>
+        <li>Press <b>Copy signature</b>.</li>
+        <li>Mail → Settings → Signatures → +.</li>
+        <li>Untick "Always match my default message font", then paste.</li>
+      </ol>
+    </div>
+  </section>
+  <p class="note">The signature is all text and tables, with no images, so it won't be blocked or show as an attachment. Use <b>Copy HTML</b> if your client or a tool like HubSpot asks for signature source code.</p>
+</div>
+
+<script>
+  const C = { ink: "#101D28", ink2: "#273A4A", muted: "#5D7180", teal: "#0B7CB3", mid: "#16AFA0", green: "#43CC92", paper: "#F6F4ED" };
+  const SANS = "'Bricolage Grotesque','Helvetica Neue',Helvetica,Arial,sans-serif";
+  const SERIF = "'Instrument Serif',Georgia,'Times New Roman',serif";
+  const MONO = "'Space Mono','Courier New',Courier,monospace";
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const val = id => document.getElementById(id).value.trim();
+
+  function build() {
+    const name = esc(val("f-name") || "Your Name");
+    const title = esc(val("f-title"));
+    const phone = val("f-phone");
+    const email = val("f-email");
+    const cta = val("f-cta") || "https://thetaylor.ai/#contact";
+    const tel = phone.replace(/[^\d+]/g, "").replace(/^0/, "+44");
+    const label = t => `<span style="font-family:${MONO};font-size:10px;letter-spacing:1px;color:${C.teal};text-transform:uppercase;">${t}</span>&nbsp;&nbsp;`;
+    const link = (href, text) => `<a href="${esc(href)}" style="color:${C.ink2};text-decoration:none;">${esc(text)}</a>`;
+    const rows = [];
+    if (phone) rows.push(`${label("M")}${link("tel:" + tel, phone)}`);
+    if (email) rows.push(`${label("E")}${link("mailto:" + email, email)}`);
+    rows.push(`${label("W")}${link("https://thetaylor.ai", "thetaylor.ai")}`);
+
+    return `<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:${SANS};color:${C.ink};max-width:460px;">
+  <tr><td style="padding:0 0 2px 0;font-family:${SANS};font-size:19px;line-height:24px;font-weight:800;letter-spacing:-0.3px;color:${C.ink};">${name}</td></tr>
+  ${title ? `<tr><td style="padding:0 0 12px 0;font-family:${MONO};font-size:11px;line-height:16px;letter-spacing:1.5px;text-transform:uppercase;color:${C.muted};">${title}</td></tr>` : `<tr><td style="padding:0 0 10px 0;font-size:1px;line-height:1px;">&nbsp;</td></tr>`}
+  <tr><td style="border-top:2px dashed ${C.teal};padding:12px 0 0 0;font-size:1px;line-height:1px;">&nbsp;</td></tr>
+  <tr><td style="padding:0 0 2px 0;">
+    <a href="https://thetaylor.ai" style="text-decoration:none;color:${C.ink};font-family:${SANS};font-size:20px;line-height:24px;font-weight:800;letter-spacing:-0.4px;">The <em style="font-family:${SERIF};font-style:italic;font-weight:400;font-size:22px;color:${C.teal};">Taylor</em></a>
+  </td></tr>
+  <tr><td style="padding:0 0 12px 0;font-family:${SANS};font-size:13px;line-height:18px;color:${C.ink2};">AI, <em style="font-family:${SERIF};font-style:italic;font-size:15px;color:${C.teal};">cut</em> to fit your business.</td></tr>
+  <tr><td style="padding:0 0 14px 0;font-family:${SANS};font-size:13px;line-height:21px;color:${C.ink2};">${rows.join("<br>")}</td></tr>
+  <tr><td style="padding:0 0 12px 0;">
+    <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:separate;"><tr>
+      <td bgcolor="${C.ink}" style="background:${C.ink};border-radius:4px;padding:8px 14px;">
+        <a href="${esc(cta)}" style="font-family:${SANS};font-size:13px;line-height:16px;font-weight:600;color:${C.paper};text-decoration:none;">Book a free fitting &rarr;</a>
+      </td>
+    </tr></table>
+  </td></tr>
+  <tr><td style="font-family:${MONO};font-size:10px;line-height:14px;letter-spacing:1px;text-transform:uppercase;color:${C.muted};">
+    <span style="color:${C.teal};">&#10005;</span>&nbsp;UK &amp; remote&nbsp;&nbsp;<span style="color:${C.mid};">&#10005;</span>&nbsp;SME-focused&nbsp;&nbsp;<span style="color:${C.green};">&#10005;</span>&nbsp;no lock-in
+  </td></tr>
+</table>`;
+  }
+
+  function plain() {
+    const lines = [val("f-name"), val("f-title") ? val("f-title") + ", The Taylor" : "The Taylor", "AI, cut to fit your business.", ""];
+    if (val("f-phone")) lines.push("M  " + val("f-phone"));
+    if (val("f-email")) lines.push("E  " + val("f-email"));
+    lines.push("W  thetaylor.ai", "", "Book a free fitting: " + (val("f-cta") || "https://thetaylor.ai/#contact"));
+    return lines.join("\n");
+  }
+
+  const sig = document.getElementById("sig");
+  const status = document.getElementById("status");
+  function render() { sig.innerHTML = build(); }
+  function say(msg) { status.textContent = msg; clearTimeout(say.t); say.t = setTimeout(() => status.textContent = "", 4000); }
+
+  document.getElementById("form").addEventListener("input", render);
+  document.getElementById("form").addEventListener("submit", e => e.preventDefault());
+
+  function selectNode(node) {
+    const r = document.createRange(); r.selectNodeContents(node);
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    return s;
+  }
+
+  document.getElementById("copy-rich").addEventListener("click", async () => {
+    const html = build();
+    try {
+      if (!window.ClipboardItem) throw new Error("no ClipboardItem");
+      await navigator.clipboard.write([new ClipboardItem({
+        "text/html": new Blob([html], { type: "text/html" }),
+        "text/plain": new Blob([plain()], { type: "text/plain" })
+      })]);
+      say("Copied. Paste it into your signature settings.");
+    } catch (e) {
+      const s = selectNode(sig);
+      let ok = false;
+      try { ok = document.execCommand("copy"); } catch (_) {}
+      if (ok) { s.removeAllRanges(); say("Copied. Paste it into your signature settings."); }
+      else say("Signature selected. Press Ctrl+C or ⌘C to copy.");
+    }
+  });
+
+  document.getElementById("copy-html").addEventListener("click", async () => {
+    const html = build();
+    try { await navigator.clipboard.writeText(html); say("HTML copied."); }
+    catch (e) {
+      const t = document.getElementById("src"); t.value = html; t.select();
+      let ok = false; try { ok = document.execCommand("copy"); } catch (_) {}
+      say(ok ? "HTML copied." : "Couldn't reach the clipboard. Try Copy signature instead.");
+    }
+  });
+
+  render();
+</script>
