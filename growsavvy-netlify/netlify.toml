@@ -1,0 +1,10 @@
+# Netlify configuration for grow-savvy.com
+[build]
+  publish = "."
+
+# Nice URLs, e.g. /what-we-do serves /what-we-do.html
+[[redirects]]
+  from = "/:page"
+  to = "/:page.html"
+  status = 200
+  force = false
