@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hca.uk.com/sitemap.xml
