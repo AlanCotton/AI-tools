@@ -58,6 +58,9 @@ Files in this folder: index.html, what-we-do.html, what-weve-done.html, why-choo
 - **LinkedIn:** Jane Heath https://www.linkedin.com/in/jane-heath and Alan Cotton https://www.linkedin.com/in/alanathca linked on the who-we-are bio cards (new tab, `rel="noopener"`) and added as `sameAs` in the Person JSON-LD.
 - **Booking:** "Book a 30-minute call" now goes to the enquiry form (`#email-form`); calendar placeholder removed.
 
+### Round 3 (2026-11-16)
+- **Privacy policy:** HubSpot (CRM) and Instantly (outreach email) added to the list of service providers; added "If you send us an enquiry, we will not add you to marketing emails."; lawful basis for enquiries was already legitimate interests (unchanged); last-updated date set to 16 November 2026. Retention and international-transfer wording unchanged (the existing policy had no placeholders there).
+
 ### Placeholders that remain
 - Short bios for Jane Heath and Alan Cotton (who-we-are bio cards).
 

@@ -56,11 +56,16 @@ Images and favicons could not be downloaded (the container cannot reach the site
 
 ## Placeholders still open (facts we don't have)
 - Jane's credentials; Alan's credentials and years of experience (why-us).
-- Workshop location (all five workshop pages and the FAQ).
 - Whether the four non-remote workshops can be delivered virtually or hybrid (workshop pages and FAQ).
-- Draft terms of business: effective date, VAT, payment terms, expenses, client responsibilities, cancellation/postponement, recording/sharing materials, liability cap.
+- Draft terms of business: effective date, expenses, client responsibilities, cancellation/postponement, recording/sharing materials, liability cap.
 - **ICO (corrected decision):** privacy policy now states "Chameleon Brands Ltd is registered with the Information Commissioner's Office (registration number ZC276789)." under "Who we are". Complaint wording (ICO at ico.org.uk) unchanged.
 
 ## Owner decisions – round 2 applied
 - **LinkedIn:** why-us founder cards now link to https://www.linkedin.com/in/jane-heath and https://www.linkedin.com/in/alanathca (new tab), and both URLs are in the Person `sameAs` in the why-us JSON-LD and the home-page Organization `founder` entries.
 - Items 12–15 (The Taylor bios, booking links, HCA founding year, Hummingbird) need no change here: Growth KnowHow already uses its own calendar link and doesn't state HCA's founding year.
+
+## Owner decisions – round 3 applied
+- **Locations vary (16):** workshop Key facts now say "Location: Agreed with you"; the FAQ location question is removed. Virtual/hybrid placeholders stay.
+- **Privacy policy (19):** dated 16 November 2026; HubSpot (CRM) and Instantly (outreach email) added to the providers list; added "We do not send marketing emails to people who enquire through this website." Lawful basis was already legitimate interests. Retention and transfer wording is the live site's own text (no placeholders there).
+- **Terms (20):** "Payment terms are set out in each proposal." replaces the payment-terms placeholder; VAT placeholder removed. Governing law (England and Wales) was already stated in the draft, not a placeholder, so it is unchanged.
+- **Form (22):** every enquiry form now has `onsubmit="return handleSubmit(event)"`. script.js opens the calendar and shows the "Thanks!" message only when Netlify accepts the AJAX post; if it fails, the form falls back to a normal POST so the enquiry isn't lost. The browser may block the calendar pop-up because it opens after the post rather than on the click. **Owner:** test after upload. This replaces the earlier "observation, not changed" note.

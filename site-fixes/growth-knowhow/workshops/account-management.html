@@ -127,11 +127,11 @@
       <p class="small">Flexible delivery to match your team's depth of need.</p>
         <div class="fmt"><div class="name">One Day Intensive</div><div class="desc">A focused, high-speed delivery of core concepts.</div></div>
         <div class="fmt"><div class="name">Two Day Deep Development</div><div class="desc">An extended format for greater skill immersion and practice, ideal for larger teams or more complex needs.</div></div>
-      <!-- TODO: confirm the location (and virtual delivery where marked) for this workshop -->
+      <!-- TODO: confirm virtual delivery where marked -->
       <dl class="facts">
         <dt>Length</dt><dd>One day or two days</dd>
         <dt>Format</dt><dd>In person <mark class="todo">[TO CONFIRM: is virtual or hybrid delivery offered for this workshop?]</mark></dd>
-        <dt>Location</dt><dd><mark class="todo">[TO CONFIRM: location, e.g. at your offices anywhere in the UK]</mark></dd>
+        <dt>Location</dt><dd>Agreed with you</dd>
         <dt>Group size</dt><dd>Up to 6 participants</dd>
       </dl>
       <a class="btn btn-primary" href="../get-in-touch.html">Book this workshop</a>
@@ -144,7 +144,7 @@
       <h2>Bring learning to <span class="em">life</span>:</h2>
       <p class="sub">Let’s discuss what’s possible</p>
       <!-- Netlify strips data-netlify and adds the form-name field when it deploys, so the scraped copy had lost them. They are restored here so the form keeps working when these files are uploaded. -->
-      <form class="enquiry" method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+      <form class="enquiry" method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleSubmit(event)">
         <input type="hidden" name="form-name" value="contact">
         <p class="hp-field" aria-hidden="true"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <input type="text" name="name" placeholder="Your name" required="" aria-label="Your name">

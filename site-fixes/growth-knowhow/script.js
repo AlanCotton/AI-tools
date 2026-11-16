@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Contact form: AJAX submit so the inline "Merci!" confirmation shows in preview
+// Contact form (wired via onsubmit on form.enquiry): AJAX submit so the inline "Thanks!" confirmation shows in preview
 // AND in production. On Netlify, posting form-encoded data (incl. form-name) to "/"
 // is captured in the Forms dashboard; elsewhere we still show the confirmation.
 function handleSubmit(e) {
@@ -28,15 +28,19 @@ function handleSubmit(e) {
     form.reset();
     goToBooking();
   };
+  // Only open the calendar once Netlify has accepted the enquiry. If the AJAX post
+  // fails, fall back to a normal form POST so the enquiry is not lost.
+  var fallback = function () { form.removeAttribute('onsubmit'); form.submit(); };
   try {
     var data = new URLSearchParams(new FormData(form)).toString();
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: data
-    }).then(reveal).catch(reveal);
+    }).then(function (res) { if (res.ok) { reveal(); } else { fallback(); } })
+      .catch(fallback);
   } catch (err) {
-    reveal();
+    fallback();
   }
   return false;
 }

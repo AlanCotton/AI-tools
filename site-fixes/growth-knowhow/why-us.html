@@ -193,7 +193,7 @@
       <h2>Bring learning to <span class="em">life</span>:</h2>
       <p class="sub">Let’s discuss what’s possible</p>
       <!-- Netlify strips data-netlify and adds the form-name field when it deploys, so the scraped copy had lost them. They are restored here so the form keeps working when these files are uploaded. -->
-      <form class="enquiry" method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+      <form class="enquiry" method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleSubmit(event)">
         <input type="hidden" name="form-name" value="contact">
         <p class="hp-field" aria-hidden="true"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <input type="text" name="name" placeholder="Your name" required="" aria-label="Your name">

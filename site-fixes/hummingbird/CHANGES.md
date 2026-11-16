@@ -30,7 +30,7 @@ No netlify.toml needed (no redirects required).
 
 ## Hummingbird – High
 - `<title>`, meta description, `lang="en-GB"` – **Done.** Title: "Hummingbird | Business mentoring for female founders".
-- Privacy policy – **Done (draft)**: privacy.html with "Draft – needs review before publishing" banner; linked next to the form button and in the footer. ICO registration ZC276789 added. **Placeholder**: publication date, email provider, retention periods, transfer safeguards, lawful bases confirmation, marketing emails.
+- Privacy policy – **Done (draft)**: privacy.html with "Draft – needs review before publishing" banner; linked next to the form button and in the footer. ICO registration ZC276789 added. Round 3: date, processors, marketing and lawful basis filled in. **Placeholder**: email provider, retention periods, transfer safeguards, cookies confirmation.
 - Company details in footer – **Done.**
 - Proof slots – **Removed per owner decision** (no new testimonials, case studies or credentials).
 - Jane's LinkedIn – **Done**: https://www.linkedin.com/in/jane-heath (link chip and Person `sameAs`). Parliamentary Review – live sentence and chip kept as on the live site, with no link (per owner correction).
@@ -61,8 +61,9 @@ No netlify.toml needed (no redirects required).
 - **ICO:** privacy.html now says Chameleon Brands Ltd is registered with the ICO (registration number ZC276789). The complaint wording points to ico.org.uk.
 - **HCA co-founder (owner correction):** Jane is a co-founder of HCA. Changed "She founded HCA" to "She co-founded HCA", the chip to "Co-founded HCA – created a sector", and the Person schema description to "Co-founder of HCA."
 - **Round 2 (owner):** Jane's LinkedIn (https://www.linkedin.com/in/jane-heath) is now linked from her chip and listed in the Person `sameAs`, and its placeholder is gone. Session, programme and first-call details vary, so their placeholders were removed. The "Working together" section keeps its two cards with only wording that stays true: one-to-one coaching plus the network, and a first conversation via the form and calendar.
+- **Round 3 (owner, item 19):** privacy.html now gives 16 November 2026 as the last-updated date. It lists HubSpot (CRM) and Instantly (outreach email) as processors, says enquirers get no newsletters or marketing emails, and states legitimate interests as the lawful basis for handling enquiries (contract for clients).
 
 ### Remaining placeholders
 - index.html: final eligibility wording after the Equality Act legal check.
-- privacy.html: publication date; marketing emails and consent; lawful bases; email provider; transfer safeguards; retention periods (enquiries and clients); cookies statement confirmed at publication.
+- privacy.html: email provider; transfer safeguards; retention periods (enquiries and clients); cookies statement confirmed at publication.
 - Owner actions: upload the renamed photo, submit the sitemap, send a test enquiry.

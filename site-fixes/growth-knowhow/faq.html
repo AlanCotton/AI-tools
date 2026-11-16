@@ -137,10 +137,6 @@
       <p>Managing a Remote Team can be run virtually or in person. <mark class="todo">[TO CONFIRM: whether the other workshops can be delivered virtually or as hybrid sessions]</mark></p>
     </div>
     <div class="faq-item">
-      <h2>Where are workshops held?</h2>
-      <p><mark class="todo">[TO CONFIRM: location – e.g. at your offices anywhere in the UK, or at a venue]</mark></p>
-    </div>
-    <div class="faq-item">
       <h2>What happens after the workshop?</h2>
       <p>A closing ‘what we learnt today’ session embeds the skills on the day. We can also stay close afterwards, with optional follow-up check-ins, ongoing mentoring and continuous-improvement sessions.</p>
     </div>
@@ -156,7 +152,7 @@
       <h2>Bring learning to <span class="em">life</span>:</h2>
       <p class="sub">Let’s discuss what’s possible</p>
       <!-- Netlify strips data-netlify and adds the form-name field when it deploys, so the scraped copy had lost them. They are restored here so the form keeps working when these files are uploaded. -->
-      <form class="enquiry" method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+      <form class="enquiry" method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleSubmit(event)">
         <input type="hidden" name="form-name" value="contact">
         <p class="hp-field" aria-hidden="true"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <input type="text" name="name" placeholder="Your name" required="" aria-label="Your name">
