@@ -33,7 +33,7 @@ No netlify.toml needed (no redirects required).
 - Privacy policy – **Done (draft)**: privacy.html with "Draft – needs review before publishing" banner; linked next to the form button and in the footer. ICO registration ZC276789 added. **Placeholder**: publication date, email provider, retention periods, transfer safeguards, lawful bases confirmation, marketing emails.
 - Company details in footer – **Done.**
 - Proof slots – **Removed per owner decision** (no new testimonials, case studies or credentials).
-- Jane's LinkedIn – **Placeholder**: the URL is not on the site. A link chip was added with `href="#"` and a visible TO CONFIRM note. Parliamentary Review – **Removed per owner decision** (it never happened).
+- Jane's LinkedIn – **Placeholder**: the URL is not on the site. A link chip was added with `href="#"` and a visible TO CONFIRM note. Parliamentary Review – live sentence and chip kept as on the live site, with no link (per owner correction).
 - What clients get (format, first call) – **Placeholder** within a new "Working together" section (two cards). It states only facts already on the site: one-to-one coaching with Jane plus network experts, and an enquiry followed by a calendar booking. Still needed: session and programme format, and the first-call length and what happens next. The price is not shown, per the owner's decision.
 
 ## Hummingbird – Medium
@@ -56,7 +56,7 @@ No netlify.toml needed (no redirects required).
 ## Owner decisions applied (2026-11-16)
 - **Testimonials and case studies:** removed the whole "Results" section (it held only placeholders), its nav and footer links, the network-credentials slot and the unused `.hb-slot` CSS.
 - **No prices:** removed the "Indicative price" card from "Working together" and "whether it is free" from the first-call placeholder. The section keeps the format and first-call cards.
-- **Parliamentary Review:** removed the sentence about the Parliamentary Review paper from "Meet Jane", the chip and link with its placeholder, and the mention in the `sameAs` TODO. Jane's other copy is unchanged.
+- **Parliamentary Review (owner correction):** the live sentence in "Meet Jane" and its plain-text chip are restored word for word. Only the link added in v1, its URL placeholder and the mention in the `sameAs` TODO were removed. It is not in the Person schema.
 - **Photos and phone numbers:** nothing to change. There were no photo or phone placeholders. The photo-rename TODO stays, because it concerns the existing photo.
 - **ICO:** privacy.html now says Chameleon Brands Ltd is registered with the ICO (registration number ZC276789). The complaint wording points to ico.org.uk.
 
@@ -64,3 +64,4 @@ No netlify.toml needed (no redirects required).
 - index.html: Jane's LinkedIn URL; session and programme format; first-call length and next steps; final eligibility wording after the Equality Act legal check.
 - privacy.html: publication date; marketing emails and consent; lawful bases; email provider; transfer safeguards; retention periods (enquiries and clients); cookies statement confirmed at publication.
 - Owner actions: upload the renamed photo, submit the sitemap, send a test enquiry.
+- **HCA co-founder (owner correction):** Jane is a co-founder of HCA. Changed "She founded HCA" to "She co-founded HCA", the chip to "Co-founded HCA – created a sector", and the Person schema description to "Co-founder of HCA."

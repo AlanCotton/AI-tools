@@ -30,7 +30,7 @@ Placeholders show on the page as yellow `[TO CONFIRM: …]` marks (`mark.todo`, 
 | Item | Status |
 |------|--------|
 | £7m stat wording | **Done.** Owner confirmed it is a fee. Both places (home and use cases) read "£1m a year in fees, delivered consistently for 7 years". The existing case study text ("1 client per year @ £1m GP") is kept exactly as on the live site. |
-| Founder page | **Done + Placeholder.** "Jane Heath" in full (lead, image alt, tag, title), LinkedIn changed from `es.linkedin.com` to `www.linkedin.com/in/jane-heath`, Person JSON-LD added. Parliamentary Review section removed (owner: it never happened); its "A free hour" button moved up into the founder section. Placeholder left: year HCA was founded. |
+| Founder page | **Done + Placeholder.** "Jane Heath" in full (lead, image alt, tag, title), LinkedIn changed from `es.linkedin.com` to `www.linkedin.com/in/jane-heath`, Person JSON-LD added. Parliamentary Review "Recognition" section kept as on the original site (owner correction); no article link or link placeholder. Placeholder left: year HCA was founded. |
 | FAQPage schema on questions.html | **Done.** Built from the nine on-page questions and answers. |
 | Home title | **Done.** "HCA \| Agency new business consultancy for an AI-first world". Other titles now "Page \| HCA". |
 | Plausible | **Done (commented out).** Snippet in every page head, commented out, with a TODO to add the domain in Plausible and mention it in privacy.html. |
@@ -58,7 +58,7 @@ Placeholders show on the page as yellow `[TO CONFIRM: …]` marks (`mark.todo`, 
 - **Phone removed:** 07775 898475 / `tel:` link taken out of every footer (all 10 pages), the `telephone` field in the home JSON-LD, and "or call us" in privacy.html. The optional phone field on the enquiry form stays.
 - **£7m stat:** worded as a fee in both places; TODOs removed.
 - **Testimonials / case studies:** the six attribution placeholders, the "Named case studies" block (two slots) and the client-logo slot removed from the home page. Existing quotes and case studies unchanged.
-- **Parliamentary Review:** the whole "Recognition" section on founder.html (pullquote, paragraph, link placeholder) removed. No other mentions exist (none in `sameAs`).
+- **Parliamentary Review (owner correction):** the "Recognition" section on founder.html is restored exactly as in the original (quote, paragraph and its "A free hour, no strings" button). Only the article-link placeholder I had added is removed; the original had no article link. Nothing in `sameAs`.
 - **ICO:** the ICO-number placeholder removed; privacy.html now says "Chameleon Brands Ltd is registered with the Information Commissioner's Office (registration number ZC276789)." Complaint wording (ico.org.uk) kept.
 - **Prices / photos:** HCA had no price or photo placeholders; nothing to change.
 

@@ -54,8 +54,8 @@ Source: live site scraped with Firecrawl on 16 Nov 2026 (home, the six brand sub
 
 ## Owner decisions applied (16 Nov 2026)
 - **Photos (decision 4):** removed Alan Cotton's photo placeholder (card shown without a photo) and the 1200×630 share-image TODO. og:image stays as the logo.
-- **Alan's bio:** placeholder replaced with text adapted from Grow Savvy's who-we-are page (co-founded HCA, founded and ran several small businesses, built sales, marketing, management and account teams). Jane's card now says "co-founded HCA" to match.
-- **Parliamentary Review (decision 3):** removed the sentence from /hummingbird.
+- **Alan's bio:** placeholder replaced with text adapted from Grow Savvy's who-we-are page (co-founded HCA, founded and ran several small businesses, built sales, marketing, management and account teams). Owner confirmed Jane co-founded HCA (with Alan Cotton): "co-founded HCA" on the home page card and on /hummingbird (resolved).
+- **Parliamentary Review (owner correction):** the live sentence on /hummingbird is kept exactly as it was; there is no link to it anywhere on the hub.
 - **HCA £7m (decision 7):** confirmed as fee; the wording already says "£1m/year in fee", TODO removed.
 - No prices, phone numbers, testimonial or ICO placeholders existed on the hub (decisions 1, 2, 5, 6 need no change).
 
