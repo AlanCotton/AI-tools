@@ -70,3 +70,11 @@ I checked the Netlify form records for every site:
 \*A recent submission was received but none is kept in the count. Those were probably marked as spam or deleted. Look in the "Spam" tab under Forms in Netlify, and make sure form notifications are set to email you.
 
 In the review I worried the Grow Savvy form might not be wired up. It is: Netlify detects it and has received submissions.
+
+## HubSpot enquiry form (replaces Netlify Forms when sites move to Vercel)
+- HubSpot account: 149559148 ("The Taylor"), EU data centre (`share-eu1` / `api-eu1`)
+- Form ID: `7f54c12e-0cf7-4caf-b25c-6c6dab495e3f`
+- Fields: firstname, lastname, email (required), phone, company, message, and the hidden `enquiry_brand`
+- `enquiry_brand` values: chameleon_brands, grow_savvy, hummingbird, growth_knowhow, hca, the_taylor, vive_libre
+- Each site keeps its own form design and posts to the HubSpot Forms API:
+  `POST https://api-eu1.hsforms.com/submissions/v3/integration/submit/149559148/7f54c12e-0cf7-4caf-b25c-6c6dab495e3f`
