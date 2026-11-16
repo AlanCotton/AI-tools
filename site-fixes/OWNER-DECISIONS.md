@@ -12,3 +12,11 @@
 10. Remaining placeholders: keep only those for facts we still genuinely don't have and that aren't covered above (e.g. LinkedIn URLs, NIF, booking links). Remove the `mark.todo` CSS only if no placeholders remain.
 
 After editing: update CHANGES.md (add an "Owner decisions applied" section and remove the resolved items from the placeholder list), then republish to the SAME artifact URL. Pass `url` with the artifact URL, `file_path` = index.html, and `files` = every changed file. Do not deploy or push anything. Reply with a short list of what you removed and what placeholders remain.
+
+# Owner decisions – round 2
+
+11. **LinkedIn:** Jane Heath = https://www.linkedin.com/in/jane-heath (the owner gave es.linkedin.com; use the www. form of the same profile, as the review asked for HCA). Alan Cotton = https://www.linkedin.com/in/alanathca (the owner gave uk.linkedin.com; same profile). Replace every LinkedIn placeholder with these, link them with `target="_blank" rel="noopener"`, and add them to the matching Person `sameAs` in JSON-LD.
+12. **The Taylor:** no bios yet. Remove the bio, role and credential placeholders from the team cards (names and LinkedIn links only).
+13. **Booking links:** where there's no calendar link, use the site's enquiry form instead. Point "Book a call"-style buttons at the form (e.g. `#contact` or the contact page) and drop the calendar placeholder.
+14. **HCA was founded in 1999.**
+15. **Hummingbird:** session length, frequency, programme length, format and first-call details all vary. Don't commit to any of them. Remove those placeholders and keep only wording that stays true without them, or remove the cards.
