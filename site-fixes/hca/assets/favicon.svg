@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="110" fill="#8DC63F"></rect>
+  <circle cx="87" cy="97" r="77" fill="#ffffff" opacity="0.10"></circle>
+  <text x="256" y="312" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-weight="700" font-size="200">
+    <tspan fill="#ffffff">h</tspan><tspan fill="#E0006A">ca</tspan>
+  </text>
+  <path d="M168 360 Q256 398 344 360" fill="none" stroke="#E0006A" stroke-width="20" stroke-linecap="round"></path>
+</svg>

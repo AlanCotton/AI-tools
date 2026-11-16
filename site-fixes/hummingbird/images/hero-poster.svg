@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#240617"/>
+      <stop offset="1" stop-color="#160410"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.75" cy="0.2" r="0.6">
+      <stop offset="0" stop-color="#C2186F" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#C2186F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <rect width="800" height="800" fill="url(#glow)"/>
+  <g transform="translate(400,410) scale(3.2) translate(-75.5,-67.5)">
+    <path d="M48 116 C 74 117 91 101 86 79" fill="none" stroke="#6FBF3F" stroke-width="3.4" stroke-linecap="round"/>
+    <path d="M54 118 C 49 101 40 91 30 83 C 28 96 33 111 46 117 C 49 118 52 118 54 118 Z" fill="#D81E7E"/>
+    <path d="M54 118 C 59 101 68 91 78 83 C 80 96 75 111 62 117 C 59 118 56 118 54 118 Z" fill="#D81E7E"/>
+    <path d="M54 118 C 47 101 47 81 54 64 C 61 81 61 101 54 118 Z" fill="#C81B72"/>
+    <path d="M72 58 C 86 40 104 22 117 17 C 112 35 100 52 82 61 C 78 63 74 62 72 58 Z" fill="#54B45A"/>
+    <path d="M74 56 C 92 53 108 57 121 69 C 107 65 93 66 81 64 C 77 63 74 60 74 56 Z" fill="#6FBF3F"/>
+    <path d="M72 59 C 65 57 59 59 55 65 C 59 58 59 51 64 47 C 69 43 74 45 75 50 C 76 54 75 57 72 59 Z" fill="#6FBF3F"/>
+    <circle cx="67" cy="52" r="2.3" fill="#FFFFFF"/>
+  </g>
+</svg>
