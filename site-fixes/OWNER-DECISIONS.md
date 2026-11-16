@@ -20,3 +20,16 @@ After editing: update CHANGES.md (add an "Owner decisions applied" section and r
 13. **Booking links:** where there's no calendar link, use the site's enquiry form instead. Point "Book a call"-style buttons at the form (e.g. `#contact` or the contact page) and drop the calendar placeholder.
 14. **HCA was founded in 1999.**
 15. **Hummingbird:** session length, frequency, programme length, format and first-call details all vary. Don't commit to any of them. Remove those placeholders and keep only wording that stays true without them, or remove the cards.
+
+# Owner decisions – round 3
+
+16. **Growth KnowHow locations vary.** Remove the location placeholders (workshop Key facts and FAQ). Say nothing specific, or "Location: agreed with you" if the box needs a value. The virtual/hybrid placeholder stays.
+17. **The Taylor:** the ownership and form-service placeholders stay for now.
+18. **Vive Libre:**
+    - Vive Libre is paid a fee by the seller's agent, but the owner doesn't want to state that. Remove the commission/fee placeholder and say nothing about who pays. Make sure no remaining text claims that Vive Libre takes no commission, is paid only by the buyer, or has no fee arrangements.
+    - The business is run by **Jane Heath as a self-employed trader (autónoma)** in Spain. In the Aviso Legal, the titular is Jane Heath, autónoma. Remove the Spanish VAT row (as an autónoma her NIF is her tax ID). Keep the placeholders for her NIF and her Spanish address. **Governing law: Spanish law and the Spanish courts.** Make the privacy policy's data controller match: Jane Heath, trading as Vive Libre. Remove the Chameleon Brands ICO line from the Vive Libre privacy policy, since Chameleon isn't the controller there. Keep the AEPD/ICO complaint wording.
+    - The town descriptions are on the live site (vivelibrespain.com). Fill each town stub page with that town's existing description from the live site, word for word (re-scrape with Firecrawl if needed). Don't write new content. Remove each "full area guide" placeholder you can fill. The UK-buyer guide placeholder stays.
+19. **Privacy policies (every site that has one):** the tools are **Instantly** (outreach email) and **HubSpot** (CRM). Enquirers **don't** get marketing emails. The lawful basis for handling enquiries is **legitimate interests**. The date published / last updated is **16 November 2026**. Fill those placeholders in. List Instantly and HubSpot as processors where the policy lists providers. Retention periods and transfer safeguards stay as placeholders.
+20. **Terms of business (Growth KnowHow, The Taylor):** payment terms are bespoke. Replace the payment-terms placeholder with "Payment terms are set out in each proposal." Remove the "whether fees include VAT" placeholder; VAT is covered by the proposal too. Other terms placeholders stay.
+21. **Governing law** wherever it's asked for on UK sites stays as a placeholder, except Vive Libre (Spanish law, above).
+22. **Growth KnowHow form:** yes, wire it to open the calendar after a successful submit (add `onsubmit="return handleSubmit(event)"` or the equivalent, as noted in CHANGES.md).
