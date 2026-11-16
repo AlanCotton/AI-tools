@@ -33,3 +33,4 @@ After editing: update CHANGES.md (add an "Owner decisions applied" section and r
 20. **Terms of business (Growth KnowHow, The Taylor):** payment terms are bespoke. Replace the payment-terms placeholder with "Payment terms are set out in each proposal." Remove the "whether fees include VAT" placeholder; VAT is covered by the proposal too. Other terms placeholders stay.
 21. **Governing law** wherever it's asked for on UK sites stays as a placeholder, except Vive Libre (Spanish law, above).
 22. **Growth KnowHow form:** yes, wire it to open the calendar after a successful submit (add `onsubmit="return handleSubmit(event)"` or the equivalent, as noted in CHANGES.md).
+23. **Governing law:** England and Wales for every brand except Vive Libre, which uses Spanish law.
