@@ -9,10 +9,10 @@ Placeholders show on the page as yellow `[TO CONFIRM: …]` marks (`mark.todo`, 
 | # | Item | Status |
 |---|------|--------|
 | 1 | robots.txt and sitemap.xml | **Done.** `robots.txt` (allow all, sitemap line) and `sitemap.xml` (8 real pages, lastmod 2026-11-16; thanks and 404 left out). Submitting the sitemap in Google Search Console is the owner's job. |
-| 2 | Canonical, OG/Twitter, JSON-LD | **Done.** Every page has canonical, og:type/site_name/title/description/url/image (absolute `https://hca.uk.com/assets/img/hero-arrows.jpg`) and `twitter:card`. Home has Organization + ProfessionalService JSON-LD (address, email, phone, parentOrganization Chameleon Brands Ltd). Founder lists Jane Heath only, because the site says Jane founded HCA – **Placeholder:** owner to confirm whether Alan Cotton should be added as co-founder (TODO comment in index.html). Meta descriptions rewritten to 150–160 characters. Canonicals use the `.html` URLs the site links to. |
+| 2 | Canonical, OG/Twitter, JSON-LD | **Done.** Every page has canonical, og:type/site_name/title/description/url/image (absolute `https://hca.uk.com/assets/img/hero-arrows.jpg`) and `twitter:card`. Home has Organization + ProfessionalService JSON-LD (address, email, parentOrganization Chameleon Brands Ltd). Founder lists Jane Heath only, because the site says Jane founded HCA (HTML comment in index.html asks whether Alan Cotton should be added). Meta descriptions rewritten to 150–160 characters. Canonicals use the `.html` URLs the site links to. |
 | 3 | Branded 404 | **Done.** `404.html` in the site's style (noindex) with links home and to the contact form. Netlify serves it automatically. Note: it uses relative asset paths like the rest of the site, so it is fully styled for top-level missing URLs (e.g. `/old-page`); for nested ones (`/a/b`) it would lose styling – switch its asset paths to `/assets/…` if that matters. |
 | 4 | Company details | **Already present** (HCA legal line in every footer). Kept, and added to the new pages. |
-| 5 | Proof / testimonials | See HCA items below. |
+| 5 | Proof / testimonials | **Resolved by owner.** Existing testimonials and case studies are the latest; kept exactly as on the live site, no placeholders. |
 | 6 | Group link, brand names | **Done.** "Part of Chameleon Brands" (link to https://chameleon-brands.com/) added to every footer, next to a Privacy policy link. |
 | 7 | Agreed claims | **Done.** "Three decades of agency go-to-market experience" in the footer, home H2, meta description and ticker; "go-to-market (GTM)" written in full on first use (home "What we do", services "AI-integrated go-to-market (GTM) strategy"). Client quotes that say "GTM system/engine" left as quoted. No "two decades" anywhere. |
 | – | En dashes | **Done.** Spaced hyphens used as dashes replaced with en dashes in visible text, titles and alt text (scripts left alone). |
@@ -22,15 +22,15 @@ Placeholders show on the page as yellow `[TO CONFIRM: …]` marks (`mark.todo`, 
 ### High
 | Item | Status |
 |------|--------|
-| Privacy policy | **Done (draft) + Placeholder.** New `privacy.html` with a visible "Draft – needs review before publishing" banner. Covers controller (Chameleon Brands Ltd, company no., registered office), what the form/email/Google Calendar booking collect, lawful basis, Netlify and Google as processors, transfers, rights, ICO complaint, no tracking cookies. Needs: ICO registration number, retention period, email provider, any CRM used, transfer mechanism, whether enquirers get marketing emails, "last updated" date, and a legal/data-protection review. Linked under the form and in every footer. The footer link that said "How we handle your data" now says "How we handle client project data" (it points to Q3 on client project data), and Q3 itself now points personal-data questions to the privacy policy. |
-| Testimonials unattributed | **Placeholder.** Each of the six quotes now has a caption `[TO CONFIRM: name, role, agency]`. Needs names/roles/agencies with each client's written permission. Quote text unchanged. |
-| Two named case studies and client logos | **Placeholder.** "Named case studies" block with two placeholder cards, and a client-logo placeholder, added under the testimonials on the home page. Needs real content and permission. |
+| Privacy policy | **Done (draft) + Placeholder.** New `privacy.html` with a visible "Draft – needs review before publishing" banner. Covers controller (Chameleon Brands Ltd, company no., registered office, ICO registration ZC276789), what the form/email/Google Calendar booking collect, lawful basis, Netlify and Google as processors, transfers, rights, ICO complaint (ico.org.uk), no tracking cookies. Still needs: retention period, email provider, any CRM used, transfer mechanism, whether enquirers get marketing emails, "last updated" date, and a legal/data-protection review. Linked under the form and in every footer. The footer link that said "How we handle your data" now says "How we handle client project data", and Q3 points personal-data questions to the privacy policy. |
+| Testimonials unattributed | **Resolved by owner – no change.** Existing testimonials kept exactly as they were; attribution placeholders removed. |
+| Two named case studies and client logos | **Resolved by owner – not added.** Existing case studies are the latest; slots removed. |
 
 ### Medium
 | Item | Status |
 |------|--------|
-| £7m stat wording | **Done + Placeholder.** Both places (home and use cases) now read "£1m GP a year, delivered consistently for 7 years", matching the case study ("1 client per year @ £1m GP"). Owner to confirm GP vs fee (visible mark + TODO). |
-| Founder page | **Done + Placeholder.** "Jane Heath" in full (H1 lead, image alt, tag, title), LinkedIn changed from `es.linkedin.com` to `www.linkedin.com/in/jane-heath`, Person JSON-LD added. Placeholders: year HCA was founded; Parliamentary Review article URL and year (link added with `href="#"`). |
+| £7m stat wording | **Done.** Owner confirmed it is a fee. Both places (home and use cases) read "£1m a year in fees, delivered consistently for 7 years". The existing case study text ("1 client per year @ £1m GP") is kept exactly as on the live site. |
+| Founder page | **Done + Placeholder.** "Jane Heath" in full (lead, image alt, tag, title), LinkedIn changed from `es.linkedin.com` to `www.linkedin.com/in/jane-heath`, Person JSON-LD added. Parliamentary Review section removed (owner: it never happened); its "A free hour" button moved up into the founder section. Placeholder left: year HCA was founded. |
 | FAQPage schema on questions.html | **Done.** Built from the nine on-page questions and answers. |
 | Home title | **Done.** "HCA \| Agency new business consultancy for an AI-first world". Other titles now "Page \| HCA". |
 | Plausible | **Done (commented out).** Snippet in every page head, commented out, with a TODO to add the domain in Plausible and mention it in privacy.html. |
@@ -53,3 +53,17 @@ Placeholders show on the page as yellow `[TO CONFIRM: …]` marks (`mark.todo`, 
 - Changed: `index.html`, `services.html`, `use-cases.html`, `how-we-work.html`, `founder.html`, `questions.html`, `thanks.html`, `assets/styles.css` (mark.todo rule), `netlify.toml` (font cache header, comment).
 - Added: `privacy.html`, `insights.html`, `404.html`, `robots.txt`, `sitemap.xml`, `assets/fonts.css`, `assets/fonts/*.woff2`, `CHANGES.md`.
 - Unchanged: `assets/main.js`, `assets/hca-ai.css`, images, favicons, video.
+
+## Owner decisions applied (OWNER-DECISIONS.md, 2026-11-16)
+- **Phone removed:** 07775 898475 / `tel:` link taken out of every footer (all 10 pages), the `telephone` field in the home JSON-LD, and "or call us" in privacy.html. The optional phone field on the enquiry form stays.
+- **£7m stat:** worded as a fee in both places; TODOs removed.
+- **Testimonials / case studies:** the six attribution placeholders, the "Named case studies" block (two slots) and the client-logo slot removed from the home page. Existing quotes and case studies unchanged.
+- **Parliamentary Review:** the whole "Recognition" section on founder.html (pullquote, paragraph, link placeholder) removed. No other mentions exist (none in `sameAs`).
+- **ICO:** the ICO-number placeholder removed; privacy.html now says "Chameleon Brands Ltd is registered with the Information Commissioner's Office (registration number ZC276789)." Complaint wording (ico.org.uk) kept.
+- **Prices / photos:** HCA had no price or photo placeholders; nothing to change.
+
+## Placeholders still open
+- founder.html: year HCA was founded.
+- privacy.html: "last updated" date, marketing-email basis, email provider, CRM, international transfer mechanism, retention period; plus a legal review of the draft.
+- insights.html: first article titles and dates.
+- HTML comments only (not visible): whether Alan Cotton is an HCA co-founder (JSON-LD); Plausible switch-on; archive video re-edit.

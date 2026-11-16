@@ -16,14 +16,14 @@ Source: live site scraped with Firecrawl on 16 Nov 2026 (home, the six brand sub
 |---|---|
 | React dev build + in-browser Babel + tweaks panel → plain static HTML/CSS | **Done.** React, ReactDOM, Babel standalone, `tweaks-panel.jsx`, `assets/tweaks.jsx`, the two inline Babel-compiled bundles and `#tweaks-root` removed. The tweaks only controlled lead brand / column count / "How we think" visibility / a hero headline that no longer exists (no colour, density or dark-mode controls were live). Their defaults are baked in: Grow Savvy first in canonical order, 3 columns, "How we think" shown. The inline `grid-template-columns: repeat(3, 1fr)` that React set (which broke the 2-column and 1-column mobile layouts) is gone, so the stylesheet's responsive grid works again. `site.js` kept – it is plain JS and still needed (mobile menu, scroll reveal). The inline video-autoplay helper and year script kept (plain JS). |
 | Home has no headings → H1 + H2s | **Done.** H1 "Chameleon Brands – a group of six specialist businesses" in the intro section; H2s "Our brands", "How we think", "Who we are", "Not sure which brand is right for you?"; H3 group headings. Section labels became H2s with the same look. Sub-pages: section labels became H2s too (H1 → H2 → H3 order). |
-| og:image relative → absolute https | **Done** on every page (`https://chameleon-brands.com/assets/logo-new.png` on home – `assets/logo.png` may not exist; brand pages use their own hero image). TODO comment: a 1200×630 share image would look better. |
+| og:image relative → absolute https | **Done** on every page (`https://chameleon-brands.com/assets/logo-new.png` on home – `assets/logo.png` may not exist; brand pages use their own hero image). |
 | /hca meta "Two decades" → "three decades" | **Done.** Also "go-to-market (GTM)" written out on first use. |
 | /thetaylor "You own it outright: no lock-in, … made in the UK" | **Done / Placeholder.** Now "UK company, European team". "You own it outright" and "no lock-in" aren't stated anywhere on thetaylor.ai (checked the repo), so they're replaced by a visible `[TO CONFIRM]` mark and an HTML TODO to confirm ownership/IP and exit terms. Hyphens on this page changed to en dashes. |
 
 ## Hub – Medium
 | Item | Status |
 |---|---|
-| Short "Who we are" section (Jane Heath and Alan Cotton) | **Done / Placeholder.** Jane's text uses only what the site already says (over 30 years' experience, founded HCA, leads Hummingbird) and her existing portrait. **Needs from owner:** Alan Cotton's photo and a two-line bio. |
+| Short "Who we are" section (Jane Heath and Alan Cotton) | **Done.** Jane's card uses what the site already says (over 30 years' experience, co-founded HCA, leads Hummingbird) and her existing portrait. Alan's bio is adapted from Grow Savvy's who-we-are page; his card has no photo (none exists on the hub). |
 | Company number | **Done.** Footer legal line on every page: "Chameleon Brands Ltd, registered in England and Wales · Company no. 12945712 · Registered office: Dragon House, Princes Way, Bridgend Industrial Estate, Bridgend, CF31 3AQ". Also in JSON-LD. |
 | "Find the right brand" / contact prompt | **Done.** "Not sure which brand is right for you?" section with an email button and the address shown as text (`#contact`). |
 | Present Vive Libre separately from the five B2B brands | **Done.** Five B2B cards under "Five specialist businesses for growing companies"; Vive Libre below a divider under "…and a life on the Costa Blanca". |
@@ -47,8 +47,17 @@ Source: live site scraped with Firecrawl on 16 Nov 2026 (home, the six brand sub
 - `mark.todo` CSS rule added.
 
 ## Notes / not done here
-- **HCA £7m figure:** the hub copies HCA's "£1m/year in fee" wording. HCA's site also calls it "£1m GP". HTML TODO added – once the owner picks the wording on hca.uk.com, use the same here.
-- Hub copy still says "unprecedented access" (/grow-savvy) and "Female-only MDs & CEOs of B2B SMEs" (/hummingbird). These are being changed on the Grow Savvy and Hummingbird sites; bring the hub in line once those wordings are final (not in the hub review, so left unchanged).
+- /grow-savvy now says "access to our 'black book'" and /hummingbird "Female founders, MDs and CEOs of small and mid-sized B2B businesses" (coordinator edits, matching the brand sites).
 - Hero video `logo-animation.mp4`: size unknown, not downloaded; referenced on the live site.
 - Hosting: the hub appears to be on Netlify (forms code in `site.js`). No redirect is needed, so no `netlify.toml` was added. Netlify serves `404.html` automatically.
 - Nothing was deployed, pushed or submitted.
+
+## Owner decisions applied (16 Nov 2026)
+- **Photos (decision 4):** removed Alan Cotton's photo placeholder (card shown without a photo) and the 1200×630 share-image TODO. og:image stays as the logo.
+- **Alan's bio:** placeholder replaced with text adapted from Grow Savvy's who-we-are page (co-founded HCA, founded and ran several small businesses, built sales, marketing, management and account teams). Jane's card now says "co-founded HCA" to match.
+- **Parliamentary Review (decision 3):** removed the sentence from /hummingbird.
+- **HCA £7m (decision 7):** confirmed as fee; the wording already says "£1m/year in fee", TODO removed.
+- No prices, phone numbers, testimonial or ICO placeholders existed on the hub (decisions 1, 2, 5, 6 need no change).
+
+## Placeholders still open
+- /thetaylor: `[TO CONFIRM: ownership and "no lock-in" terms]` (still open with the owner). `mark.todo` CSS kept for it.

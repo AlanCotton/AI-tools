@@ -14,7 +14,7 @@ Images and favicons could not be downloaded (the container cannot reach the site
 | 2 | Canonical, OG/Twitter, JSON-LD | Done on every page. Organization + ProfessionalService JSON-LD on the home page (founders, parent Chameleon Brands Ltd, Bridgend address). Course schema on each workshop page, AboutPage on why-us, FAQPage on faq. `lang="en-GB"`. Logo in schema uses the existing favicon-180.png (no separate logo file exists – the logo is CSS text). |
 | 3 | Branded 404 | Done – `404.html` in the site style with links home, to the workshops and to contact. Uses root links (`/…`) because Netlify serves it at any missing path; those links will not work inside the artifact preview. |
 | 4 | Company details | Done – HCA-style legal line in every footer; company number and registered office also added to the privacy policy's "Who we are". |
-| 5 | Proof | Placeholder – home page now shows the three case-study quotes (anonymous) with slots for client name/logo and a measured result. Needs names, logos and figures from the owner, with client permission. |
+| 5 | Proof | Done – home page now shows the three existing case-study quotes, anonymous as on the live site (owner decision: no named/attributed slots). |
 | 6 | Group link / names | Done – "Part of Chameleon Brands" in every footer. Brand spellings checked. |
 | 7 | Agreed claims | Done – "three decades" kept (no "two decades" on the site); Jane's line uses "over 30 years' experience"; "go-to-market (GTM)" written in full on first use on why-us and faq. |
 
@@ -23,11 +23,11 @@ Images and favicons could not be downloaded (the container cannot reach the site
 | Priority | Item | Status |
 |---|---|---|
 | High | Company details | Done (footer legal line on every page). |
-| High | Three case-study quotes on home page | Done – new "Client results" section before the contact form, links to the full studies on why-us. Name/logo/result slots are placeholders. |
-| High | Phone + direct calendar link | Calendar: Done – uses the Google Calendar link already in script.js (`calendar.app.google/g3XnCTvhj4SAgEpz9`) under every contact form and on get-in-touch. Phone: **Placeholder** in the contact sections and footer (do not reuse HCA's number). |
-| Medium | Workshop facts (length / format / location / group size / from £X) | Done as a "Key facts" list in each workshop sidebar. Length and group size come from the site. Format: Managing a Remote Team = virtual or in person (stated on the site); others show "In person" + **placeholder** asking whether virtual/hybrid is offered. Location and "from £" price: **Placeholder**. |
+| High | Three case-study quotes on home page | Done – new "Client results" section before the contact form, links to the full studies on why-us. Quotes kept exactly as on the live site. |
+| High | Phone + direct calendar link | Calendar: Done – uses the Google Calendar link already in script.js (`calendar.app.google/g3XnCTvhj4SAgEpz9`) under every contact form and on get-in-touch. Phone: not applicable – the brand has no phone number (owner decision). |
+| Medium | Workshop facts (length / format / location / group size) | Done as a "Key facts" list in each workshop sidebar. Length and group size come from the site. Format: Managing a Remote Team = virtual or in person (stated on the site); others show "In person" + **placeholder** asking whether virtual/hybrid is offered. Location: **Placeholder**. No price (owner decision). |
 | Medium | Titles with "sales training" / "UK" | Done where accurate: home, the two sales workshops, account management ("Account Management Training"), FAQ. Internal Communication and Managing a Remote Team are not sales training, so their titles have no "sales training". All titles now use "Page | Growth KnowHow". Meta descriptions rewritten to ~150–160 characters. |
-| Medium | Course schema | Done on all five workshop pages (CourseInstance per format). **TODO:** add an `offers` price once the "from" price is confirmed. |
+| Medium | Course schema | Done on all five workshop pages (CourseInstance per format). No price/offers (owner decision). |
 | Medium | One name for the remote workshop | Done – "Managing a Remote Team" (eyebrow, panel label, H1/H3 "Managing a Remote Team Workshop", title, form option). "Remote Team Management & Collaboration" and "Leadership" removed. URL `/workshops/remote-team` unchanged. |
 | Medium | /why-us heading order | Done – the H1 section now comes before the "Meet Jane & Alan" H2 section. |
 | Medium | "How it works" nav link | Done – added to the nav on every page (links to the home page's #how). |
@@ -35,8 +35,8 @@ Images and favicons could not be downloaded (the container cannot reach the site
 | Medium | LinkedIn + credentials for Jane and Alan, name HCA | HCA: Done (why-us now says "We founded HCA, one of the first go-to-market (GTM) agencies in the UK", linked to hca.uk.com). Founder cards added for Jane Heath and Alan Cotton. LinkedIn URLs and credentials: **Placeholder** (not on the site). Photo alt text changed to "Jane Heath and Alan Cotton" order – check it matches the photo. |
 | Low | Capitalise after "Purpose." | Done on sales-performance, account-management and internal-communication, and also on remote-team, which had the same issue. |
 | Low | Honeypot and duplicate hidden form visually hidden | Done – the honeypot paragraph was visible ("Don't fill this out") and the duplicate form at the bottom of each page was visible because the site-wide `form{display:flex}` overrode it. Honeypot now uses an off-screen class; duplicate form has `hidden` plus `[hidden]{display:none!important}`. |
-| Low | Terms of business (draft) | Done as a template – `terms.html`, "Draft – needs review before publishing" banner, noindex, not in sitemap. Fees, payment terms, VAT, cancellation, IP restrictions and liability cap are **placeholders**. Linked in the footer. |
-| Low | FAQ | Done – `faq.html` from facts on the site, linked in the footer. Answers about virtual delivery, location and price are **placeholders** and are left out of the FAQPage schema until confirmed. |
+| Low | Terms of business (draft) | Done as a template – `terms.html`, "Draft – needs review before publishing" banner, noindex, not in sitemap. Payment terms, VAT, expenses, cancellation, IP restrictions and liability cap are **placeholders** (no prices on the page). Linked in the footer. |
+| Low | FAQ | Done – `faq.html` from facts on the site, linked in the footer. Answers about virtual delivery and location are **placeholders** (the price question was removed) and are left out of the FAQPage schema until confirmed. |
 
 ## Other changes and notes
 - En dashes (–) replace spaced hyphens used as asides throughout; the em dash in the form success message is now an en dash.
@@ -47,3 +47,16 @@ Images and favicons could not be downloaded (the container cannot reach the site
 - script.js is unchanged.
 
 **Update 2026-11-16:** the owner confirmed none of the brands has a phone number, so all phone placeholders have been removed. No phone number is needed.
+
+## Owner decisions applied (16 Nov 2026)
+- **Testimonials/case studies:** removed the client name/logo and measured-result slots (and their TODOs) from the three home-page case-study cards and the TODO on why-us. Quotes and case studies kept exactly as on the live site.
+- **No prices:** removed the "Price – From £" row from every workshop Key facts box, the price TODO from the Course schema, and the "How much does a workshop cost?" question from the FAQ.
+- **Phone numbers:** removed every phone placeholder (footer "Tel:" line and "or call …" in the contact sections) – done by the coordinator and carried into the build.
+- Parliamentary Review, photos, ICO, HCA £7m, Vive Libre, The Taylor: nothing on this site needed changing.
+
+## Placeholders still open (facts we don't have)
+- Jane Heath and Alan Cotton LinkedIn URLs; Jane's credentials; Alan's credentials and years of experience (why-us).
+- Workshop location (all five workshop pages and the FAQ).
+- Whether the four non-remote workshops can be delivered virtually or hybrid (workshop pages and FAQ).
+- Draft terms of business: effective date, VAT, payment terms, expenses, client responsibilities, cancellation/postponement, recording/sharing materials, liability cap.
+- **ICO (corrected decision):** privacy policy now states "Chameleon Brands Ltd is registered with the Information Commissioner's Office (registration number ZC276789)." under "Who we are". Complaint wording (ICO at ico.org.uk) unchanged.

@@ -12,10 +12,10 @@ Files in this folder: index.html, what-we-do.html, what-weve-done.html, why-choo
 | # | Item | Status |
 |---|------|--------|
 | 1 | robots.txt and sitemap.xml | **Done.** sitemap lists the five content pages, lastmod 2026-11-16. privacy-policy (kept `noindex` as on the live site), thanks and 404 are left out. **Owner:** submit the sitemap in Google Search Console. |
-| 2 | Canonical, OG/Twitter, JSON-LD | **Done.** Every page: `lang="en-GB"`, canonical, og:type/site_name/title/description/url/image (full https URLs), twitter:card. Home: Organization + ProfessionalService JSON-LD (address, Chameleon Brands Ltd parent, founders Jane Heath and Alan Cotton). what-we-do: FAQPage JSON-LD (factual answers only; the price question is left out). who-we-are: Person JSON-LD for both founders (TODO to add LinkedIn `sameAs`). Meta descriptions are 151–159 characters. |
+| 2 | Canonical, OG/Twitter, JSON-LD | **Done.** Every page: `lang="en-GB"`, canonical, og:type/site_name/title/description/url/image (full https URLs), twitter:card. Home: Organization + ProfessionalService JSON-LD (address, Chameleon Brands Ltd parent, founders Jane Heath and Alan Cotton). what-we-do: FAQPage JSON-LD (factual answers only). who-we-are: Person JSON-LD for both founders (TODO to add LinkedIn `sameAs`). Meta descriptions are 151–159 characters. |
 | 3 | Branded 404 | **Done (kept and checked).** Existing 404.html kept in its own style; added a "Get in touch" link, the footer with company details, `noindex`, `lang`. It uses root-relative links/assets (`/css/...`, `/`) because Netlify serves it at any URL depth – so inside the claude.ai preview the 404 page shows unstyled; it is correct on Netlify. |
 | 4 | Company details | **Done.** Footer on every page: "Grow Savvy is a trading name of Chameleon Brands Ltd, registered in England and Wales · Company no. 12945712 · Registered office: Dragon House, …". Privacy policy "Who we are" now also gives the company number and registered office. |
-| 5 | Proof | **Placeholder.** Home: two named-testimonial slots; what-weve-done: one named case-study slot. Needs real quotes/case studies with permission from the owner. |
+| 5 | Proof | **Done (owner decision).** The existing case studies are the latest; they are kept exactly as on the live site and their figures are brought onto the home page. No testimonial or case-study placeholders. |
 | 6 | Group link / brand names | **Done.** "Part of Chameleon Brands" in every footer. Brand spellings checked. |
 | 7 | Agreed claims | **Done.** "30+ years in B2B growth"; Jane "over 30 years' experience"; HCA described as one of the UK's first go-to-market consultancies; "go-to-market (GTM)" written out at first GTM on each page; no "two decades". |
 
@@ -26,7 +26,7 @@ Files in this folder: index.html, what-we-do.html, what-weve-done.html, why-choo
 | GA placeholder G-XXXXXXXXXX | **Done.** Snippet removed from every page; HTML comment explains how to re-add it (consent banner first, real ID, update privacy policy cookies section). |
 | H1 typed by JS | **Done.** The H1 now holds "Unlock real growth." in the HTML. typed.js still animates it as an enhancement (starts by deleting the real text), and does not run under `prefers-reduced-motion: reduce`. |
 | Company details in footer | **Done** (see 4). |
-| No proof on home | **Done / Placeholder.** New home sections: case-study figures from what-we've-done (£250K a year from £25K; 2× in two years with three new markets; £1m target, doubled in a year) linking to the case studies; two named-quote placeholders; founders' photo (images/founders.jpg from who-we-are) with a short "Jane & Alan, personally" block. |
+| No proof on home | **Done.** New home sections: case-study figures from what-we've-done (£250K a year from £25K; 2× in two years with three new markets; £1m target, doubled in a year) linking to the case studies; founders' photo (images/founders.jpg from who-we-are) with a short "Jane & Alan, personally" block. |
 
 ## Grow Savvy – Medium
 | Item | Status |
@@ -34,7 +34,7 @@ Files in this folder: index.html, what-we-do.html, what-weve-done.html, why-choo
 | Titles | **Done.** "Page \| Grow Savvy"; home "Grow Savvy \| Business growth consultant UK". |
 | Phone | **Not needed** – the owner confirmed Grow Savvy has no phone number; placeholder removed. |
 | "Book a 30-minute call" | **Placeholder.** Button added in the contact block on every page; no calendar link exists on the site, so it points to #contact with a TODO. Needs the booking URL. |
-| Engagement models / FAQ | **Done / Placeholder.** what-we-do: three engagement models built from services the site already describes (discovery session, growth and GTM mentoring programme, ongoing mentoring) with "From [TO CONFIRM]" prices; six-question FAQ (answers taken from existing site copy, price answer is a placeholder). Owner to confirm the models, formats and prices. |
+| Engagement models / FAQ | **Done.** what-we-do: three engagement models built from services the site already describes (discovery session, growth and GTM mentoring programme, ongoing mentoring), describing format and what's included, with no prices; five-question FAQ with answers taken from existing site copy. |
 | Founder bios with LinkedIn | **Placeholder.** who-we-are: bio cards for Jane Heath and Alan Cotton (only agreed facts: Jane over 30 years' experience; both co-founded HCA) plus placeholders for fuller bios and LinkedIn URLs (none on the site). |
 | Positioning (Grow Savvy = growth support incl. AI; The Taylor = bespoke AI builds) | **Done.** Home AI pillar and a what-we-do FAQ answer now say AI adoption is part of the growth support and point bespoke AI builds to The Taylor (thetaylor.ai). Typed line "Integrate AI, properly." → "Put AI to work, properly." Meta descriptions adjusted. |
 
@@ -45,6 +45,20 @@ Files in this folder: index.html, what-we-do.html, what-weve-done.html, why-choo
 | "unprecedented access" | **Done.** Now "You'll also have access to our ‘black book’…". |
 | One quote style, "Jane & Alan" order | **Done.** UK single curly quotes throughout (‘Trojan horse’, ‘why you?’, ‘we’). Founders named Jane first in text, alt text and schema. The name captions under the founders' photo stay Alan (left) / Jane (right) because they label positions in the photo. |
 | "B2B SME" in hero | **Done.** "Running, and growing, a small or mid-sized business…". |
+
+## Owner decisions applied (2026-11-16)
+- **Testimonials and case studies:** removed the home-page testimonials section (it held only two named-quote placeholders) and the named case-study slot on what-weve-done. The three existing case studies are unchanged.
+- **No prices:** removed the three "From [TO CONFIRM: £ …]" lines from the engagement models (the models stay, describing format and what's included), the "How much does it cost?" FAQ, and the now-unused `.price` and `.quote` CSS. No price appeared in any schema.
+- **Phone:** no phone number; placeholder removed (by the coordinator). The optional phone field on the form stays.
+- **Photos:** no photo placeholders were on this site; the founder cards on who-we-are show no photo and the existing founders.jpg is used on home and who-we-are.
+- **Parliamentary Review, ICO number, HCA £7m, Vive Libre, The Taylor:** not present on this site; nothing to change.
+
+### Placeholders that remain
+- Calendar booking link for "Book a 30-minute call" (contact block on every page).
+- LinkedIn URLs for Jane Heath and Alan Cotton (who-we-are bio cards; then add them as `sameAs` in the Person JSON-LD).
+- Short bios for Jane Heath and Alan Cotton (who-we-are bio cards).
+
+`mark.todo` CSS is kept because these placeholders remain.
 
 ## Not changed / notes
 - netlify.toml: not needed (no redirects required; Netlify serves 404.html automatically and pretty URLs map /what-we-do to what-we-do.html).

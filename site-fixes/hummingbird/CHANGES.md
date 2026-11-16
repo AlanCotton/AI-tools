@@ -24,31 +24,43 @@ No netlify.toml needed (no redirects required).
 2. Canonical, OG/Twitter, JSON-LD – **Done** (Organization + ProfessionalService with parentOrganization Chameleon Brands Ltd; founder Jane Heath only, as the site names only Jane). og:image uses the live photo URL – switch to the renamed file once uploaded.
 3. Branded 404 – **Done.**
 4. Company details – **Done** (HCA-style legal line in the footer of index and privacy).
-5. Proof – **Placeholder**: 3 testimonial slots, 3 case-study slots (third optional), network credentials slot. Needs real, permissioned content from owner.
+5. Proof – **Resolved by owner decision**: the site had no testimonials or case studies, and the owner confirmed there are no new ones. The placeholder slots were removed.
 6. Group link / brand names – **Done** ("Part of Chameleon Brands" in footer; brand name spellings already consistent).
 7. Agreed claims – **Done**: "30 years of go-to-market experience" → "over 30 years’ go-to-market (GTM) experience" (GTM spelled out on first use); "over 30 years of experience" → "over 30 years’ experience". No "two decades" on the site.
 
 ## Hummingbird – High
 - `<title>`, meta description, `lang="en-GB"` – **Done.** Title: "Hummingbird | Business mentoring for female founders".
-- Privacy policy – **Done (draft)**: privacy.html with "Draft – needs review before publishing" banner; linked next to the form button and in the footer. **Placeholder**: ICO registration number, publication date, email provider, retention periods, transfer safeguards, lawful bases confirmation, marketing emails.
+- Privacy policy – **Done (draft)**: privacy.html with "Draft – needs review before publishing" banner; linked next to the form button and in the footer. ICO registration ZC276789 added. **Placeholder**: publication date, email provider, retention periods, transfer safeguards, lawful bases confirmation, marketing emails.
 - Company details in footer – **Done.**
-- Proof slots (testimonials, 2–3 case studies, network credentials) – **Placeholder.**
-- Jane's LinkedIn + Parliamentary Review link – **Placeholder**: neither URL is on the site; two link chips added with `href="#"` and a visible TO CONFIRM note.
-- What clients get (format, first call, indicative price) – **Placeholder** within a new "Working together" section; only facts already on the site are stated (one-to-one coaching with Jane plus network experts; enquiry then calendar booking). Needs session/programme format, first-call length and cost, and "from £X" price.
+- Proof slots – **Removed per owner decision** (no new testimonials, case studies or credentials).
+- Jane's LinkedIn – **Placeholder**: the URL is not on the site. A link chip was added with `href="#"` and a visible TO CONFIRM note. Parliamentary Review – **Removed per owner decision** (it never happened).
+- What clients get (format, first call) – **Placeholder** within a new "Working together" section (two cards). It states only facts already on the site: one-to-one coaching with Jane plus network experts, and an enquiry followed by a calendar booking. Still needed: session and programme format, and the first-call length and what happens next. The price is not shown, per the owner's decision.
 
 ## Hummingbird – Medium
 - Form labels; name and email `required` – **Done** (visible labels, autocomplete attributes, `data-netlify`, `netlify-honeypot`, hidden `form-name`). Owner: send a test enquiry after deploying. In the artifact preview the form does not send (shows a "Preview only" message).
 - Hero video `muted`, `playsinline`, `poster` – **Done** (poster: images/hero-poster.svg; autoplay is skipped under prefers-reduced-motion).
 - "Book a call" → Google Calendar link already on the site (`https://calendar.app.google/36cKDgewPTFvcCmB8?source=hummingbird-site`) – **Done** (header CTA, plus a direct link under the form).
 - Rename WhatsApp image – **Not possible here** (file could not be downloaded); live URL kept, TODOs added, new name proposed above. Alt text improved to "Jane Heath, founder of Hummingbird Consultancy".
-- Person schema for Jane Heath – **Done** (sameAs to be added once LinkedIn/Parliamentary Review URLs are known).
+- Person schema for Jane Heath – **Done** (add `sameAs` with her LinkedIn URL once known).
 
 ## Hummingbird – Low
 - "Female-only founders, MDs & CEOs" → "Female founders, MDs and CEOs" – **Done.**
-- Nav order matches page order – **Done** (Network, Meet Jane, Approach, Results, Working together, Book a call; footer links in the same order).
+- Nav order matches page order – **Done** (Network, Meet Jane, Approach, Working together, Book a call; footer links in the same order).
 - En dashes – **Done** (all spaced hyphens in copy replaced with –).
 - Eligibility note + Equality Act TODO – **Done / Placeholder**: short eligibility line under "Who we work with" with a TO CONFIRM mark and an HTML TODO asking for a legal check of the women-only offer (clients and network) under the Equality Act 2010.
 
 ## Other notes for the owner
 - Google Fonts are still loaded from Google (unchanged); the draft privacy policy mentions this.
 - "Meet Jane" text now uses her full name, "Jane Heath", to match the Person schema.
+
+## Owner decisions applied (2026-11-16)
+- **Testimonials and case studies:** removed the whole "Results" section (it held only placeholders), its nav and footer links, the network-credentials slot and the unused `.hb-slot` CSS.
+- **No prices:** removed the "Indicative price" card from "Working together" and "whether it is free" from the first-call placeholder. The section keeps the format and first-call cards.
+- **Parliamentary Review:** removed the sentence about the Parliamentary Review paper from "Meet Jane", the chip and link with its placeholder, and the mention in the `sameAs` TODO. Jane's other copy is unchanged.
+- **Photos and phone numbers:** nothing to change. There were no photo or phone placeholders. The photo-rename TODO stays, because it concerns the existing photo.
+- **ICO:** privacy.html now says Chameleon Brands Ltd is registered with the ICO (registration number ZC276789). The complaint wording points to ico.org.uk.
+
+### Remaining placeholders
+- index.html: Jane's LinkedIn URL; session and programme format; first-call length and next steps; final eligibility wording after the Equality Act legal check.
+- privacy.html: publication date; marketing emails and consent; lawful bases; email provider; transfer safeguards; retention periods (enquiries and clients); cookies statement confirmed at publication.
+- Owner actions: upload the renamed photo, submit the sitemap, send a test enquiry.
