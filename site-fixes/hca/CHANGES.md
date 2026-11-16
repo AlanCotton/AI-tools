@@ -9,7 +9,7 @@ Placeholders show on the page as yellow `[TO CONFIRM: …]` marks (`mark.todo`, 
 | # | Item | Status |
 |---|------|--------|
 | 1 | robots.txt and sitemap.xml | **Done.** `robots.txt` (allow all, sitemap line) and `sitemap.xml` (8 real pages, lastmod 2026-11-16; thanks and 404 left out). Submitting the sitemap in Google Search Console is the owner's job. |
-| 2 | Canonical, OG/Twitter, JSON-LD | **Done.** Every page has canonical, og:type/site_name/title/description/url/image (absolute `https://hca.uk.com/assets/img/hero-arrows.jpg`) and `twitter:card`. Home has Organization + ProfessionalService JSON-LD (address, email, parentOrganization Chameleon Brands Ltd). Founder lists Jane Heath only, because the site says Jane founded HCA (HTML comment in index.html asks whether Alan Cotton should be added). Meta descriptions rewritten to 150–160 characters. Canonicals use the `.html` URLs the site links to. |
+| 2 | Canonical, OG/Twitter, JSON-LD | **Done.** Every page has canonical, og:type/site_name/title/description/url/image (absolute `https://hca.uk.com/assets/img/hero-arrows.jpg`) and `twitter:card`. Home has Organization + ProfessionalService JSON-LD (address, email, parentOrganization Chameleon Brands Ltd). Founder lists Jane Heath and Alan Cotton (owner confirmed they co-founded HCA). Meta descriptions rewritten to 150–160 characters. Canonicals use the `.html` URLs the site links to. |
 | 3 | Branded 404 | **Done.** `404.html` in the site's style (noindex) with links home and to the contact form. Netlify serves it automatically. Note: it uses relative asset paths like the rest of the site, so it is fully styled for top-level missing URLs (e.g. `/old-page`); for nested ones (`/a/b`) it would lose styling – switch its asset paths to `/assets/…` if that matters. |
 | 4 | Company details | **Already present** (HCA legal line in every footer). Kept, and added to the new pages. |
 | 5 | Proof / testimonials | **Resolved by owner.** Existing testimonials and case studies are the latest; kept exactly as on the live site, no placeholders. |
@@ -60,10 +60,11 @@ Placeholders show on the page as yellow `[TO CONFIRM: …]` marks (`mark.todo`, 
 - **Testimonials / case studies:** the six attribution placeholders, the "Named case studies" block (two slots) and the client-logo slot removed from the home page. Existing quotes and case studies unchanged.
 - **Parliamentary Review (owner correction):** the "Recognition" section on founder.html is restored exactly as in the original (quote, paragraph and its "A free hour, no strings" button). Only the article-link placeholder I had added is removed; the original had no article link. Nothing in `sameAs`.
 - **ICO:** the ICO-number placeholder removed; privacy.html now says "Chameleon Brands Ltd is registered with the Information Commissioner's Office (registration number ZC276789)." Complaint wording (ico.org.uk) kept.
+- **Co-founders (owner correction):** founder.html now says Jane Heath "co-founded" HCA (meta/og description, body, title "Jane Heath, co-founder | HCA", portrait alt "Portrait of Jane Heath, co-founder of HCA", image tag, Person `jobTitle`). Home JSON-LD lists Jane Heath and Alan Cotton as founders; the TODO about it is removed. No new copy about Alan.
 - **Prices / photos:** HCA had no price or photo placeholders; nothing to change.
 
 ## Placeholders still open
 - founder.html: year HCA was founded.
 - privacy.html: "last updated" date, marketing-email basis, email provider, CRM, international transfer mechanism, retention period; plus a legal review of the draft.
 - insights.html: first article titles and dates.
-- HTML comments only (not visible): whether Alan Cotton is an HCA co-founder (JSON-LD); Plausible switch-on; archive video re-edit.
+- HTML comments only (not visible): Plausible switch-on; archive video re-edit.
