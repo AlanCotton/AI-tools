@@ -32,7 +32,7 @@ Files in this folder: index.html, what-we-do.html, what-weve-done.html, why-choo
 | Item | Status |
 |------|--------|
 | Titles | **Done.** "Page \| Grow Savvy"; home "Grow Savvy \| Business growth consultant UK". |
-| Phone | **Placeholder** in the contact block on every page – needs the Grow Savvy number (HCA's number not reused). |
+| Phone | **Not needed** – the owner confirmed Grow Savvy has no phone number; placeholder removed. |
 | "Book a 30-minute call" | **Placeholder.** Button added in the contact block on every page; no calendar link exists on the site, so it points to #contact with a TODO. Needs the booking URL. |
 | Engagement models / FAQ | **Done / Placeholder.** what-we-do: three engagement models built from services the site already describes (discovery session, growth and GTM mentoring programme, ongoing mentoring) with "From [TO CONFIRM]" prices; six-question FAQ (answers taken from existing site copy, price answer is a placeholder). Owner to confirm the models, formats and prices. |
 | Founder bios with LinkedIn | **Placeholder.** who-we-are: bio cards for Jane Heath and Alan Cotton (only agreed facts: Jane over 30 years' experience; both co-founded HCA) plus placeholders for fuller bios and LinkedIn URLs (none on the site). |

@@ -45,3 +45,5 @@ Images and favicons could not be downloaded (the container cannot reach the site
 - Observation, not changed: script.js defines `handleSubmit()` (AJAX post, then opens the calendar and shows "Thanks! Opening the calendar…"), but the live forms do not call it, so the form does a plain POST and the success message never shows. If the "Send & choose a time" behaviour is wanted, add `onsubmit="return handleSubmit(event)"` to the forms. Left as it is because it was not in the review.
 - Fonts still load from Google Fonts (not in this site's review).
 - script.js is unchanged.
+
+**Update 2026-11-16:** the owner confirmed none of the brands has a phone number, so all phone placeholders have been removed. No phone number is needed.

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse by budget | Vive Libre</title>
+<meta name="description" content="Example Costa Blanca North homes by budget, from family villas to frontline estates. Curated by Vive Libre, your independent buyer's agent. Ask us for live options.">
+<link rel="canonical" href="https://vivelibrespain.com/listings">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vive Libre">
+<meta property="og:title" content="Browse by budget | Vive Libre, Costa Blanca North">
+<meta property="og:description" content="Example Costa Blanca North homes by budget, from family villas to frontline estates. Curated by Vive Libre, your independent buyer's agent. Ask us for live options.">
+<meta property="og:url" content="https://vivelibrespain.com/listings">
+<meta property="og:image" content="https://vivelibrespain.com/images/photos/prop-altea-hills.jpg?v=5">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Browse by budget | Vive Libre, Costa Blanca North">
+<meta name="twitter:description" content="Example Costa Blanca North homes by budget, from family villas to frontline estates. Curated by Vive Libre, your independent buyer's agent. Ask us for live options.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<!-- TODO: self-host Hanken Grotesk (download the woff2 files, add @font-face to styles.css, remove these Google Fonts links and update the Fonts line in privacy.html) -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="https://vivelibrespain.com/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<style>
+.ph.has-photo { position: relative; }
+.price-chip { position: absolute; left: 1rem; top: 1rem; z-index: 3; font-family: var(--sans); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.01em; color: var(--deep); background: rgba(251, 253, 252, 0.94); padding: 0.5em 0.85em; border-radius: 100px; box-shadow: var(--shadow-soft); }
+.specs { display: flex; flex-wrap: wrap; gap: 0 1.1rem; margin: 1rem 0 1.1rem; list-style: none; padding: 0; }
+.specs li { font-size: 0.9rem; color: var(--ink-soft); display: flex; align-items: center; gap: 0.45em; }
+.specs li + li { padding-left: 1.1rem; border-left: 1px solid var(--line); }
+.specs .v { font-weight: 700; color: var(--ink); }
+.prop-desc { color: var(--ink-soft); font-size: 1rem; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.8rem; }
+.filter-tab { font-family: var(--sans); font-size: 0.92rem; font-weight: 600; letter-spacing: 0.01em; padding: 0.7em 1.25em; border-radius: 100px; border: 1px solid rgba(12, 58, 67, 0.4); color: #0c3a43; background: rgba(255, 255, 255, 0.4); cursor: pointer; white-space: nowrap; transition: background 0.3s, color 0.3s, border-color 0.3s; }
+.filter-tab:hover { border-color: #0c3a43; }
+.filter-tab[aria-pressed="true"] { background: #0c3a43; color: #67dede; border-color: #0c3a43; }
+.count-line { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 1.4rem; }
+.prop-card.hide { display: none; }
+.live-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; margin-top: 1.4rem; }
+.disclaimer { font-size: 0.86rem; color: var(--ink-mute); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.3rem; background: var(--shell); }
+@media (max-width: 600px) { .filter-tab { font-size: 0.85rem; padding: 0.62em 1.05em; } }
+.vl-editor { position: fixed; right: 1rem; bottom: 1rem; z-index: 200; width: min(420px, calc(100vw - 2rem)); max-height: 80vh; overflow: auto; background: var(--shell); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow-lift); padding: 1.1rem 1.2rem 1.3rem; }
+.vl-editor.vl-ed-min { max-height: 52px; overflow: hidden; }
+.vl-ed-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.vl-ed-head strong { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; color: var(--ink); }
+.vl-ed-close { background: none; border: 1px solid var(--line); border-radius: 6px; width: 30px; height: 30px; cursor: pointer; color: var(--ink-soft); font-size: 1.1rem; line-height: 1; }
+.vl-ed-note { font-size: 0.8rem; color: var(--ink-mute); margin: 0.6rem 0 1rem; line-height: 1.5; }
+.vl-ed-note code { font-family: var(--mono); font-size: 0.92em; color: var(--sea); }
+.vl-ed-rows { display: flex; flex-direction: column; gap: 0.7rem; }
+.vl-ed-row { display: flex; flex-direction: column; gap: 0.3rem; }
+.vl-ed-row span { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.02em; color: var(--ink-soft); }
+.vl-ed-row input { border: 1px solid var(--line); border-radius: 6px; padding: 0.6em 0.7em; font-size: 0.85rem; color: var(--ink); background: #fff; }
+.vl-ed-row input:focus { outline: none; border-color: var(--sea); box-shadow: rgba(60, 110, 118, 0.14) 0 0 0 3px; }
+.vl-ed-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 1.1rem; }
+.vl-ed-actions .btn { padding: 0.7em 1.1em; font-size: 0.8rem; }
+.vl-ed-msg { font-size: 0.78rem; color: var(--sea); font-weight: 600; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="horizonGrad" x1="6" y1="10" x2="58" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4FA6D6"></stop><stop offset="0.52" stop-color="#74CEC9"></stop><stop offset="1" stop-color="#A6D8EC"></stop></linearGradient></defs></svg>
+
+<header class="site-header solid">
+  <div class="nav-inner">
+    <a aria-label="Vive Libre home" class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="26" r="13"></circle><line x1="9" y1="44" x2="55" y2="44"></line><line x1="15" y1="51" x2="49" y2="51"></line><line x1="23" y1="58" x2="41" y2="58"></line></svg><span class="brand-text">Vive Libre<span class="vl-sub">Costa Blanca</span></span></a>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a aria-current="page" href="areas.html">Areas &amp; homes</a></li>
+        <li><a class="nav-cta" href="contact.html">Book a call</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero on-sea">
+  <div class="wrap">
+    <span class="kicker on-dark reveal"><a href="areas.html#homes" style="color:inherit">Properties</a> · Browse by budget</span>
+    <h1 class="display reveal" style="margin-top:1.2rem">Browse by budget.</h1>
+    <p class="lead reveal d1">A curated snapshot of the Costa Blanca North's upper market, from a hillside villa to a frontline estate. These are examples to show the range; tell us your brief and we'll bring you live options to match, including off-market homes.</p>
+    <div class="filters reveal d1" role="group" aria-label="Filter properties by budget">
+      <button class="filter-tab" data-filter="all" aria-pressed="true">All homes</button>
+      <button class="filter-tab" data-filter="villas" aria-pressed="false">Villas €950k–€2.5m</button>
+      <button class="filter-tab" data-filter="frontline" aria-pressed="false">Frontline &amp; estates €4m+</button>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand">
+  <div class="wrap">
+    <p class="count-line reveal" id="count-line">Showing all example homes  ·  7 examples</p>
+    <div class="grid g-3" id="prop-grid">
+      <article class="card prop-card reveal" data-band="villas">
+        <div class="ph has-photo"><img class="scene" src="https://vivelibrespain.com/images/photos/prop-finestrat.jpg?v=5" alt="Contemporary villa with sea views in Finestrat"><span class="price-chip">€975,000</span></div>
+        <div class="card-body">
+          <span class="card-tag">Finestrat · Sea views</span>
+          <h3>Contemporary villa with sea &amp; mountain views</h3>
+          <ul class="specs"><li><span class="v">3</span> bed</li><li><span class="v">3</span> bath</li><li><span class="v">210 m²</span></li></ul>
+          <p class="prop-desc">Bright open-plan living beneath the Puig Campana, with a private pool and both sea and mountain on the horizon.</p>
+          <a class="tlink prop-link" data-prop="finestrat-villa" href="contact.html" style="margin-top:1rem">Enquire <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card prop-card reveal" data-band="villas">
+        <div class="ph has-photo"><img class="scene" src="https://vivelibrespain.com/images/photos/terrace.jpg?v=5" alt="Modern villa with infinity pool in Moraira"><span class="price-chip">€1,295,000</span></div>
+        <div class="card-body">
+          <span class="card-tag">Moraira · Benimeit</span>
+          <h3>Modern hillside villa with infinity pool</h3>
+          <ul class="specs"><li><span class="v">4</span> bed</li><li><span class="v">3</span> bath</li><li><span class="v">240 m²</span></li></ul>
+          <p class="prop-desc">South-facing and serene, with open sea and mountain views and seamless indoor–outdoor living.</p>
+          <a class="tlink prop-link" data-prop="moraira-villa" href="contact.html" style="margin-top:1rem">Enquire <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card prop-card reveal d1" data-band="villas">
+        <div class="ph has-photo"><img class="scene" src="https://vivelibrespain.com/images/photos/prop-denia.jpg?v=5" alt="Family villa with pool beneath the Montgó in Dénia"><span class="price-chip">€1,650,000</span></div>
+        <div class="card-body">
+          <span class="card-tag">Dénia · Montgó</span>
+          <h3>Family villa beneath the Montgó</h3>
+          <ul class="specs"><li><span class="v">4</span> bed</li><li><span class="v">3</span> bath</li><li><span class="v">280 m²</span></li></ul>
+          <p class="prop-desc">Established gardens, a private pool and easy reach of the town, beaches and international schools.</p>
+          <a class="tlink prop-link" data-prop="denia-villa" href="contact.html" style="margin-top:1rem">Enquire <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card prop-card reveal d2" data-band="villas">
+        <div class="ph has-photo"><img class="scene" src="https://vivelibrespain.com/images/photos/villa.jpg?v=5" alt="Contemporary villa in Jávea"><span class="price-chip">€2,450,000</span></div>
+        <div class="card-body">
+          <span class="card-tag">Jávea · Balcón al Mar</span>
+          <h3>Contemporary villa with panoramic sea views</h3>
+          <ul class="specs"><li><span class="v">4</span> bed</li><li><span class="v">4</span> bath</li><li><span class="v">340 m²</span></li></ul>
+          <p class="prop-desc">Walls of glass framing the bay, an infinity pool and a summer kitchen built for long lunches.</p>
+          <a class="tlink prop-link" data-prop="javea-villa" href="contact.html" style="margin-top:1rem">Enquire <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card prop-card reveal" data-band="frontline">
+        <div class="ph has-photo"><img class="scene" src="https://vivelibrespain.com/images/photos/prop-altea-hills.jpg?v=5" alt="Frontline mansion in Altea Hills"><span class="price-chip">€4,200,000</span></div>
+        <div class="card-body">
+          <span class="card-tag">Altea Hills · Gated</span>
+          <h3>Frontline mansion above the bay</h3>
+          <ul class="specs"><li><span class="v">5</span> bed</li><li><span class="v">6</span> bath</li><li><span class="v">600 m²</span></li></ul>
+          <p class="prop-desc">An architectural statement with lift, spa and cinema, on an infinity terrace over the bay of Altea.</p>
+          <a class="tlink prop-link" data-prop="altea-mansion" href="contact.html" style="margin-top:1rem">Enquire <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card prop-card reveal d1" data-band="frontline">
+        <div class="ph has-photo"><img class="scene" src="https://vivelibrespain.com/images/photos/prop-benissa-coast.jpg?v=5" alt="Frontline estate terrace on the Benissa coast"><span class="price-chip">€5,400,000</span></div>
+        <div class="card-body">
+          <span class="card-tag">Benissa · Coast</span>
+          <h3>Frontline estate with private sea access</h3>
+          <ul class="specs"><li><span class="v">5</span> bed</li><li><span class="v">5</span> bath</li><li><span class="v">720 m²</span></li></ul>
+          <p class="prop-desc">A rare position on the rugged Benissa coast, with steps to the water and uninterrupted horizons.</p>
+          <a class="tlink prop-link" data-prop="benissa-estate" href="contact.html" style="margin-top:1rem">Enquire <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card prop-card reveal d2" data-band="frontline">
+        <!-- TODO: this card still uses the Moraira marina town photo. No matching property photo exists on the site; supply one (e.g. images/photos/prop-moraira-frontline.jpg) and swap it in. -->
+        <div class="ph has-photo"><img class="scene" src="https://vivelibrespain.com/images/photos/moraira.jpg?v=5" alt="Moraira marina and coast"><span class="price-chip">€4,950,000</span></div>
+        <div class="card-body">
+          <span class="card-tag">Moraira · Frontline</span>
+          <h3>Frontline villa above its own cove</h3>
+          <ul class="specs"><li><span class="v">5</span> bed</li><li><span class="v">5</span> bath</li><li><span class="v">540 m²</span></li></ul>
+          <p class="prop-desc">Walls of glass, a sea-edge pool and the marina a short walk away: privacy without isolation.</p>
+          <a class="tlink prop-link" data-prop="moraira-frontline" href="contact.html" style="margin-top:1rem">Enquire <span class="arr">→</span></a>
+        </div>
+      </article>
+
+    </div>
+    <p class="fineprint" style="margin-top:1rem"><mark class="todo">[TO CONFIRM: photo for the Moraira frontline villa – it currently shows the Moraira marina]</mark></p>
+    <div class="disclaimer reveal" style="margin-top:clamp(2rem,4vw,3rem)">
+      <strong>About these examples.</strong> Prices, sizes and locations are indicative of the current Costa Blanca North market in each band. They're here to show the range, not as a fixed portfolio. Tell us your brief and we'll curate live options to match, including off-market homes you won't find on the portals.
+      <div class="live-row">
+        <span class="fineprint">Prefer to scan the open market yourself?</span>
+        <a class="tlink" id="live-link" href="https://www.idealista.com/en/venta-viviendas/alicante-provincia/con-precio-desde_950000/" target="_blank" rel="noopener" style="font-size:0.88rem">View current listings on Idealista <span class="arr">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sea">
+  <div class="wrap center measure reveal">
+    <h2 style="color:var(--shell)">Tell us what you're picturing.</h2>
+    <p class="lead" style="margin-top:1.2rem; color:var(--on-deep-soft)">Whatever your budget or stage, we'll search the whole market on your behalf and bring you a shortlist worth your time, calmly, and with no obligation.</p>
+    <div class="hero-actions" style="justify-content:center; margin-top:2rem">
+      <a class="btn btn-ochre" href="contact.html">Start your search <span class="arr">→</span></a>
+      <a class="btn btn-ghost on-dark" href="how-it-works.html">How we help</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="26" r="13"></circle><line x1="9" y1="44" x2="55" y2="44"></line><line x1="15" y1="51" x2="49" y2="51"></line><line x1="23" y1="58" x2="41" y2="58"></line></svg><span class="brand-text">Vive Libre<span class="vl-sub">Costa Blanca</span></span></a>
+        <p>A personal buyer's agent and relocation partner for international buyers on the Costa Blanca North. Live free.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="buying-process.html">Buying process</a></li>
+          <li><a href="how-it-works.html#buying-safely">Buying safely</a></li>
+          <li><a href="how-it-works.html#rentals">Rentals &amp; orientation</a></li>
+          <li><a aria-current="page" href="areas.html">Areas &amp; homes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy &amp; cookies</a></li>
+          <li><a href="aviso-legal.html">Aviso Legal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-news">
+        <!-- TODO: the "Join the community" newsletter form was a demo (it stored nothing) and has been removed.
+             Re-add a real sign-up once a mailing list provider is chosen, and name that provider in privacy.html. -->
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:hello@vivelibrespain.com">hello@vivelibrespain.com</a></li>
+          <li>WhatsApp: Jane <a href="https://wa.me/447770447149" target="_blank" rel="noopener">+44 7770 447149</a></li>
+          <li>WhatsApp: Estelle <a href="https://wa.me/34675981829" target="_blank" rel="noopener">+34 675 98 18 29</a></li>
+          <li><a href="contact.html">Book a free discovery call →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Vive Libre · vivelibrespain.com</span>
+      <span>Independent buyer's agent &amp; relocation concierge · Costa Blanca North, Spain</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+(function () {
+  /* ============================================================
+     PROPERTY LINKS - edit these to point each example at a real,
+     live listing. Leave "" to keep the card on "Enquire" (-> contact).
+     Tip: open this page as  listings.html?edit=1  for a friendly
+     editor that updates these for you and gives you the code to paste
+     back here so the links work for everyone.
+     ============================================================ */
+  var PROPERTY_LINKS = {
+    "finestrat-villa":  "",
+    "moraira-villa":    "",
+    "denia-villa":      "",
+    "javea-villa":      "",
+    "altea-mansion":    "",
+    "benissa-estate":   "",
+    "moraira-frontline":""
+  };
+  var PROP_TITLES = {
+    "finestrat-villa":"Finestrat · Contemporary villa (€975k)",
+    "moraira-villa":"Moraira · Hillside villa (€1.295m)",
+    "denia-villa":"Dénia · Family villa (€1.65m)",
+    "javea-villa":"Jávea · Contemporary villa (€2.45m)",
+    "altea-mansion":"Altea Hills · Frontline mansion (€4.2m)",
+    "benissa-estate":"Benissa · Frontline estate (€5.4m)",
+    "moraira-frontline":"Moraira · Frontline villa (€4.95m)"
+  };
+  var STORE_KEY = "vl_prop_links";
+
+  function merged() {
+    var m = {}; for (var k in PROPERTY_LINKS) m[k] = PROPERTY_LINKS[k];
+    try {
+      var saved = JSON.parse(localStorage.getItem(STORE_KEY) || "{}");
+      for (var k2 in saved) if (k2 in m && typeof saved[k2] === "string") m[k2] = saved[k2];
+    } catch (e) {}
+    return m;
+  }
+
+  function applyLinks() {
+    var links = merged();
+    document.querySelectorAll(".prop-link").forEach(function (a) {
+      var id = a.getAttribute("data-prop");
+      var url = (links[id] || "").trim();
+      if (url) {
+        a.setAttribute("href", url);
+        a.setAttribute("target", "_blank");
+        a.setAttribute("rel", "noopener");
+        a.innerHTML = 'View this property <span class="arr">↗</span>';
+      } else {
+        a.setAttribute("href", "contact.html");
+        a.removeAttribute("target");
+        a.removeAttribute("rel");
+        a.innerHTML = 'Enquire <span class="arr">→</span>';
+      }
+    });
+  }
+  applyLinks();
+
+  var tabs = document.querySelectorAll(".filter-tab");
+  var cards = document.querySelectorAll(".prop-card");
+  var countLine = document.getElementById("count-line");
+  var liveLink = document.getElementById("live-link");
+  var labels = {
+    all: "Showing all example homes",
+    villas: "Villas · €950k – €2.5m",
+    frontline: "Frontline & estates · €4m and above"
+  };
+  var liveLinks = {
+    all: "https://www.idealista.com/en/venta-viviendas/alicante-provincia/con-precio-desde_950000/",
+    villas: "https://www.idealista.com/en/venta-viviendas/alicante-provincia/con-precio-desde_950000,precio-hasta_2500000,chalets/",
+    frontline: "https://www.idealista.com/en/venta-viviendas/alicante-provincia/con-precio-desde_4000000,chalets/"
+  };
+  function apply(filter) {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var match = filter === "all" || c.getAttribute("data-band") === filter;
+      c.classList.toggle("hide", !match);
+      if (match) shown++;
+    });
+    tabs.forEach(function (t) { t.setAttribute("aria-pressed", t.getAttribute("data-filter") === filter ? "true" : "false"); });
+    if (countLine) countLine.textContent = (labels[filter] || labels.all) + "  ·  " + shown + " example" + (shown === 1 ? "" : "s");
+    if (liveLink && liveLinks[filter]) liveLink.setAttribute("href", liveLinks[filter]);
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener("click", function () {
+      var f = t.getAttribute("data-filter");
+      apply(f);
+      try { history.replaceState(null, "", f === "all" ? "listings.html" : "listings.html?band=" + f); } catch (e) {}
+    });
+  });
+  var params = new URLSearchParams(window.location.search);
+  var band = params.get("band");
+  apply(["villas", "frontline"].indexOf(band) > -1 ? band : "all");
+
+  if (params.get("edit") === "1") {
+    var elinks = merged();
+    var rows = Object.keys(PROP_TITLES).map(function (id) {
+      return '<label class="vl-ed-row"><span>' + PROP_TITLES[id] + '</span>' +
+        '<input type="url" data-edit="' + id + '" value="' + (elinks[id] || "").replace(/"/g, "&quot;") +
+        '" placeholder="Paste live listing URL, or leave blank for Enquire" /></label>';
+    }).join("");
+    var panel = document.createElement("div");
+    panel.className = "vl-editor";
+    panel.innerHTML =
+      '<div class="vl-ed-head"><strong>Update property links</strong>' +
+      '<button type="button" class="vl-ed-close" aria-label="Minimise">–</button></div>' +
+      '<p class="vl-ed-note">Paste a live listing URL against any home and the card updates instantly and switches to “View this property”. Edits are saved in this browser for preview. To make them permanent for all visitors, press <em>Copy code</em> and paste the block into <code>listings.html</code> (the PROPERTY LINKS section), then re-upload.</p>' +
+      '<div class="vl-ed-rows">' + rows + '</div>' +
+      '<div class="vl-ed-actions">' +
+      '<button type="button" class="btn btn-ochre vl-ed-copy">Copy code</button>' +
+      '<button type="button" class="btn btn-ghost vl-ed-clear">Clear saved edits</button>' +
+      '<span class="vl-ed-msg" aria-live="polite"></span></div>';
+    document.body.appendChild(panel);
+    function save() {
+      var obj = {};
+      panel.querySelectorAll("input[data-edit]").forEach(function (inp) { obj[inp.getAttribute("data-edit")] = inp.value.trim(); });
+      try { localStorage.setItem(STORE_KEY, JSON.stringify(obj)); } catch (e) {}
+      applyLinks();
+    }
+    panel.querySelectorAll("input[data-edit]").forEach(function (inp) { inp.addEventListener("input", save); });
+    panel.querySelector(".vl-ed-close").addEventListener("click", function () { panel.classList.toggle("vl-ed-min"); });
+    panel.querySelector(".vl-ed-clear").addEventListener("click", function () {
+      try { localStorage.removeItem(STORE_KEY); } catch (e) {}
+      panel.querySelectorAll("input[data-edit]").forEach(function (inp) { inp.value = ""; });
+      applyLinks();
+      panel.querySelector(".vl-ed-msg").textContent = "Cleared.";
+    });
+    panel.querySelector(".vl-ed-copy").addEventListener("click", function () {
+      var obj = {};
+      panel.querySelectorAll("input[data-edit]").forEach(function (inp) { obj[inp.getAttribute("data-edit")] = inp.value.trim(); });
+      var lines = Object.keys(obj).map(function (k) {
+        var pad = "                    ".slice(0, Math.max(1, 20 - k.length));
+        return '    "' + k + '":' + pad + '"' + obj[k].replace(/"/g, '\\"') + '"';
+      });
+      var code = "  var PROPERTY_LINKS = {\n" + lines.join(",\n") + "\n  };";
+      var msg = panel.querySelector(".vl-ed-msg");
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(code).then(
+          function () { msg.textContent = "Code copied. Paste it into listings.html."; },
+          function () { window.prompt("Copy this code into listings.html:", code); }
+        );
+      } else { window.prompt("Copy this code into listings.html:", code); }
+    });
+  }
+})();
+</script>
+</body>
+</html>

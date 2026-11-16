@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How it works | Vive Libre</title>
+<meta name="description" content="How Vive Libre guides international buyers from first call to settling in on the Costa Blanca: trusted advisers, legal checks, orientation days and transparent fees.">
+<link rel="canonical" href="https://vivelibrespain.com/how-it-works">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vive Libre">
+<meta property="og:title" content="How Vive Libre works: your buyer's agent and relocation partner">
+<meta property="og:description" content="How Vive Libre guides international buyers from first call to settling in on the Costa Blanca: trusted advisers, legal checks, orientation days and transparent fees.">
+<meta property="og:url" content="https://vivelibrespain.com/how-it-works">
+<meta property="og:image" content="https://vivelibrespain.com/images/photos/villa.jpg?v=5">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Vive Libre works: your buyer's agent and relocation partner">
+<meta name="twitter:description" content="How Vive Libre guides international buyers from first call to settling in on the Costa Blanca: trusted advisers, legal checks, orientation days and transparent fees.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<!-- TODO: self-host Hanken Grotesk (download the woff2 files, add @font-face to styles.css, remove these Google Fonts links and update the Fonts line in privacy.html) -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="https://vivelibrespain.com/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<style>
+.journey { display: grid; gap: 0; margin-top: clamp(2rem, 4vw, 3rem); }
+.step { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(1.5rem, 4vw, 4rem); padding-block: clamp(2rem, 4vw, 3.2rem); border-top: 1px solid var(--line); align-items: start; }
+.step:last-child { border-bottom: 1px solid var(--line); }
+.step-index { display: flex; align-items: baseline; gap: 1rem; }
+.step-index .no { font-family: var(--mono); font-size: 0.78rem; color: var(--ochre); letter-spacing: 0.12em; padding-top: 0.3rem; }
+.step-index h3 { font-size: clamp(1.6rem, 2.6vw, 2.3rem); }
+.step p { color: var(--ink-soft); }
+.step .ph { margin-top: 1.2rem; aspect-ratio: 16 / 9; }
+@media (max-width: 760px) { .step { grid-template-columns: minmax(0, 1fr); gap: 1rem; } }
+.faq { border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-family: var(--serif); font-size: clamp(1.25rem, 2.2vw, 1.7rem); color: var(--ink); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary .ic { flex: 0 0 auto; width: 26px; height: 26px; position: relative; transition: transform .4s var(--ease); }
+.faq summary .ic::before, .faq summary .ic::after { content: ""; position: absolute; background: var(--ochre); }
+.faq summary .ic::before { top: 12px; left: 3px; right: 3px; height: 1.5px; }
+.faq summary .ic::after { left: 12px; top: 3px; bottom: 3px; width: 1.5px; transition: transform .4s var(--ease); }
+.faq details[open] summary .ic::after { transform: scaleY(0); }
+.faq .ans { padding: 0 0 1.6rem; color: var(--ink-soft); max-width: 70ch; }
+.faq .ans p + p { margin-top: 0.9rem; }
+#buying-safely, #rentals, #fees { scroll-margin-top: 72px; }
+.tier { background: var(--shell); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.6rem, 3vw, 2.4rem); display: flex; flex-direction: column; height: 100%; }
+.tier.feature-tier { border-color: var(--lilac); box-shadow: var(--shadow-soft); position: relative; }
+.tier.feature-tier::before { content: "Most popular"; position: absolute; top: -1px; right: 1.6rem; transform: translateY(-50%); background: var(--lilac); color: #fff; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.4em 0.8em; border-radius: 100px; }
+.tier h3 { font-size: 1.7rem; }
+.tier .sub { color: var(--ink-mute); font-size: 0.95rem; margin-top: 0.3rem; }
+.tier .list-check { margin-top: 1.4rem; margin-bottom: 1.6rem; }
+.tier .btn { margin-top: auto; justify-content: center; }
+.bg-deep .tier .list-check li { color: var(--ink-soft); }
+.bg-deep .tier h3 { color: var(--ink); }
+.promise-grid { margin-top: clamp(2rem, 4vw, 3rem); }
+.guide-img { aspect-ratio: 16 / 7; border-radius: var(--radius); overflow: hidden; }
+.guide { max-width: 720px; margin: clamp(2rem, 5vw, 3.5rem) auto 0; }
+.guide h3 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-top: clamp(2rem, 4vw, 2.8rem); }
+.guide h3:first-child { margin-top: 0; }
+.guide p { margin-top: 1rem; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; }
+.guide p a { color: var(--sea); text-decoration: underline; text-underline-offset: 3px; }
+.guide .list-check { margin-top: 1.1rem; }
+.guide-note { margin-top: clamp(2rem, 4vw, 2.8rem); padding: 1.2rem 1.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--sand); font-size: 0.95rem; color: var(--ink-soft); }
+@media (max-width: 600px) { .guide-img { aspect-ratio: 4 / 3; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="horizonGrad" x1="6" y1="10" x2="58" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4FA6D6"></stop><stop offset="0.52" stop-color="#74CEC9"></stop><stop offset="1" stop-color="#A6D8EC"></stop></linearGradient></defs></svg>
+
+<header class="site-header solid">
+  <div class="nav-inner">
+    <a aria-label="Vive Libre home" class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="26" r="13"></circle><line x1="9" y1="44" x2="55" y2="44"></line><line x1="15" y1="51" x2="49" y2="51"></line><line x1="23" y1="58" x2="41" y2="58"></line></svg><span class="brand-text">Vive Libre<span class="vl-sub">Costa Blanca</span></span></a>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a aria-current="page" href="how-it-works.html">How it works</a></li>
+        <li><a href="areas.html">Areas &amp; homes</a></li>
+        <li><a class="nav-cta" href="contact.html">Book a call</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero on-sea">
+  <div class="wrap">
+    <span class="kicker on-dark reveal">How it works</span>
+    <h1 class="display reveal" style="margin-top:1.2rem">One partner, the whole way through.</h1>
+    <p class="lead reveal d1">We guide you from the first daydream to the day you settle in, handling the people, the paperwork and the fine print so you can stay focused on the life you're moving towards.</p>
+  </div>
+</section>
+
+<section class="section bg-shell">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">The journey</span>
+      <h2 style="margin-top:1.1rem; max-width:20ch">Five steps from first conversation to first morning here.</h2>
+    </div>
+    <div class="journey">
+      <div class="step reveal">
+        <div class="step-index"><span class="no">01</span><h3>Pre-sale consultation</h3></div>
+        <div><p>A relaxed, no-obligation conversation. We listen to the dream, the practicalities and the worries, and tell you honestly how we can help and what to expect.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-index"><span class="no">02</span><h3>Understanding your requirements</h3></div>
+        <div><p>We build a clear brief together: budget, must-haves, the feeling you're after. We'll challenge assumptions kindly and help you weigh trade-offs you might not have considered: aspect, winter sun, distance to schools and airports.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-index"><span class="no">03</span><h3>Curated selection &amp; viewings</h3></div>
+        <div>
+          <p>We search the whole market, including off-market and pre-launch homes, and present a shortlist worth your time. When you visit, viewings are planned around you, with our honest read on each property.</p>
+          <div class="ph has-photo" style="aspect-ratio:16/9; margin-top:1.2rem"><img class="scene" src="https://vivelibrespain.com/images/photos/villa.jpg?v=5" alt="A curated high-end home with pool and sea views"></div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-index"><span class="no">04</span><h3>Negotiation &amp; purchase support</h3></div>
+        <div><p>We negotiate on your behalf and coordinate the trusted people who make it safe: lawyer, gestor, notary, bank. We track every document and deadline so nothing stalls and nothing surprises you.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-index"><span class="no">05</span><h3>Settling in</h3></div>
+        <div><p>Keys are the beginning, not the end. Utilities, residency, schools, interiors, the right builder, the social side, and an introduction to a community of people who've made the same move.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-deep">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker on-dark">What's included</span>
+      <h2 style="margin-top:1.1rem; color:var(--shell); max-width:22ch">Two layers of support, one point of contact.</h2>
+    </div>
+    <div class="grid g-2" style="margin-top:clamp(2rem,4vw,3rem)">
+      <div class="reveal">
+        <h3 class="svc-head">Core purchase relationships</h3>
+        <p style="margin-top:1.1rem; color:var(--on-deep-soft)">The vetted professionals who make buying in Spain safe and straightforward.</p>
+        <ul class="list-check" style="margin-top:1.2rem">
+          <li>Trusted agents &amp; off-market access</li>
+          <li>Banks &amp; mortgage finance</li>
+          <li>Surveyors &amp; valuations</li>
+          <li>Independent lawyers &amp; conveyancing</li>
+          <li>Gestor &amp; notary coordination</li>
+          <li>Introductions to tax specialists</li>
+        </ul>
+      </div>
+      <div class="reveal d1">
+        <h3 class="svc-head lilac">Value-added services</h3>
+        <p style="margin-top:1.1rem; color:var(--on-deep-soft)">Everything that turns a purchase into a settled, happy life here.</p>
+        <ul class="list-check" style="margin-top:1.2rem">
+          <li>Interiors &amp; architects</li>
+          <li>Builders &amp; renovation management</li>
+          <li>Gardeners &amp; ongoing maintenance</li>
+          <li>Health &amp; insurance brokers</li>
+          <li>Driving regulations &amp; licences</li>
+          <li>International &amp; local schools</li>
+          <li>Settling-in &amp; community introductions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand" id="buying-safely">
+  <div class="wrap">
+    <div class="measure reveal">
+      <span class="kicker">Buying safely</span>
+      <h2 style="margin-top:1.1rem">Buying without the pitfalls.</h2>
+      <p style="margin-top:1.3rem; color:var(--ink-soft)">Buying abroad means trusting people you've never met, in a language you may not speak, under a legal system you don't know. Here's how we make sure it goes right.</p>
+    </div>
+    <div class="grid g-4 promise-grid">
+      <div class="feature reveal"><span class="num">01</span><h3>Trusted advisers</h3><p>Every lawyer, broker and specialist we introduce is someone we've worked with and would use ourselves.</p></div>
+      <div class="feature reveal d1"><span class="num">02</span><h3>Independent advice</h3><p>We look at every home with your interests first, and tell you plainly if something isn't right.</p></div>
+      <div class="feature reveal d2"><span class="num">03</span><h3>Your money protected</h3><p>Funds move through regulated channels and your lawyer, never in cash.</p></div>
+      <div class="feature reveal d3"><span class="num">04</span><h3>Nothing hidden</h3><p>You'll know every cost, every step and every document before you sign.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-shell">
+<div class="wrap">
+<div class="ph has-photo guide-img reveal"><img class="scene" src="https://vivelibrespain.com/images/photos/res-contract.jpg" alt="Meeting with advisers"></div>
+<article class="guide reveal">
+<h3>We work with trusted advisers</h3>
+<p>Buying in Spain involves lawyers, notaries, banks, surveyors, tax advisers and gestors. We've built a network of independent professionals who work with international buyers every day, speak your language and answer their phones. You choose who to appoint; we make sure you're choosing from people with a proven track record.</p>
+<ul class="list-check"><li>Independent property lawyers</li><li>Mortgage brokers and currency specialists</li><li>Cross-border tax and inheritance advisers</li><li>Surveyors, architects and builders</li><li>Gestors to handle the paperwork</li></ul>
+<h3>Avoiding scams</h3>
+<p>Most purchases go smoothly, but international buyers can be a target. A few simple rules protect you.</p>
+<ul class="list-check"><li>Never pay a deposit until your own lawyer has checked the property and the seller</li><li>Never send money because an email says bank details have changed. Always confirm by phone with someone you know</li><li>Be wary of pressure to sign quickly, or requests to pay part of the price in cash</li><li>Check the seller is the registered owner, or has the legal right to sell</li><li>Use a bank or regulated currency provider, never an informal transfer</li></ul>
+<h3>Buying off plan</h3>
+<p>New-build and off-plan homes can be excellent value, but you're paying for something that doesn't exist yet. Spanish law gives buyers strong protections, so make sure they're in place before you pay anything.</p>
+<ul class="list-check"><li>Stage payments before completion should be covered by a bank guarantee or insurance policy in your name</li><li>Check the developer's track record, and that the building licence has been granted</li><li>Read the full specification, not just the brochure, and have it attached to the contract</li><li>Ask what's planned on neighbouring plots, as renders never show the next building</li><li>Agree in writing what happens if the build is delayed</li></ul>
+<h3>The legal checks we insist on</h3>
+<p>Your lawyer carries out these checks before you commit. We make sure none are skipped.</p>
+<ul class="list-check"><li>The nota simple from the land registry, which confirms ownership and any debts or charges against the property</li><li>The land registry and the catastro match: size, boundaries and buildings</li><li>Planning status: extensions, pools and conversions are legal and registered</li><li>The licence of first occupation, or its equivalent, for new and recently built homes</li><li>No unpaid community fees, IBI or utility bills, which can follow the property</li><li>For rural homes, that the land and buildings are legal and the plot is what you think it is</li></ul>
+<h3>How the buying process works</h3>
+<ul class="list-check"><li><strong>Reservation</strong>: a small deposit takes the home off the market while your lawyer runs the checks</li><li><strong>Private purchase contract</strong>: often an arras contract, with a deposit (commonly around 10%) and clear terms if either side pulls out</li><li><strong>Completion</strong>: you sign the deed at the notary, pay the balance and receive the keys</li><li><strong>Registration</strong>: your lawyer registers the deed in your name at the land registry</li></ul>
+<p><a href="buying-process.html">See the full buying process, with timings and costs</a></p>
+<h3>The things summer buyers overlook</h3>
+<ul class="list-check"><li><strong>Winter sun</strong>: in winter the sun sits low, and a north-facing home or a plot in a valley can lose direct sun for months</li><li><strong>Multiple listings</strong>: the same home is often listed by several agencies at different prices; we search across them all, and off-market</li><li><strong>Renders and photos</strong>: they flatter, so we check the view, the light and what's around the property in person</li></ul>
+<h3>A survey is worth it</h3>
+<p>Spanish purchases don't routinely include a survey, so many buyers skip one. For older villas especially, an independent survey can reveal damp, structural problems or costly repairs before you commit.</p>
+<p class="guide-note">This section is general guidance, not legal advice. Your own lawyer should confirm every check for your specific purchase.</p>
+</article>
+</div>
+</section>
+
+<section class="section bg-sand" id="rentals">
+  <div class="wrap">
+    <div class="measure reveal" style="margin-bottom:clamp(2.5rem,5vw,3.5rem)">
+      <span class="kicker">Rentals &amp; orientation</span>
+      <h2 style="margin-top:1.1rem">Try the life on, before you buy it.</h2>
+      <p style="margin-top:1.3rem; color:var(--ink-soft)">The biggest mistake we see is buying somewhere on the strength of a holiday. Two gentler ways to begin: live here for a season, or spend a guided day discovering where you truly belong.</p>
+    </div>
+    <div class="split">
+      <div class="reveal">
+        <span class="kicker">Seasonal rentals</span>
+        <h3 style="margin-top:1.1rem; font-size:clamp(1.6rem,2.6vw,2.2rem)">Live here for a season first.</h3>
+        <p style="margin-top:1.3rem; color:var(--ink-soft)">We recommend renting in the area for a season before you buy. A winter here teaches you more than a dozen summer viewings: which valley keeps its sun, which town comes alive off-season, which commute you can actually live with.</p>
+        <p style="margin-top:1.1rem; color:var(--ink-soft)">We help you find a quality rental in the right spot and introduce you to daily life, so your eventual purchase is made with confidence, not a leap of faith.</p>
+        <a class="tlink" href="contact.html" style="margin-top:1.6rem">Ask about rentals <span class="arr">→</span></a>
+      </div>
+      <div class="reveal d1">
+        <div class="ph has-photo" style="aspect-ratio:4/5"><img class="scene" src="https://vivelibrespain.com/images/photos/seasonal.jpg" alt="The bay of Altea at sunset"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-deep">
+  <div class="wrap">
+    <div class="measure reveal">
+      <span class="kicker on-dark">The orientation experience</span>
+      <h2 style="margin-top:1.1rem; color:var(--shell)">A day made to help you choose with your heart and your head.</h2>
+      <p class="lead" style="margin-top:1.2rem; color:var(--on-deep-soft)">Not a property tour, but an introduction to the coast itself. We drive you through the towns that fit your brief, talk through the trade-offs, make the introductions that matter, and pause for a long lunch at a restaurant we love. You leave knowing where you want to be.</p>
+    </div>
+    <div class="grid g-2" style="margin-top:clamp(2.5rem,5vw,3.5rem); align-items:stretch">
+      <div class="tier feature-tier reveal">
+        <span class="card-tag" style="color:var(--lilac-deep)">Private</span>
+        <h3>The private day</h3>
+        <p class="sub">Just you and us, fully tailored</p>
+        <ul class="list-check">
+          <li>A bespoke route built around your brief</li>
+          <li>Unhurried time in each area, at your pace</li>
+          <li>Introductions to our trusted local people</li>
+          <li>Lunch at a high-end restaurant, on us</li>
+          <li>Optionally extended with a 5-star partner hotel stay for a wider search</li>
+        </ul>
+        <a class="btn btn-lilac" href="contact.html">Enquire about a private day <span class="arr">→</span></a>
+      </div>
+      <div class="tier reveal d1">
+        <span class="card-tag" style="color:var(--ochre)">Small group</span>
+        <h3>The group package</h3>
+        <p class="sub">A handful of like-minded buyers</p>
+        <ul class="list-check">
+          <li>A curated route across the headline towns</li>
+          <li>Shared insight and good company</li>
+          <li>Key local introductions</li>
+          <li>A relaxed group lunch included</li>
+          <li>A lower-cost way to get your bearings</li>
+        </ul>
+        <a class="btn btn-ghost" href="contact.html">Join a group day <span class="arr">→</span></a>
+      </div>
+    </div>
+    <p class="fineprint reveal" style="color:var(--on-deep-soft); margin-top:1.6rem">Orientation fees can be credited towards our buyer's agent service if you go on to purchase with us. We'll explain everything on your discovery call.</p>
+  </div>
+</section>
+
+<section class="section bg-shell">
+  <div class="wrap">
+    <div class="grid g-3">
+      <div class="feature reveal">
+        <span class="num">No pressure</span>
+        <h3 style="margin-top:.6rem">Zero obligation to buy</h3>
+        <p>Orientation stands alone. Plenty of people use it simply to make a confident decision about whether, and where, to move.</p>
+      </div>
+      <div class="feature reveal d1">
+        <span class="num">Real insight</span>
+        <h3 style="margin-top:.6rem">The honest local view</h3>
+        <p>The things a portal can't tell you: winter sun, noise, traffic, which streets flood, where the good schools really are.</p>
+      </div>
+      <div class="feature reveal d2">
+        <span class="num">A soft start</span>
+        <h3 style="margin-top:.6rem">A gentle way to meet us</h3>
+        <p>Spend a day together and you'll know if we're the partner you want for the bigger journey. Most people do.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <span class="kicker">The value</span>
+        <h2 style="margin-top:1.1rem">A single, transparent fee, and real money saved.</h2>
+        <p style="margin-top:1.3rem; color:var(--ink-soft)">We work on a fixed professional fee, agreed up front, the same whatever the price of the home. Our focus is one thing only: getting the best possible outcome for you.</p>
+        <p style="margin-top:1.1rem; color:var(--ink-soft)">The negotiation often covers the fee, before you count the months of time, the costly mistakes avoided, and the simple peace of mind.</p>
+        <a class="tlink" href="contact.html" style="margin-top:1.6rem">Discuss your move <span class="arr">→</span></a>
+      </div>
+      <div class="reveal d1">
+        <div class="card" style="padding:2rem">
+          <span class="card-tag">What the fee buys you</span>
+          <ul class="list-check" style="margin-top:1.2rem">
+            <li>Expert negotiation that typically pays for itself</li>
+            <li>Months of your time, given back</li>
+            <li>A market searched in full, not just one agency's stock</li>
+            <li>Costly mistakes seen coming and avoided</li>
+            <li>A trusted team assembled around you</li>
+          </ul>
+          <hr class="rule" style="margin-block:1.6rem">
+          <p class="fineprint">Every move is different, so we confirm the exact scope and fee after a first conversation, with no pressure. Starting prices are set out under <a href="#fees" style="text-decoration:underline">Fees &amp; independence</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEES & INDEPENDENCE (new – review fix) -->
+<section class="section bg-shell" id="fees">
+  <div class="wrap">
+    <div class="split" style="align-items:start">
+      <div class="reveal">
+        <span class="kicker">Fees &amp; independence</span>
+        <h2 style="margin-top:1.1rem">What it costs, and who pays us.</h2>
+        <p style="margin-top:1.3rem; color:var(--ink-soft)">You pay us a fixed professional fee, agreed in writing before we start. It doesn't rise with the price of the home you buy.</p>
+        <!-- TODO: owner to state plainly whether Vive Libre receives any commission, referral or introduction fee from sellers, developers, estate agents or the professionals it introduces, and how any such payment is disclosed to the client. -->
+        <p style="margin-top:1.1rem; color:var(--ink-soft)"><strong>Independence:</strong> <mark class="todo">[TO CONFIRM: statement on whether we take any commission or fee from sellers, developers, agents or introduced professionals]</mark></p>
+      </div>
+      <div class="reveal d1">
+        <div class="card" style="padding:2rem">
+          <span class="card-tag">Starting prices</span>
+          <ul class="fee-list" style="margin-top:1rem">
+            <li><strong>Buyer's agent service</strong><span>from <mark class="todo">[TO CONFIRM: €X]</mark></span></li>
+            <li><strong>Private orientation day</strong><span>from <mark class="todo">[TO CONFIRM: €X]</mark></span></li>
+            <li><strong>Group orientation day</strong><span>from <mark class="todo">[TO CONFIRM: €X]</mark></span></li>
+          </ul>
+          <p class="fineprint" style="margin-top:1.2rem">Prices <mark class="todo">[TO CONFIRM: include or exclude IVA (VAT)?]</mark>. Orientation fees can be credited towards our buyer's agent service if you go on to purchase with us.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand">
+  <div class="wrap">
+    <div class="measure reveal">
+      <span class="kicker lilac">Good questions</span>
+      <h2 style="margin-top:1.1rem">What a buyer's agent actually does.</h2>
+    </div>
+    <div class="faq reveal" style="margin-top:clamp(1.6rem,3vw,2.5rem)">
+      <details open>
+        <summary>What does a buyer's agent do? <span class="ic"></span></summary>
+        <div class="ans"><p>We work for you, the buyer. We source and secure the right home, save you time and money, negotiate hard on your behalf, and oversee the whole transaction through to completion. On the Costa Blanca we also handle the relocation around it.</p></div>
+      </details>
+      <details>
+        <summary>How is this different from an estate agent? <span class="ic"></span></summary>
+        <div class="ans"><p>An estate agent's job is to sell their own stock, so their focus is the sale. Ours is you: finding the right home and negotiating the best deal on it. We search the entire market (every agency, plus off-market) rather than steering you towards one portfolio.</p></div>
+      </details>
+      <details>
+        <summary>How does it save me money? <span class="ic"></span></summary>
+        <div class="ans"><p>Through expert, dispassionate negotiation; by spotting overpriced or problem properties before you commit; and by avoiding the expensive errors that catch out overseas buyers, from the wrong aspect to paperwork that derails a purchase.</p></div>
+      </details>
+      <details>
+        <summary>What sort of clients do you work with? <span class="ic"></span></summary>
+        <div class="ans"><p>International buyers making a considered move to the Costa Blanca North (relocating families, retirees, holiday-home owners and remote professionals) who value their time and want a trusted partner to handle the detail for them.</p></div>
+      </details>
+      <details>
+        <summary>What's the process to work with you? <span class="ic"></span></summary>
+        <div class="ans"><p>It starts with a free discovery call. If we're a good fit, we agree a brief and a fixed fee, then begin the search. From there we guide you through viewings, negotiation, purchase and settling in, with one point of contact throughout.</p></div>
+      </details>
+      <details>
+        <summary>What can you do that I can't do myself? <span class="ic"></span></summary>
+        <div class="ans"><p>You absolutely could do it yourself, with months of research, a lot of flights, and the risk of learning the local rules the expensive way. We bring the relationships, the market knowledge and the negotiating distance, and we compress the whole thing into a calm, guided experience.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sea">
+  <div class="wrap center measure reveal">
+    <h2 style="color:var(--shell)">Ready to take the first step?</h2>
+    <p class="lead" style="margin-top:1.2rem; color:var(--on-deep-soft)">Tell us where you are in the journey. The first call is free, and there's no obligation to go further.</p>
+    <div class="hero-actions" style="justify-content:center; margin-top:2rem">
+      <a class="btn btn-ochre" href="contact.html">Book a free discovery call <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="26" r="13"></circle><line x1="9" y1="44" x2="55" y2="44"></line><line x1="15" y1="51" x2="49" y2="51"></line><line x1="23" y1="58" x2="41" y2="58"></line></svg><span class="brand-text">Vive Libre<span class="vl-sub">Costa Blanca</span></span></a>
+        <p>A personal buyer's agent and relocation partner for international buyers on the Costa Blanca North. Live free.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a aria-current="page" href="how-it-works.html">How it works</a></li>
+          <li><a href="buying-process.html">Buying process</a></li>
+          <li><a href="how-it-works.html#buying-safely">Buying safely</a></li>
+          <li><a href="how-it-works.html#rentals">Rentals &amp; orientation</a></li>
+          <li><a href="areas.html">Areas &amp; homes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy &amp; cookies</a></li>
+          <li><a href="aviso-legal.html">Aviso Legal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-news">
+        <!-- TODO: the "Join the community" newsletter form was a demo (it stored nothing) and has been removed.
+             Re-add a real sign-up once a mailing list provider is chosen, and name that provider in privacy.html. -->
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:hello@vivelibrespain.com">hello@vivelibrespain.com</a></li>
+          <li>WhatsApp: Jane <a href="https://wa.me/447770447149" target="_blank" rel="noopener">+44 7770 447149</a></li>
+          <li>WhatsApp: Estelle <a href="https://wa.me/34675981829" target="_blank" rel="noopener">+34 675 98 18 29</a></li>
+          <li><a href="contact.html">Book a free discovery call →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Vive Libre · vivelibrespain.com</span>
+      <span>Independent buyer's agent &amp; relocation concierge · Costa Blanca North, Spain</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Vive Libre – Netlify config (added with the review fixes)
+# Pages are served at clean URLs (/contact for contact.html) by Netlify's Pretty URLs.
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true

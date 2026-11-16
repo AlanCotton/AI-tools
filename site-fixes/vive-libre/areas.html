@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Areas &amp; homes | Vive Libre</title>
+<meta name="description" content="The Costa Blanca North from Villajoyosa up to Dénia: Altea, Moraira, Jávea, Calpe, Benissa, Finestrat and more. A short guide to each town, plus example homes.">
+<link rel="canonical" href="https://vivelibrespain.com/areas">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vive Libre">
+<meta property="og:title" content="Areas we cover: Costa Blanca North area guides">
+<meta property="og:description" content="The Costa Blanca North from Villajoyosa up to Dénia: Altea, Moraira, Jávea, Calpe, Benissa, Finestrat and more. A short guide to each town, plus example homes.">
+<meta property="og:url" content="https://vivelibrespain.com/areas">
+<meta property="og:image" content="https://vivelibrespain.com/images/photos/altea.jpg?v=5">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Areas we cover: Costa Blanca North area guides">
+<meta name="twitter:description" content="The Costa Blanca North from Villajoyosa up to Dénia: Altea, Moraira, Jávea, Calpe, Benissa, Finestrat and more. A short guide to each town, plus example homes.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<!-- TODO: self-host Hanken Grotesk (download the woff2 files, add @font-face to styles.css, remove these Google Fonts links and update the Fonts line in privacy.html) -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="https://vivelibrespain.com/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<style>
+.area { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.area:nth-child(2n) .area-media { order: 2; }
+.area + .area { margin-top: clamp(3rem, 6vw, 6rem); }
+.area-media .ph { aspect-ratio: 5 / 4; }
+.area-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+@media (max-width: 800px) {
+  .area, .area:nth-child(2n) .area-media { grid-template-columns: 1fr; order: 0; }
+  .area-media .ph { aspect-ratio: 16 / 10; }
+}
+.area-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+@media (max-width: 760px) { .area-strip { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .area-strip { grid-template-columns: 1fr; } }
+#homes { scroll-margin-top: 72px; }
+.ph.has-photo { position: relative; }
+.price-chip { position: absolute; left: 1rem; top: 1rem; z-index: 3; font-family: var(--sans); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.01em; color: var(--deep); background: rgba(251, 253, 252, 0.94); padding: 0.5em 0.85em; border-radius: 100px; box-shadow: var(--shadow-soft); }
+.price-chip.on-feature { font-size: 1.15rem; }
+.illus-badge { position: absolute; right: 1rem; top: 1rem; z-index: 3; font-family: var(--sans); font-weight: 600; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: rgba(12, 32, 44, 0.62); backdrop-filter: blur(4px); padding: 0.45em 0.8em; border-radius: 100px; }
+.loc-row { display: flex; align-items: center; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+.specs { display: flex; flex-wrap: wrap; gap: 0 1.1rem; margin: 1rem 0 1.1rem; list-style: none; padding: 0; }
+.specs li { font-size: 0.9rem; color: var(--ink-soft); display: flex; align-items: center; gap: 0.45em; }
+.specs li + li { padding-left: 1.1rem; border-left: 1px solid var(--line); }
+.specs .v { font-weight: 700; color: var(--ink); }
+.prop-desc { color: var(--ink-soft); font-size: 1rem; }
+.feature-prop { align-items: stretch; }
+.feature-prop .ph { height: 100%; min-height: 340px; aspect-ratio: auto; }
+.feature-body { display: flex; flex-direction: column; justify-content: center; }
+.disclaimer { font-size: 0.86rem; color: var(--ink-mute); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.3rem; background: var(--shell); }
+.ladder { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.6rem; }
+a.pill { transition: background 0.3s, border-color 0.3s, color 0.3s, transform 0.3s; }
+a.pill:hover { background: var(--shell); color: var(--deep); border-color: var(--shell); transform: translateY(-1px); }
+a.pill .arr { font-size: 0.9em; opacity: 0.7; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="horizonGrad" x1="6" y1="10" x2="58" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4FA6D6"></stop><stop offset="0.52" stop-color="#74CEC9"></stop><stop offset="1" stop-color="#A6D8EC"></stop></linearGradient></defs></svg>
+
+<header class="site-header solid">
+  <div class="nav-inner">
+    <a aria-label="Vive Libre home" class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="26" r="13"></circle><line x1="9" y1="44" x2="55" y2="44"></line><line x1="15" y1="51" x2="49" y2="51"></line><line x1="23" y1="58" x2="41" y2="58"></line></svg><span class="brand-text">Vive Libre<span class="vl-sub">Costa Blanca</span></span></a>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a aria-current="page" href="areas.html">Areas &amp; homes</a></li>
+        <li><a class="nav-cta" href="contact.html">Book a call</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero on-sea">
+  <div class="wrap">
+    <span class="kicker on-dark reveal">Areas we cover</span>
+    <h1 class="display reveal" style="margin-top:1.2rem">The Costa Blanca North, town by town.</h1>
+    <p class="lead reveal d1">From Villajoyosa up to Dénia, each town along this coast has its own character, light and pace of life. Here's how to think about where you might belong, and we'll help you feel the difference in person.</p>
+  </div>
+</section>
+
+<section class="section bg-shell">
+  <div class="wrap">
+    <article class="area reveal">
+      <div class="area-media"><div class="ph has-photo"><img class="scene" src="https://vivelibrespain.com/images/photos/altea.jpg?v=5" alt="The blue-domed church of Altea"></div></div>
+      <div>
+        <div class="area-meta"><span class="pill lilac">Altea</span><span class="mono">the jewel of the Costa Blanca</span></div>
+        <h2>Altea, the jewel of the Costa Blanca.</h2>
+        <p style="margin-top:1rem; color:var(--ink-soft)">Whitewashed, romantic and quietly creative, Altea is the most beguiling town on the coast. Cobbled old town stacked above a blue-domed church, a working harbour, and pebbled bays where the waves draw back with a hush. Altea draws artists and people who want beauty over bustle: characterful, walkable and genuinely lived-in.</p>
+        <a class="tlink" href="areas-altea.html" style="margin-top:1.2rem">Altea area guide <span class="arr">→</span></a>
+      </div>
+    </article>
+    <article class="area reveal">
+      <div class="area-media"><div class="ph has-photo"><img class="scene" src="https://vivelibrespain.com/images/photos/moraira.jpg?v=5" alt="Moraira marina and coast"></div></div>
+      <div>
+        <div class="area-meta"><span class="pill lilac">Moraira</span><span class="mono">quiet sophistication</span></div>
+        <h2>Low-rise, low-key, gently exclusive.</h2>
+        <p style="margin-top:1rem; color:var(--ink-soft)">A planning ethos that kept the high-rises out, so Moraira stays intimate: a pretty marina, good restaurants, sheltered coves. A long-standing favourite for those who want calm with everything close to hand.</p>
+        <a class="tlink" href="areas-moraira.html" style="margin-top:1.2rem">Moraira area guide <span class="arr">→</span></a>
+      </div>
+    </article>
+    <article class="area reveal">
+      <div class="area-media"><div class="ph has-photo"><img class="scene" src="https://vivelibrespain.com/images/photos/javea.jpg?v=5" alt="Jávea and the bay beneath the Montgó"></div></div>
+      <div>
+        <div class="area-meta"><span class="pill lilac">Jávea (Xàbia)</span><span class="mono">three towns in one</span></div>
+        <h2>Historic centre, port and arenal beach.</h2>
+        <p style="margin-top:1rem; color:var(--ink-soft)">Sheltered beneath the green Montgó massif, Jávea offers a beautiful old town, a fishing port and a sandy bay. Three distinct moods in one place. Established, leafy and especially loved by international families.</p>
+        <a class="tlink" href="areas-javea.html" style="margin-top:1.2rem">Jávea area guide <span class="arr">→</span></a>
+      </div>
+    </article>
+
+    <hr class="rule reveal" style="margin-block:clamp(3rem,6vw,5rem)">
+
+    <div class="reveal" style="margin-bottom:1.6rem">
+      <span class="kicker">Also along this coast</span>
+      <h2 style="margin-top:1rem; max-width:24ch">Seven more towns worth knowing.</h2>
+    </div>
+    <div class="area-strip reveal">
+      <article class="card">
+        <div class="ph has-photo" style="aspect-ratio:1/1"><img class="scene" src="https://vivelibrespain.com/images/photos/villajoyosa.jpg?v=5" alt="The painted houses of Villajoyosa"></div>
+        <div class="card-body"><h3 style="font-size:1.3rem">Villajoyosa</h3><p style="font-size:0.92rem">Candy-coloured fishermen's houses and a chocolate-making heritage at the coast's southern edge.</p><a class="tlink" href="areas-villajoyosa.html" style="margin-top:0.8rem">Area guide <span class="arr">→</span></a></div>
+      </article>
+      <article class="card">
+        <div class="ph has-photo" style="aspect-ratio:1/1"><img class="scene" src="https://vivelibrespain.com/images/photos/finestrat.jpg?v=5" alt="A Costa Blanca town beneath the mountains"></div>
+        <div class="card-body"><h3 style="font-size:1.3rem">Finestrat</h3><p style="font-size:0.92rem">A dramatic mountain village inland, with sea-view villas and a foot in both worlds.</p><a class="tlink" href="areas-finestrat.html" style="margin-top:0.8rem">Area guide <span class="arr">→</span></a></div>
+      </article>
+      <article class="card">
+        <div class="ph has-photo" style="aspect-ratio:1/1"><img class="scene" src="https://vivelibrespain.com/images/photos/lanucia.jpg?v=5" alt="A whitewashed plaza in La Nucía"></div>
+        <div class="card-body"><h3 style="font-size:1.3rem">La Nucía</h3><p style="font-size:0.92rem">An easygoing inland town of whitewashed plazas and palms, with space, sport and value, minutes from the sea.</p><a class="tlink" href="areas-la-nucia.html" style="margin-top:0.8rem">Area guide <span class="arr">→</span></a></div>
+      </article>
+      <article class="card">
+        <div class="ph has-photo" style="aspect-ratio:1/1"><img class="scene" src="https://vivelibrespain.com/images/photos/albir.jpg?v=5" alt="The pebble bay of l'Albir below the Serra Gelada"></div>
+        <div class="card-body"><h3 style="font-size:1.3rem">Albir</h3><p style="font-size:0.92rem">A calm pebble bay below the Serra Gelada, with its lighthouse walk and a palm-lined promenade.</p><a class="tlink" href="areas-albir.html" style="margin-top:0.8rem">Area guide <span class="arr">→</span></a></div>
+      </article>
+      <article class="card">
+        <div class="ph has-photo" style="aspect-ratio:1/1"><img class="scene" src="https://vivelibrespain.com/images/photos/calpe.jpg?v=5" alt="Calpe beach and the Peñón de Ifach"></div>
+        <div class="card-body"><h3 style="font-size:1.3rem">Calpe</h3><p style="font-size:0.92rem">Defined by the Peñón de Ifach rock, with long beaches, salt flats and flamingos.</p><a class="tlink" href="areas-calpe.html" style="margin-top:0.8rem">Area guide <span class="arr">→</span></a></div>
+      </article>
+      <article class="card">
+        <div class="ph has-photo" style="aspect-ratio:1/1"><img class="scene" src="https://vivelibrespain.com/images/photos/benissa.jpg?v=5" alt="Benissa and its inland hills"></div>
+        <div class="card-body"><h3 style="font-size:1.3rem">Benissa</h3><p style="font-size:0.92rem">A handsome historic town inland with its own rugged, unspoilt stretch of coast.</p><a class="tlink" href="areas-benissa.html" style="margin-top:0.8rem">Area guide <span class="arr">→</span></a></div>
+      </article>
+      <article class="card">
+        <div class="ph has-photo" style="aspect-ratio:1/1"><img class="scene" src="https://vivelibrespain.com/images/photos/denia.jpg?v=5" alt="Dénia town and sea"></div>
+        <div class="card-body"><h3 style="font-size:1.3rem">Dénia</h3><p style="font-size:0.92rem">A lively port city with a castle, a gastronomy scene and the ferry to Ibiza.</p><a class="tlink" href="areas-denia.html" style="margin-top:0.8rem">Area guide <span class="arr">→</span></a></div>
+      </article>
+      <article class="card" style="background:var(--mist); align-items:flex-start; justify-content:center; padding:1.5rem; display:flex">
+        <div class="card-body" style="padding:0">
+          <span class="card-tag">Not sure yet?</span>
+          <h3 style="font-size:1.3rem; margin-block:.4rem">Let us show you</h3>
+          <p style="font-size:0.92rem; margin-bottom:1rem">An orientation day is the easiest way to feel the difference between them.</p>
+          <a class="tlink" href="how-it-works.html#rentals">Orientation <span class="arr">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand" id="homes">
+  <div class="wrap">
+    <div class="measure reveal">
+      <span class="kicker">Example homes</span>
+      <h2 style="margin-top:1.1rem">A snapshot of the market.</h2>
+      <p style="margin-top:1.3rem; color:var(--ink-soft)">A handful of homes to show the range across the Costa Blanca North's upper market, from a hillside villa to a frontline estate above the bay. When you work with us, we search the whole market and curate a shortlist to your brief, including off-market homes you won't find on the portals.</p>
+      <div class="ladder">
+        <a class="pill" href="listings.html?band=villas">Villas €950k–€2.5m <span class="arr">→</span></a>
+        <a class="pill" href="listings.html?band=frontline">Frontline &amp; estates €4m+ <span class="arr">→</span></a>
+        <a class="pill" href="contact.html">Off-market &amp; exclusives <span class="arr">→</span></a>
+      </div>
+    </div>
+    <div style="margin-top:clamp(2.5rem,5vw,3.5rem)">
+    <div class="split feature-prop reveal">
+      <div class="ph has-photo">
+        <img class="scene" src="https://vivelibrespain.com/images/photos/villa.jpg?v=5" alt="Contemporary villa with pool and sea views in Jávea">
+        <span class="illus-badge">Illustrative</span>
+        <span class="price-chip on-feature">€2,450,000</span>
+      </div>
+      <div class="feature-body">
+        <div class="loc-row"><span class="pill lilac">Featured</span><span class="card-tag">Balcón al Mar · Jávea</span></div>
+        <h2 style="font-size:clamp(1.9rem,3.4vw,2.8rem)">Contemporary villa with panoramic sea views</h2>
+        <ul class="specs"><li><span class="v">4</span> bed</li><li><span class="v">4</span> bath</li><li><span class="v">340 m²</span> build</li><li><span class="v">1,000 m²</span> plot</li></ul>
+        <p class="prop-desc">A clean-lined modern home set high on the Balcón al Mar cliffs, with walls of glass framing the turquoise of the bay. Infinity pool, summer kitchen and a south-facing terrace made for long lunches. A short drive to the Arenal beach and the old town.</p>
+        <a class="btn btn-ochre" href="listings.html?band=villas" style="margin-top:1.6rem; align-self:flex-start">Browse this range <span class="arr">→</span></a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sand" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:clamp(1.6rem,3vw,2.4rem)">
+      <span class="kicker">More across the range</span>
+      <h2 style="margin-top:1rem; max-width:20ch">Seven more across the upper market.</h2>
+    </div>
+    <div class="grid g-3">
+      <article class="card reveal">
+        <div class="ph has-photo">
+          <img class="scene" src="https://vivelibrespain.com/images/photos/terrace.jpg?v=5" alt="Modern villa with infinity pool in Moraira">
+          <span class="illus-badge">Illustrative</span>
+          <span class="price-chip">€1,295,000</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Moraira · Benimeit</span>
+          <h3>Modern hillside villa with infinity pool</h3>
+          <ul class="specs"><li><span class="v">4</span> bed</li><li><span class="v">3</span> bath</li><li><span class="v">240 m²</span></li></ul>
+          <p class="prop-desc">South-facing and serene, with open sea and mountain views, an infinity pool and seamless indoor–outdoor living.</p>
+          <a class="tlink" href="listings.html?band=villas" style="margin-top:1rem">Browse this range <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card reveal d2">
+        <div class="ph has-photo">
+          <img class="scene" src="https://vivelibrespain.com/images/photos/prop-denia.jpg?v=5" alt="Family villa with pool near Dénia">
+          <span class="illus-badge">Illustrative</span>
+          <span class="price-chip">€1,650,000</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Dénia · Montgó</span>
+          <h3>Family villa with pool beneath the Montgó</h3>
+          <ul class="specs"><li><span class="v">4</span> bed</li><li><span class="v">3</span> bath</li><li><span class="v">280 m²</span></li></ul>
+          <p class="prop-desc">Established gardens, a generous pool and easy reach of the town, the beaches and international schools.</p>
+          <a class="tlink" href="listings.html?band=villas" style="margin-top:1rem">Browse this range <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="ph has-photo">
+          <img class="scene" src="https://vivelibrespain.com/images/photos/prop-benissa-house.jpg?v=5" alt="Designer kitchen of a villa near Calpe">
+          <span class="illus-badge">Illustrative</span>
+          <span class="price-chip">€2,150,000</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Calpe · Maryvilla</span>
+          <h3>Designer villa above the bay</h3>
+          <ul class="specs"><li><span class="v">4</span> bed</li><li><span class="v">4</span> bath</li><li><span class="v">310 m²</span></li></ul>
+          <p class="prop-desc">Fully reimagined with a chef's kitchen and walls of glass, moments from the marina and the Peñón de Ifach.</p>
+          <a class="tlink" href="listings.html?band=villas" style="margin-top:1rem">Browse this range <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card reveal d1">
+        <div class="ph has-photo">
+          <img class="scene" src="https://vivelibrespain.com/images/photos/prop-javea-port.jpg?v=5" alt="Reception room of a villa in Jávea">
+          <span class="illus-badge">Illustrative</span>
+          <span class="price-chip">€2,850,000</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Jávea · La Corona</span>
+          <h3>Villa with sea-view reception rooms</h3>
+          <ul class="specs"><li><span class="v">5</span> bed</li><li><span class="v">4</span> bath</li><li><span class="v">420 m²</span></li></ul>
+          <p class="prop-desc">Generous, light-filled living spaces opening to terraces and pool, on an established plot above the Arenal.</p>
+          <a class="tlink" href="listings.html?band=villas" style="margin-top:1rem">Browse this range <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card reveal d2">
+        <div class="ph has-photo">
+          <img class="scene" src="https://vivelibrespain.com/images/photos/prop-luxe-terrace.jpg?v=5" alt="Villa terrace overlooking the sea at sunset">
+          <span class="illus-badge">Illustrative</span>
+          <span class="price-chip">€3,500,000</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Moraira · El Portet</span>
+          <h3>Sea-edge villa with sunset terraces</h3>
+          <ul class="specs"><li><span class="v">5</span> bed</li><li><span class="v">5</span> bath</li><li><span class="v">480 m²</span></li></ul>
+          <p class="prop-desc">Wrapped in terraces above the water near El Portet, with a pool that meets the horizon and the marina close by.</p>
+          <a class="tlink" href="listings.html?band=frontline" style="margin-top:1rem">Browse this range <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="ph has-photo">
+          <img class="scene" src="https://vivelibrespain.com/images/photos/prop-altea-hills.jpg?v=5" alt="Contemporary frontline mansion in Altea Hills">
+          <span class="illus-badge">Illustrative</span>
+          <span class="price-chip">€4,200,000</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Altea Hills · Gated</span>
+          <h3>Frontline mansion above the bay</h3>
+          <ul class="specs"><li><span class="v">5</span> bed</li><li><span class="v">6</span> bath</li><li><span class="v">600 m²</span></li></ul>
+          <p class="prop-desc">An architectural statement with lift, spa and cinema, on an infinity terrace above the bay of Altea.</p>
+          <a class="tlink" href="listings.html?band=frontline" style="margin-top:1rem">Browse this range <span class="arr">→</span></a>
+        </div>
+      </article>
+      <article class="card reveal d1">
+        <div class="ph has-photo">
+          <img class="scene" src="https://vivelibrespain.com/images/photos/prop-benissa-coast.jpg?v=5" alt="Frontline estate terrace on the Benissa coast">
+          <span class="illus-badge">Illustrative</span>
+          <span class="price-chip">€5,400,000</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Benissa · Coast</span>
+          <h3>Frontline estate with private sea access</h3>
+          <ul class="specs"><li><span class="v">5</span> bed</li><li><span class="v">5</span> bath</li><li><span class="v">720 m²</span></li></ul>
+          <p class="prop-desc">A rare position on the rugged Benissa coast, with steps to the water and uninterrupted horizons.</p>
+          <a class="tlink" href="listings.html?band=frontline" style="margin-top:1rem">Browse this range <span class="arr">→</span></a>
+        </div>
+      </article>
+
+    </div>
+    <div class="disclaimer reveal" style="margin-top:clamp(2rem,4vw,3rem)">
+      <strong>About these examples.</strong> The homes on this page are illustrative only and are not current listings. Each <em>Browse this range</em> link opens our own curated selection for that budget. The homes shown are indicative of what's typically available; tell us your brief and we'll bring you live options to match, including off-market homes. Imagery is representative of the area and property style.
+    </div>
+  </div>
+</section>
+
+<section class="section bg-deep">
+  <div class="wrap center measure reveal">
+    <h2 style="color:var(--shell)">The map only tells you so much.</h2>
+    <p class="lead" style="margin-top:1.2rem; color:var(--on-deep-soft)">The right area is a feeling as much as a fact. Let's find yours. Start with a call, or come and explore on an orientation day.</p>
+    <div class="hero-actions" style="justify-content:center; margin-top:2rem">
+      <a class="btn btn-ochre" href="contact.html">Book a discovery call <span class="arr">→</span></a>
+      <a class="btn btn-ghost on-dark" href="how-it-works.html#rentals">Orientation experiences</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="26" r="13"></circle><line x1="9" y1="44" x2="55" y2="44"></line><line x1="15" y1="51" x2="49" y2="51"></line><line x1="23" y1="58" x2="41" y2="58"></line></svg><span class="brand-text">Vive Libre<span class="vl-sub">Costa Blanca</span></span></a>
+        <p>A personal buyer's agent and relocation partner for international buyers on the Costa Blanca North. Live free.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="buying-process.html">Buying process</a></li>
+          <li><a href="how-it-works.html#buying-safely">Buying safely</a></li>
+          <li><a href="how-it-works.html#rentals">Rentals &amp; orientation</a></li>
+          <li><a aria-current="page" href="areas.html">Areas &amp; homes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy &amp; cookies</a></li>
+          <li><a href="aviso-legal.html">Aviso Legal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-news">
+        <!-- TODO: the "Join the community" newsletter form was a demo (it stored nothing) and has been removed.
+             Re-add a real sign-up once a mailing list provider is chosen, and name that provider in privacy.html. -->
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:hello@vivelibrespain.com">hello@vivelibrespain.com</a></li>
+          <li>WhatsApp: Jane <a href="https://wa.me/447770447149" target="_blank" rel="noopener">+44 7770 447149</a></li>
+          <li>WhatsApp: Estelle <a href="https://wa.me/34675981829" target="_blank" rel="noopener">+34 675 98 18 29</a></li>
+          <li><a href="contact.html">Book a free discovery call →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Vive Libre · vivelibrespain.com</span>
+      <span>Independent buyer's agent &amp; relocation concierge · Costa Blanca North, Spain</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
