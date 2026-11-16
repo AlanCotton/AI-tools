@@ -13,29 +13,29 @@ Not published live. Nothing was deployed, pushed or submitted.
 | 2 | Canonical, OG/Twitter, JSON-LD | **Done**: on every page, with absolute https og:image. The home page has `RealEstateAgent` schema (address, email, areaServed, parentOrganization, founders Jane Heath and Estelle). **Placeholder:** Estelle's surname (HTML TODO). |
 | 3 | Branded 404 | **Done**: `404.html` (noindex, links to the home page and contact). Note: it uses relative paths, so on a nested missing URL (e.g. `/a/b`) the CSS will not load. Change `styles.css`/`site.js` to `/styles.css` and `/site.js` in 404.html on deploy if you want it styled at any depth. |
 | 4 | Company details | Not required for Vive Libre's footer. The entity is named on privacy.html and the new aviso-legal.html. The Aviso Legal link is in every footer. |
-| 5 | Proof / testimonials | **Placeholder**: checkable attribution for both testimonials (surname or initial, area, year, with consent), plus a Google Business Profile link (about.html). |
+| 5 | Proof / testimonials | **Resolved by owner**: the existing testimonials are kept exactly as they were, with no attribution or Google Business Profile placeholders. |
 | 6 | Group link | **Done**: "Part of Chameleon Brands" appears only on privacy.html and aviso-legal.html, as the brief asks. Brand spellings checked. |
 | 7 | Agreed claims | **Done**: Jane's bio now says "over 30 years' experience" (was "25+ years"). |
 
 ## Vive Libre – High
 | Item | Status |
 |------|--------|
-| Fees & Independence section with "from €X" | **Done / Placeholder**: new `#fees` section on how-it-works.html, linked from the home page, the value card and the buying-process costs note. **Needs:** prices for the buyer's agent service, private orientation day and group orientation day; whether prices include IVA; and the commission/independence statement. |
-| Draft Aviso Legal | **Done (draft)**: aviso-legal.html, with a "Draft – needs review before publishing" banner. Entity, company number and registered office are filled in. **Placeholders:** NIF, Spanish VAT, Spanish address, Valencian agent register (RAICV) number, photo credits, governing law. An HTML TODO asks a Spanish lawyer to confirm the trading entity, VAT and agent registration. |
+| Fees & Independence section | **Done / Placeholder**: renamed "Independence" (`#independence` on how-it-works.html, linked from the home page) because the owner doesn't publish prices. No prices are shown. **Needs:** the commission/independence statement. |
+| Draft Aviso Legal | **Done (draft)**: aviso-legal.html, with a "Draft – needs review before publishing" banner. Entity, company number and registered office are filled in. **Placeholders:** NIF, Spanish VAT, Spanish address, photo credits, governing law. An HTML TODO asks a Spanish lawyer to confirm the trading entity and VAT. (The agent-register placeholder was removed by owner decision.) |
 | Remove placeholder items | **Done**: "[mailing list provider, when live]" removed from privacy.html (HTML TODO to add the provider later). The demo newsletter form ("Join the community") is removed from every footer and replaced by a "Get in touch" column (email, WhatsApp numbers already on the site, Book a call). An HTML TODO explains how to re-add the newsletter. The unused demo-form handler was removed from site.js. |
 | UK English / en-GB | **Done**: `lang="en-GB"` and `og:locale en_GB`. The UK source text was used (the live page was rendering US variants such as harbor, favorite and licenses through the translator). "toward" changed to "towards". Privacy "last updated" date changed to 16 November 2026. |
 
 ## Vive Libre – Medium
 | Item | Status |
 |------|--------|
-| Listing photos | **Done** on listings.html: Altea Hills now uses `prop-altea-hills.jpg` (was the church photo), Benissa uses `prop-benissa-coast.jpg` (was the cove photo), and Dénia uses `prop-denia.jpg` (was the town photo). **Placeholder:** the Moraira frontline villa still shows the Moraira marina photo, because the site has no matching property image. |
+| Listing photos | **Done** on listings.html: Altea Hills now uses `prop-altea-hills.jpg` (was the church photo), Benissa uses `prop-benissa-coast.jpg` (was the cove photo), and Dénia uses `prop-denia.jpg` (was the town photo). The Moraira frontline villa keeps the Moraira marina photo (owner: no other photos exist). |
 | "4 examples" counter vs 7 homes | **Done**: the static HTML now says "Showing all example homes · 7 examples" with no hidden cards, and JavaScript updates the line when a filter is used. |
 | Meta description "entry apartments" | **Done**: reworded on listings.html. |
 | Dénia twice | **Done**: home areas fine print now reads "Also covering Finestrat, Benidorm's quieter edges, Calpe and Benissa." (Dénia is already in the heading.) |
 | Town stub pages | **Done (stubs)**: `areas-<town>.html` for Altea, Moraira, Jávea, Villajoyosa, Finestrat, La Nucía, Albir, Calpe, Benissa and Dénia. Each uses the site's existing text and photo, with a visible TODO for the full guide. They are linked from areas.html and the home cards. |
 | Guide stub "Buying property in Spain as a UK citizen" | **Done (stub)**: resources-uk-buyers.html, built from facts already on the site, with a TODO for the full content. Linked from resources and the guide pills. |
-| Testimonials attribution + Google Business Profile | **Placeholder** (see item 5). |
-| Founder stock photo | **Placeholder**: visible TODO under founders.jpg on about.html. |
+| Testimonials attribution + Google Business Profile | **Resolved by owner**: no placeholders (see item 5). |
+| Founder stock photo | **Resolved by owner**: the existing photo stays, with no placeholder. |
 | Booking link and tel: links | **Booking link: Placeholder** on contact.html ("Book a call online: [TO CONFIRM: online booking link]"). **Phone: not added.** Per the owner, none of the companies has a phone number, so there are no phone placeholders or tel: links anywhere. |
 | RealEstateAgent schema | **Done** (index.html). There is no telephone field, for the same reason. |
 | Redirect /contact.html → /contact | **Done**: netlify.toml (301). |
@@ -55,11 +55,17 @@ Not published live. Nothing was deployed, pushed or submitted.
 - Stylesheet cache-buster query strings (`?v=26`) were dropped.
 - Not touched: listings.html `?edit=1` link editor, the WhatsApp widget, all prices and example homes (still marked "Illustrative").
 
-## Placeholders for the owner
-- **Fees:** buyer's agent from €X, private orientation day from €X, group orientation day from €X; IVA included or not; commission/independence statement.
-- **Legal (Aviso Legal):** NIF, Spanish VAT, Spanish address, RAICV number, photo credits, governing law, and Spanish lawyer review of the trading entity, VAT and register.
-- **Proof:** testimonial attribution (with consent) and Google Business Profile link.
-- **Media:** real photo of Jane and Estelle (replace founders.jpg); a property photo for the Moraira frontline villa.
-- **Contact:** online booking link.
-- **Content:** 10 town guides and the UK-buyer guide; Estelle's surname for the schema.
-- **Later:** newsletter provider (re-add the form and update privacy.html); self-host the font; submit the sitemap in Search Console.
+## Owner decisions applied (16 November 2026)
+- **No prices:** the "Starting prices" card (three "from €X" rows and the IVA question) is removed. The section is renamed "Independence" (`#independence`) and the home-page link is updated. The value card is back to its original live wording, and the extra link in the buying-process costs note is gone. The unused `.fee-list` CSS is removed.
+- **Testimonials:** the attribution placeholders on both testimonials, the Google Business Profile line and their TODOs are removed. The testimonials are unchanged.
+- **Photos:** the "replace stock photo" placeholder (about.html) and the Moraira villa photo placeholder (listings.html) are removed, along with their TODOs.
+- **Phone:** no phone placeholders or tel: links (done earlier).
+- **Aviso Legal:** the Valencian agent-register row, its placeholder and that part of the lawyer TODO are removed.
+- **ICO:** privacy.html now states "Chameleon Brands Ltd is registered with the UK Information Commissioner's Office (registration number ZC276789)." and adds an ICO registration row to the "Who we are" box. The AEPD and ICO complaint wording is unchanged.
+
+## Placeholders for the owner (remaining)
+- **Independence:** a statement on whether Vive Libre takes any commission or fee from sellers, developers, agents or introduced professionals.
+- **Aviso Legal:** NIF, Spanish VAT (IVA) registration, Spanish trading address, photo credits, governing law, plus a Spanish lawyer's review of the trading entity and VAT.
+- **Contact:** an online booking link.
+- **Content:** the 10 town guides and the UK-buyer guide; Estelle's surname for the schema (HTML comment only).
+- **Later:** a newsletter provider (re-add the form and update privacy.html); self-host the font; submit the sitemap in Search Console.
