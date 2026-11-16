@@ -32,7 +32,7 @@ Images and favicons could not be downloaded (the container cannot reach the site
 | Medium | /why-us heading order | Done – the H1 section now comes before the "Meet Jane & Alan" H2 section. |
 | Medium | "How it works" nav link | Done – added to the nav on every page (links to the home page's #how). |
 | Medium | Privacy line next to form button | Done – a short line with a link to the existing privacy policy sits beside every Send button. |
-| Medium | LinkedIn + credentials for Jane and Alan, name HCA | HCA: Done (why-us now says "We founded HCA, one of the first go-to-market (GTM) agencies in the UK", linked to hca.uk.com). Founder cards added for Jane Heath and Alan Cotton. LinkedIn URLs and credentials: **Placeholder** (not on the site). Photo alt text changed to "Jane Heath and Alan Cotton" order – check it matches the photo. |
+| Medium | LinkedIn + credentials for Jane and Alan, name HCA | HCA: Done (why-us now says "We founded HCA, one of the first go-to-market (GTM) agencies in the UK", linked to hca.uk.com). Founder cards added for Jane Heath and Alan Cotton. LinkedIn: Done (owner decision round 2). Credentials: **Placeholder** (not on the site). Photo alt text changed to "Jane Heath and Alan Cotton" order – check it matches the photo. |
 | Low | Capitalise after "Purpose." | Done on sales-performance, account-management and internal-communication, and also on remote-team, which had the same issue. |
 | Low | Honeypot and duplicate hidden form visually hidden | Done – the honeypot paragraph was visible ("Don't fill this out") and the duplicate form at the bottom of each page was visible because the site-wide `form{display:flex}` overrode it. Honeypot now uses an off-screen class; duplicate form has `hidden` plus `[hidden]{display:none!important}`. |
 | Low | Terms of business (draft) | Done as a template – `terms.html`, "Draft – needs review before publishing" banner, noindex, not in sitemap. Payment terms, VAT, expenses, cancellation, IP restrictions and liability cap are **placeholders** (no prices on the page). Linked in the footer. |
@@ -55,8 +55,12 @@ Images and favicons could not be downloaded (the container cannot reach the site
 - Parliamentary Review, photos, HCA £7m, Vive Libre, The Taylor: nothing on this site needed changing.
 
 ## Placeholders still open (facts we don't have)
-- Jane Heath and Alan Cotton LinkedIn URLs; Jane's credentials; Alan's credentials and years of experience (why-us).
+- Jane's credentials; Alan's credentials and years of experience (why-us).
 - Workshop location (all five workshop pages and the FAQ).
 - Whether the four non-remote workshops can be delivered virtually or hybrid (workshop pages and FAQ).
 - Draft terms of business: effective date, VAT, payment terms, expenses, client responsibilities, cancellation/postponement, recording/sharing materials, liability cap.
 - **ICO (corrected decision):** privacy policy now states "Chameleon Brands Ltd is registered with the Information Commissioner's Office (registration number ZC276789)." under "Who we are". Complaint wording (ICO at ico.org.uk) unchanged.
+
+## Owner decisions – round 2 applied
+- **LinkedIn:** why-us founder cards now link to https://www.linkedin.com/in/jane-heath and https://www.linkedin.com/in/alanathca (new tab), and both URLs are in the Person `sameAs` in the why-us JSON-LD and the home-page Organization `founder` entries.
+- Items 12–15 (The Taylor bios, booking links, HCA founding year, Hummingbird) need no change here: Growth KnowHow already uses its own calendar link and doesn't state HCA's founding year.

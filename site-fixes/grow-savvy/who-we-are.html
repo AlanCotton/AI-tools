@@ -34,7 +34,6 @@
 .team-names .rl{color:var(--muted);font-size:15px;margin-top:2px;}
 .team-cta{display:flex;gap:14px;flex-wrap:wrap;}
 </style>
-<!-- TODO: add "sameAs": ["<LinkedIn URL>"] to each Person once the LinkedIn URLs are confirmed. -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -42,6 +41,7 @@
   {
    "@type": "Person",
    "name": "Jane Heath",
+   "sameAs": ["https://www.linkedin.com/in/jane-heath"],
    "jobTitle": "Co-founder",
    "worksFor": {
     "@type": "Organization",
@@ -52,6 +52,7 @@
   {
    "@type": "Person",
    "name": "Alan Cotton",
+   "sameAs": ["https://www.linkedin.com/in/alanathca"],
    "jobTitle": "Co-founder",
    "worksFor": {
     "@type": "Organization",
@@ -137,7 +138,7 @@
     </div>
   </section>
 
-  <!-- FOUNDER BIOS. TODO: owner to supply short bios and LinkedIn URLs. -->
+  <!-- FOUNDER BIOS. TODO: owner to supply short bios. -->
   <section class="band band--cream section section--tight" style="padding-top:0;" data-screen-label="Founder bios">
     <div class="container">
       <div class="sec-head reveal">
@@ -149,13 +150,13 @@
           <div class="vcard__n">Co-founder</div>
           <h3>Jane Heath</h3>
           <p>Jane has over 30 years' experience and co-founded HCA, one of the first go-to-market consultancies in the UK. <mark class="todo">[TO CONFIRM: short bio – background, specialisms]</mark></p>
-          <p class="bio-link">LinkedIn: <mark class="todo">[TO CONFIRM: Jane's LinkedIn URL]</mark></p>
+          <p class="bio-link"><a href="https://www.linkedin.com/in/jane-heath" target="_blank" rel="noopener">Jane on LinkedIn</a></p>
         </article>
         <article class="vcard reveal" data-delay="2">
           <div class="vcard__n">Co-founder</div>
           <h3>Alan Cotton</h3>
           <p>Alan co-founded HCA, one of the first go-to-market consultancies in the UK. <mark class="todo">[TO CONFIRM: short bio – background, specialisms]</mark></p>
-          <p class="bio-link">LinkedIn: <mark class="todo">[TO CONFIRM: Alan's LinkedIn URL]</mark></p>
+          <p class="bio-link"><a href="https://www.linkedin.com/in/alanathca" target="_blank" rel="noopener">Alan on LinkedIn</a></p>
         </article>
       </div>
     </div>
@@ -204,10 +205,9 @@
             <p class="contact__lead">Tell us where your business is, where you want to take it and we'll show you how to get there. Drop us a line – the first conversation is on us.</p>
             <div class="contact__links">
               <a class="contact__email" href="mailto:hello@grow-savvy.com?subject=Grow%20Savvy%20website%20enquiry">hello@grow-savvy.com</a>
-              <!-- TODO: replace href="#contact" with the real calendar booking link (e.g. a Google Calendar appointment page) -->
+              <!-- No calendar link: the booking button goes to the enquiry form beside it. -->
               <div class="contact__book">
-                <a class="btn btn--primary" href="#contact">Book a 30-minute call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
-                <mark class="todo">[TO CONFIRM: calendar booking link]</mark>
+                <a class="btn btn--primary" href="#email-form">Book a 30-minute call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
               </div>
             </div>
           </div>

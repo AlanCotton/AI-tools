@@ -36,7 +36,7 @@ Not published live. Nothing was deployed, pushed or submitted.
 | Guide stub "Buying property in Spain as a UK citizen" | **Done (stub)**: resources-uk-buyers.html, built from facts already on the site, with a TODO for the full content. Linked from resources and the guide pills. |
 | Testimonials attribution + Google Business Profile | **Resolved by owner**: no placeholders (see item 5). |
 | Founder stock photo | **Resolved by owner**: the existing photo stays, with no placeholder. |
-| Booking link and tel: links | **Booking link: Placeholder** on contact.html ("Book a call online: [TO CONFIRM: online booking link]"). **Phone: not added.** Per the owner, none of the companies has a phone number, so there are no phone placeholders or tel: links anywhere. |
+| Booking link and tel: links | **Booking link: resolved by owner (round 2)**: there is no calendar link, so every "Book a call" button and link points to the contact form (contact.html) and the booking placeholder is removed. **Phone: not added.** Per the owner, none of the companies has a phone number, so there are no phone placeholders or tel: links anywhere. |
 | RealEstateAgent schema | **Done** (index.html). There is no telephone field, for the same reason. |
 | Redirect /contact.html → /contact | **Done**: netlify.toml (301). |
 
@@ -63,9 +63,12 @@ Not published live. Nothing was deployed, pushed or submitted.
 - **Aviso Legal:** the Valencian agent-register row, its placeholder and that part of the lawyer TODO are removed.
 - **ICO:** privacy.html now states "Chameleon Brands Ltd is registered with the UK Information Commissioner's Office (registration number ZC276789)." and adds an ICO registration row to the "Who we are" box. The AEPD and ICO complaint wording is unchanged.
 
+## Owner decisions applied – round 2
+- **Booking:** the online-booking-link placeholder and its TODO are removed from contact.html. All booking buttons already go to the contact form.
+- **LinkedIn:** Jane's bio keeps https://www.linkedin.com/in/jane-heath (opens in a new tab). The same URL is added as `sameAs` on Jane Heath in the home-page JSON-LD. No other LinkedIn links were added.
+
 ## Placeholders for the owner (remaining)
 - **Independence:** a statement on whether Vive Libre takes any commission or fee from sellers, developers, agents or introduced professionals.
 - **Aviso Legal:** NIF, Spanish VAT (IVA) registration, Spanish trading address, photo credits, governing law, plus a Spanish lawyer's review of the trading entity and VAT.
-- **Contact:** an online booking link.
 - **Content:** the 10 town guides and the UK-buyer guide; Estelle's surname for the schema (HTML comment only).
 - **Later:** a newsletter provider (re-add the form and update privacy.html); self-host the font; submit the sitemap in Search Console.

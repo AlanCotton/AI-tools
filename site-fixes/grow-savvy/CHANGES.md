@@ -12,7 +12,7 @@ Files in this folder: index.html, what-we-do.html, what-weve-done.html, why-choo
 | # | Item | Status |
 |---|------|--------|
 | 1 | robots.txt and sitemap.xml | **Done.** sitemap lists the five content pages, lastmod 2026-11-16. privacy-policy (kept `noindex` as on the live site), thanks and 404 are left out. **Owner:** submit the sitemap in Google Search Console. |
-| 2 | Canonical, OG/Twitter, JSON-LD | **Done.** Every page: `lang="en-GB"`, canonical, og:type/site_name/title/description/url/image (full https URLs), twitter:card. Home: Organization + ProfessionalService JSON-LD (address, Chameleon Brands Ltd parent, founders Jane Heath and Alan Cotton). what-we-do: FAQPage JSON-LD (factual answers only). who-we-are: Person JSON-LD for both founders (TODO to add LinkedIn `sameAs`). Meta descriptions are 151–159 characters. |
+| 2 | Canonical, OG/Twitter, JSON-LD | **Done.** Every page: `lang="en-GB"`, canonical, og:type/site_name/title/description/url/image (full https URLs), twitter:card. Home: Organization + ProfessionalService JSON-LD (address, Chameleon Brands Ltd parent, founders Jane Heath and Alan Cotton). what-we-do: FAQPage JSON-LD (factual answers only). who-we-are: Person JSON-LD for both founders with LinkedIn `sameAs`. Meta descriptions are 151–159 characters. |
 | 3 | Branded 404 | **Done (kept and checked).** Existing 404.html kept in its own style; added a "Get in touch" link, the footer with company details, `noindex`, `lang`. It uses root-relative links/assets (`/css/...`, `/`) because Netlify serves it at any URL depth – so inside the claude.ai preview the 404 page shows unstyled; it is correct on Netlify. |
 | 4 | Company details | **Done.** Footer on every page: "Grow Savvy is a trading name of Chameleon Brands Ltd, registered in England and Wales · Company no. 12945712 · Registered office: Dragon House, …". Privacy policy "Who we are" now also gives the company number and registered office. |
 | 5 | Proof | **Done (owner decision).** The existing case studies are the latest; they are kept exactly as on the live site and their figures are brought onto the home page. No testimonial or case-study placeholders. |
@@ -33,9 +33,9 @@ Files in this folder: index.html, what-we-do.html, what-weve-done.html, why-choo
 |------|--------|
 | Titles | **Done.** "Page \| Grow Savvy"; home "Grow Savvy \| Business growth consultant UK". |
 | Phone | **Not needed** – the owner confirmed Grow Savvy has no phone number; placeholder removed. |
-| "Book a 30-minute call" | **Placeholder.** Button added in the contact block on every page; no calendar link exists on the site, so it points to #contact with a TODO. Needs the booking URL. |
+| "Book a 30-minute call" | **Done (owner decision).** Button in the contact block on every page goes to the enquiry form beside it (`#email-form`); there is no calendar link. |
 | Engagement models / FAQ | **Done.** what-we-do: three engagement models built from services the site already describes (discovery session, growth and GTM mentoring programme, ongoing mentoring), describing format and what's included, with no prices; five-question FAQ with answers taken from existing site copy. |
-| Founder bios with LinkedIn | **Placeholder.** who-we-are: bio cards for Jane Heath and Alan Cotton (only agreed facts: Jane over 30 years' experience; both co-founded HCA) plus placeholders for fuller bios and LinkedIn URLs (none on the site). |
+| Founder bios with LinkedIn | **Done / Placeholder.** who-we-are: bio cards for Jane Heath and Alan Cotton (only agreed facts: Jane over 30 years' experience; both co-founded HCA) with LinkedIn links (www.linkedin.com/in/jane-heath, www.linkedin.com/in/alanathca, also as `sameAs` in the Person JSON-LD). Fuller bios are still placeholders. |
 | Positioning (Grow Savvy = growth support incl. AI; The Taylor = bespoke AI builds) | **Done.** Home AI pillar and a what-we-do FAQ answer now say AI adoption is part of the growth support and point bespoke AI builds to The Taylor (thetaylor.ai). Typed line "Integrate AI, properly." → "Put AI to work, properly." Meta descriptions adjusted. |
 
 ## Grow Savvy – Low
@@ -54,9 +54,11 @@ Files in this folder: index.html, what-we-do.html, what-weve-done.html, why-choo
 - **ICO:** privacy-policy.html now states "Chameleon Brands Ltd is registered with the Information Commissioner's Office (registration number ZC276789)." in the "Who we are" section; the existing wording about complaining to the ICO is unchanged.
 - **Parliamentary Review, HCA £7m, Vive Libre, The Taylor:** not present on this site; nothing to change.
 
+### Round 2 (2026-11-16)
+- **LinkedIn:** Jane Heath https://www.linkedin.com/in/jane-heath and Alan Cotton https://www.linkedin.com/in/alanathca linked on the who-we-are bio cards (new tab, `rel="noopener"`) and added as `sameAs` in the Person JSON-LD.
+- **Booking:** "Book a 30-minute call" now goes to the enquiry form (`#email-form`); calendar placeholder removed.
+
 ### Placeholders that remain
-- Calendar booking link for "Book a 30-minute call" (contact block on every page).
-- LinkedIn URLs for Jane Heath and Alan Cotton (who-we-are bio cards; then add them as `sameAs` in the Person JSON-LD).
 - Short bios for Jane Heath and Alan Cotton (who-we-are bio cards).
 
 `mark.todo` CSS is kept because these placeholders remain.

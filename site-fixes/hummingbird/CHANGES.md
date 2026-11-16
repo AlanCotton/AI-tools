@@ -33,15 +33,15 @@ No netlify.toml needed (no redirects required).
 - Privacy policy – **Done (draft)**: privacy.html with "Draft – needs review before publishing" banner; linked next to the form button and in the footer. ICO registration ZC276789 added. **Placeholder**: publication date, email provider, retention periods, transfer safeguards, lawful bases confirmation, marketing emails.
 - Company details in footer – **Done.**
 - Proof slots – **Removed per owner decision** (no new testimonials, case studies or credentials).
-- Jane's LinkedIn – **Placeholder**: the URL is not on the site. A link chip was added with `href="#"` and a visible TO CONFIRM note. Parliamentary Review – live sentence and chip kept as on the live site, with no link (per owner correction).
-- What clients get (format, first call) – **Placeholder** within a new "Working together" section (two cards). It states only facts already on the site: one-to-one coaching with Jane plus network experts, and an enquiry followed by a calendar booking. Still needed: session and programme format, and the first-call length and what happens next. The price is not shown, per the owner's decision.
+- Jane's LinkedIn – **Done**: https://www.linkedin.com/in/jane-heath (link chip and Person `sameAs`). Parliamentary Review – live sentence and chip kept as on the live site, with no link (per owner correction).
+- What clients get – **Done**: a new "Working together" section with two cards, the format (one-to-one coaching with Jane plus the network) and the first call (enquiry, then a calendar booking). It makes no promises on session length, programme length or price, per the owner's decisions.
 
 ## Hummingbird – Medium
 - Form labels; name and email `required` – **Done** (visible labels, autocomplete attributes, `data-netlify`, `netlify-honeypot`, hidden `form-name`). Owner: send a test enquiry after deploying. In the artifact preview the form does not send (shows a "Preview only" message).
 - Hero video `muted`, `playsinline`, `poster` – **Done** (poster: images/hero-poster.svg; autoplay is skipped under prefers-reduced-motion).
 - "Book a call" → Google Calendar link already on the site (`https://calendar.app.google/36cKDgewPTFvcCmB8?source=hummingbird-site`) – **Done** (header CTA, plus a direct link under the form).
 - Rename WhatsApp image – **Not possible here** (file could not be downloaded); live URL kept, TODOs added, new name proposed above. Alt text improved to "Jane Heath, founder of Hummingbird Consultancy".
-- Person schema for Jane Heath – **Done** (add `sameAs` with her LinkedIn URL once known).
+- Person schema for Jane Heath – **Done** (with LinkedIn in `sameAs`).
 
 ## Hummingbird – Low
 - "Female-only founders, MDs & CEOs" → "Female founders, MDs and CEOs" – **Done.**
@@ -59,9 +59,10 @@ No netlify.toml needed (no redirects required).
 - **Parliamentary Review (owner correction):** the live sentence in "Meet Jane" and its plain-text chip are restored word for word. Only the link added in v1, its URL placeholder and the mention in the `sameAs` TODO were removed. It is not in the Person schema.
 - **Photos and phone numbers:** nothing to change. There were no photo or phone placeholders. The photo-rename TODO stays, because it concerns the existing photo.
 - **ICO:** privacy.html now says Chameleon Brands Ltd is registered with the ICO (registration number ZC276789). The complaint wording points to ico.org.uk.
+- **HCA co-founder (owner correction):** Jane is a co-founder of HCA. Changed "She founded HCA" to "She co-founded HCA", the chip to "Co-founded HCA – created a sector", and the Person schema description to "Co-founder of HCA."
+- **Round 2 (owner):** Jane's LinkedIn (https://www.linkedin.com/in/jane-heath) is now linked from her chip and listed in the Person `sameAs`, and its placeholder is gone. Session, programme and first-call details vary, so their placeholders were removed. The "Working together" section keeps its two cards with only wording that stays true: one-to-one coaching plus the network, and a first conversation via the form and calendar.
 
 ### Remaining placeholders
-- index.html: Jane's LinkedIn URL; session and programme format; first-call length and next steps; final eligibility wording after the Equality Act legal check.
+- index.html: final eligibility wording after the Equality Act legal check.
 - privacy.html: publication date; marketing emails and consent; lawful bases; email provider; transfer safeguards; retention periods (enquiries and clients); cookies statement confirmed at publication.
 - Owner actions: upload the renamed photo, submit the sitemap, send a test enquiry.
-- **HCA co-founder (owner correction):** Jane is a co-founder of HCA. Changed "She founded HCA" to "She co-founded HCA", the chip to "Co-founded HCA – created a sector", and the Person schema description to "Co-founder of HCA."

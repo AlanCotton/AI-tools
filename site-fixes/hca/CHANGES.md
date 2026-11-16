@@ -30,7 +30,7 @@ Placeholders show on the page as yellow `[TO CONFIRM: …]` marks (`mark.todo`, 
 | Item | Status |
 |------|--------|
 | £7m stat wording | **Done.** Owner confirmed it is a fee. Both places (home and use cases) read "£1m a year in fees, delivered consistently for 7 years". The existing case study text ("1 client per year @ £1m GP") is kept exactly as on the live site. |
-| Founder page | **Done + Placeholder.** "Jane Heath" in full (lead, image alt, tag, title), LinkedIn changed from `es.linkedin.com` to `www.linkedin.com/in/jane-heath`, Person JSON-LD added. Parliamentary Review "Recognition" section kept as on the original site (owner correction); no article link or link placeholder. Placeholder left: year HCA was founded. |
+| Founder page | **Done + Placeholder.** "Jane Heath" in full (lead, image alt, tag, title), LinkedIn changed from `es.linkedin.com` to `www.linkedin.com/in/jane-heath`, Person JSON-LD added. Parliamentary Review "Recognition" section kept as on the original site (owner correction); no article link or link placeholder. Founded year filled in: 1999 (owner, round 2). |
 | FAQPage schema on questions.html | **Done.** Built from the nine on-page questions and answers. |
 | Home title | **Done.** "HCA \| Agency new business consultancy for an AI-first world". Other titles now "Page \| HCA". |
 | Plausible | **Done (commented out).** Snippet in every page head, commented out, with a TODO to add the domain in Plausible and mention it in privacy.html. |
@@ -64,9 +64,13 @@ Placeholders show on the page as yellow `[TO CONFIRM: …]` marks (`mark.todo`, 
 - **Prices / photos:** HCA had no price or photo placeholders; nothing to change.
 
 ## Placeholders still open
-- founder.html: year HCA was founded.
 - privacy.html: "last updated" date, marketing-email basis, email provider, CRM, international transfer mechanism, retention period; plus a legal review of the draft.
 - insights.html: first article titles and dates.
 - HTML comments only (not visible): Plausible switch-on; archive video re-edit.
 
 **Update:** owner confirmed the £1m figure is a fee; the case study now reads "1 client per year @ £1m fee".
+
+## Owner decisions round 2 applied
+- **Founded 1999:** founder.html now reads "She co-founded HCA in 1999"; placeholder removed. Home Organization JSON-LD has `"foundingDate": "1999"`.
+- **LinkedIn:** founder.html links Jane to exactly https://www.linkedin.com/in/jane-heath (`target="_blank" rel="noopener"`); same URL in her `sameAs` in the founder.html Person data and the home `founder` entry. Alan Cotton's home `founder` entry has `sameAs` https://www.linkedin.com/in/alanathca. No visible Alan copy added.
+- Items 12, 13 and 15 don't apply to HCA (HCA already has a real calendar link).
