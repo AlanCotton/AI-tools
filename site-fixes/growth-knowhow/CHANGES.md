@@ -52,7 +52,7 @@ Images and favicons could not be downloaded (the container cannot reach the site
 - **Testimonials/case studies:** removed the client name/logo and measured-result slots (and their TODOs) from the three home-page case-study cards and the TODO on why-us. Quotes and case studies kept exactly as on the live site.
 - **No prices:** removed the "Price – From £" row from every workshop Key facts box, the price TODO from the Course schema, and the "How much does a workshop cost?" question from the FAQ.
 - **Phone numbers:** removed every phone placeholder (footer "Tel:" line and "or call …" in the contact sections) – done by the coordinator and carried into the build.
-- Parliamentary Review, photos, ICO, HCA £7m, Vive Libre, The Taylor: nothing on this site needed changing.
+- Parliamentary Review, photos, HCA £7m, Vive Libre, The Taylor: nothing on this site needed changing.
 
 ## Placeholders still open (facts we don't have)
 - Jane Heath and Alan Cotton LinkedIn URLs; Jane's credentials; Alan's credentials and years of experience (why-us).

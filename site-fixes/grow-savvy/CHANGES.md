@@ -51,7 +51,8 @@ Files in this folder: index.html, what-we-do.html, what-weve-done.html, why-choo
 - **No prices:** removed the three "From [TO CONFIRM: £ …]" lines from the engagement models (the models stay, describing format and what's included), the "How much does it cost?" FAQ, and the now-unused `.price` and `.quote` CSS. No price appeared in any schema.
 - **Phone:** no phone number; placeholder removed (by the coordinator). The optional phone field on the form stays.
 - **Photos:** no photo placeholders were on this site; the founder cards on who-we-are show no photo and the existing founders.jpg is used on home and who-we-are.
-- **Parliamentary Review, ICO number, HCA £7m, Vive Libre, The Taylor:** not present on this site; nothing to change.
+- **ICO:** privacy-policy.html now states "Chameleon Brands Ltd is registered with the Information Commissioner's Office (registration number ZC276789)." in the "Who we are" section; the existing wording about complaining to the ICO is unchanged.
+- **Parliamentary Review, HCA £7m, Vive Libre, The Taylor:** not present on this site; nothing to change.
 
 ### Placeholders that remain
 - Calendar booking link for "Book a 30-minute call" (contact block on every page).
