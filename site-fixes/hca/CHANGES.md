@@ -68,3 +68,5 @@ Placeholders show on the page as yellow `[TO CONFIRM: …]` marks (`mark.todo`, 
 - privacy.html: "last updated" date, marketing-email basis, email provider, CRM, international transfer mechanism, retention period; plus a legal review of the draft.
 - insights.html: first article titles and dates.
 - HTML comments only (not visible): Plausible switch-on; archive video re-edit.
+
+**Update:** owner confirmed the £1m figure is a fee; the case study now reads "1 client per year @ £1m fee".
