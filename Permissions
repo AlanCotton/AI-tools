@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Instantly",
+      "mcp__HubSpot",
+      "mcp__Google_Sheets",
+      "mcp__Google_Drive",
+      "mcp__Gmail",
+      "mcp__Prospeo",
+      "mcp__Firecrawl",
+      "mcp__claude-code-remote__send_later",
+      "mcp__claude-code-remote__get_trigger",
+      "mcp__claude-code-remote__list_triggers"
+    ]
+  }
+}
